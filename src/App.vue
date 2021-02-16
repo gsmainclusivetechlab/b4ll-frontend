@@ -191,20 +191,20 @@ h2 {
   padding-bottom: 18px;
 }
 h3 {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bold;
   color: #373737;
   padding-bottom: 18px;
   margin-bottom: 0;
 }
 h4 {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
   color: #373737;
   line-height: 24px;
 }
 h5 {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
   line-height: 30px;
 }
@@ -218,7 +218,7 @@ p {
 }
 @media only screen and (max-width: 993px) {
   h1 {
-    font-size: 30px;
+    font-size: 27px;
   }
 }
 </style>

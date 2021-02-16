@@ -19,20 +19,26 @@
                   <router-link to="/">Home</router-link>
                 </b-nav-item>
                 <b-nav-item href="#">
-                  <router-link to="/">How it works</router-link>
+                  <router-link to="/howitworks">How it works</router-link>
                 </b-nav-item>
                 <b-nav-item-dropdown text="Knowledge Base" right>
-                  <b-dropdown-item href="#">item-1</b-dropdown-item>
-                  <b-dropdown-item href="#">item-2</b-dropdown-item>
+                  <b-dropdown-item href="#">Getting Started</b-dropdown-item>
+                  <b-dropdown-item href="#"
+                    >Biometric Authentication</b-dropdown-item
+                  >
+                  <b-dropdown-item href="#">User Management</b-dropdown-item>
+                  <b-dropdown-item href="#"
+                    >Authentication Management</b-dropdown-item
+                  >
                 </b-nav-item-dropdown>
                 <b-nav-item href="#">
-                  <router-link to="/">Tutorials</router-link>
+                  <router-link to="/tutorials">Tutorials</router-link>
                 </b-nav-item>
                 <b-nav-item href="#">
-                  <router-link to="/">About</router-link>
+                  <router-link to="/about">About</router-link>
                 </b-nav-item>
                 <b-nav-item href="#">
-                  <router-link to="/">FAQs</router-link>
+                  <router-link to="/faq">FAQs</router-link>
                 </b-nav-item>
               </b-navbar-nav>
             </b-navbar-nav>
@@ -88,6 +94,7 @@ export default {
   line-height: normal;
   font-weight: 400;
 }
+
 .navbar-brand .normal-logo {
   width: 66px;
   height: 64px;
@@ -110,6 +117,7 @@ export default {
 .navbar-light .navbar-nav .show > .nav-link {
   color: white !important;
 }
+
 .lang-menu {
   height: 27px;
   padding-right: 42px;
@@ -141,13 +149,13 @@ a {
   background-size: contain;
   background-repeat: no-repeat;
   font-size: 18px;
-     position: absolute;
-    border: none;
-    bottom: 14px;
-    right: 0;
-    width: 10px;
-    height: 10px;
-    line-height: 10px;
+  position: absolute;
+  border: none;
+  bottom: 14px;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  line-height: 10px;
 }
 .navbar-light .navbar-nav .nav-item {
   display: flex;
@@ -161,27 +169,43 @@ a {
 .navbar-light .navbar-nav .dropdown-item.active {
   color: #6b3076 !important;
   background: #fff;
+  border-radius: 10px;
 }
 .navbar-expand-lg .navbar-nav .dropdown-menu {
-  background: #95236c;
+  background: #fff;
   padding: 0;
   margin: 0;
-  left: 0;
+
+  box-shadow: 0 16px 40px rgb(0 0 0 / 10%);
+  /* border-radius: 10px;
+    
+    padding-top: 34px;
+    padding-left: 24px;
+    padding-right: 24px;
+    min-width: 271px;
+    min-height: 201px;
+  
+    padding-bottom: 28px;
+        top: 45px; */
 }
 .nav-link:focus,
 .nav-link:hover {
   border: none;
   outline: none;
 }
-.navbar-light .navbar-toggler {
-    color: transparent;
-    border-color: transparent;
-}
+
 .navbar-light .navbar-toggler-icon {
   background-image: url("../../assets/images/menu.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+}
+.navbar-light .navbar-toggler {
+  color: transparent;
+  border-color: transparent;
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu li a {
+  color: #373737 !important;
 }
 @media only screen and (min-width: 1025px) {
   .navbar {
@@ -195,31 +219,90 @@ a {
     right: 55px;
   }
 }
+@media only screen and (min-width: 1024px) {
+  .navbar-light .navbar-nav .nav-item .nav-link a.router-link-exact-active {
+    position: relative;
+  }
+  .navbar-expand-lg .navbar-nav .dropdown-menu::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid #fff;
+    position: absolute;
+    right: 22px;
+    top: -9px;
+  }
+  .navbar-light
+    .navbar-nav
+    .nav-item
+    .nav-link
+    a.router-link-exact-active::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #ae52c4;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    right: -28px;
+
+    box-shadow: 0 16px 40px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+
+    padding-top: 34px;
+    padding-left: 24px;
+    padding-right: 24px;
+    /* min-width: 271px; */
+    /* min-height: 201px; */
+    /* bottom: -27px; */
+    padding-bottom: 28px;
+    top: 45px;
+  }
+}
 @media only screen and (max-width: 993px) {
-  .navbar-light .navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle{
-    padding-left: 20px;
-  }
-  .navbar-light .navbar-nav li a{
-        padding: 10px 0px;
-  }
   .navbar-light .navbar-nav .nav-item {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    /* padding-left: 0; */
+    flex-direction: column;
   }
+  .topbar .navbar-light .navbar-nav .nav-link a,
+  .topbar .navbar-light .navbar-nav .nav-item.dropdown .nav-link a,
+  .navbar-light .navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle {
+    padding-left: 19px;
+  }
+  .navbar-expand-lg .navbar-nav .dropdown-menu li a {
+    padding-left: 19px;
+  }
+  .navbar-light .navbar-nav li a {
+    padding-left: 0;
+  }
+  .navbar-nav {
+    background: #95236c;
+  }
+
   .dropdown-down-logo {
     margin-left: 0;
     width: 20px;
     height: 20px;
   }
   .navbar-expand-lg .navbar-nav .dropdown-menu {
-    
-    position: absolute;
-    padding-left: 19px;
-}
+    position: relative;
+    padding-left: 0;
+    width: 100%;
+    border-radius: none;
+  }
   .navbar-nav {
     background: #95236c;
-   
   }
   .navbar {
     padding-right: 0;
@@ -229,6 +312,11 @@ a {
   }
   ul.search-bar {
     right: 85px;
+  }
+  .navbar .dropdown-toggle:after {
+    right: 23px;
+    top: 14px;
+    bottom: 0;
   }
 }
 </style>
