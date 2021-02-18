@@ -222,8 +222,7 @@ export default {
   data: () => ({
     props: {
       tittle: "SECURE YOUR TRANSACTIONS",
-      content:
-        "Protect yourself from unauthorized activity by using your biometric as your authentication",
+      content: `Protect yourself from unauthorized activity by using your\n biometric as your authentication`,
       breadCrumb: {
         tittle: "How it works",
         link: "/howitworks",

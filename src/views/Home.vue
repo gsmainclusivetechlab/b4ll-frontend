@@ -355,7 +355,9 @@ export default {
 </script>
 <style>
 .home-header {
-  background-color: #663479;
+      background-image: linear-gradient(
+180deg
+, #6b3076 0%, #424985 100%);
 }
 .home-header::before {
   content: "";
@@ -770,9 +772,7 @@ margin-left: 69px;
 }
 }
 @media only screen and (max-width: 993px) {
- .navbar .dropdown-toggle:after{
-    right: 23px;
-  }
+
   .mobile-group-banner {
     min-height: 450px;
     background-size: contain;

@@ -268,6 +268,9 @@ a {
   }
 }
 @media only screen and (max-width: 993px) {
+  .navbar-light .navbar-nav .nav-item .nav-link a.router-link-exact-active{
+    font-weight: 700;
+  }
   .navbar-light .navbar-nav .nav-item {
     display: flex;
     justify-content: flex-start;

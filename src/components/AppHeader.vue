@@ -96,12 +96,13 @@ export default {
   align-items: flex-start;
   flex-direction: column;
   padding-bottom: 40px;
+  white-space: normal;
 }
 .inner-header .inner-banner-wrapper {
-  min-height: 260px;
+  min-height: 213px;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-end;
   position: relative;
 }
 .pagination-content ul {
