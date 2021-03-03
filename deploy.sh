@@ -23,4 +23,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 # git push -f git@github.com:gsmainclusivetechlab.github.io/b4ll-frontend/.git master:gh-pages
 git push -f git@github.com:gsmainclusivetechlab/b4ll-frontend/.git master:gh-pages
+
 cd -
+
