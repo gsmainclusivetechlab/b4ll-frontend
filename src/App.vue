@@ -15,151 +15,35 @@ export default {
 };
 </script>
 <style>
-/* spartan-100 - latin */
+
 @font-face {
-  font-family: "Spartan";
-  font-style: normal;
-  font-weight: 100;
-  src: url("./fonts/spartan-v3-latin-100.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("./fonts/spartan-v3-latin-100.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("./fonts/spartan-v3-latin-100.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("./fonts/spartan-v3-latin-100.woff")
-      format("woff"),
-    /* Modern Browsers */ url("./fonts/spartan-v3-latin-100.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */ url("./fonts/spartan-v3-latin-100.svg#Spartan")
-      format("svg"); /* Legacy iOS */
+
+       font-family: 'Arial';
+         font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/arialregular.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/arialregular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/arialregular.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/arialregular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/arialregular.svg#Arial') format('svg'); /* Legacy iOS */
 }
-/* spartan-300 - latin */
+
 @font-face {
-  font-family: "Spartan";
-  font-style: normal;
-  font-weight: 300;
-  src: url("./fonts/spartan-v3-latin-300.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("./fonts/spartan-v3-latin-300.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("./fonts/spartan-v3-latin-300.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("./fonts/spartan-v3-latin-300.woff")
-      format("woff"),
-    /* Modern Browsers */ url("./fonts/spartan-v3-latin-300.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */ url("./fonts/spartan-v3-latin-300.svg#Spartan")
-      format("svg"); /* Legacy iOS */
+ 
+
+       font-family: 'Arial';
+         font-style: normal;
+  font-weight: bold;
+  src: url('./fonts/arialbold.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/arialbold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/arialbold.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/arialbold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/arialbold.svg#Arial') format('svg'); /* Legacy iOS */
 }
-/* spartan-200 - latin */
-@font-face {
-  font-family: "Spartan";
-  font-style: normal;
-  font-weight: 200;
-  src: url("./fonts/spartan-v3-latin-200.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("./fonts/spartan-v3-latin-200.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("./fonts/spartan-v3-latin-200.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("./fonts/spartan-v3-latin-200.woff")
-      format("woff"),
-    /* Modern Browsers */ url("./fonts/spartan-v3-latin-200.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */ url("./fonts/spartan-v3-latin-200.svg#Spartan")
-      format("svg"); /* Legacy iOS */
-}
-/* spartan-regular - latin */
-@font-face {
-  font-family: "Spartan";
-  font-style: normal;
-  font-weight: 400;
-  src: url("./fonts/spartan-v3-latin-regular.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("./fonts/spartan-v3-latin-regular.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("./fonts/spartan-v3-latin-regular.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("./fonts/spartan-v3-latin-regular.woff")
-      format("woff"),
-    /* Modern Browsers */ url("./fonts/spartan-v3-latin-regular.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("./fonts/spartan-v3-latin-regular.svg#Spartan") format("svg"); /* Legacy iOS */
-}
-/* spartan-500 - latin */
-@font-face {
-  font-family: "Spartan";
-  font-style: normal;
-  font-weight: 500;
-  src: url("./fonts/spartan-v3-latin-500.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("./fonts/spartan-v3-latin-500.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("./fonts/spartan-v3-latin-500.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("./fonts/spartan-v3-latin-500.woff")
-      format("woff"),
-    /* Modern Browsers */ url("./fonts/spartan-v3-latin-500.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */ url("./fonts/spartan-v3-latin-500.svg#Spartan")
-      format("svg"); /* Legacy iOS */
-}
-/* spartan-700 - latin */
-@font-face {
-  font-family: "Spartan";
-  font-style: normal;
-  font-weight: 700;
-  src: url("./fonts/spartan-v3-latin-700.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("./fonts/spartan-v3-latin-700.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("./fonts/spartan-v3-latin-700.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("./fonts/spartan-v3-latin-700.woff")
-      format("woff"),
-    /* Modern Browsers */ url("./fonts/spartan-v3-latin-700.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */ url("./fonts/spartan-v3-latin-700.svg#Spartan")
-      format("svg"); /* Legacy iOS */
-}
-/* spartan-600 - latin */
-@font-face {
-  font-family: "Spartan";
-  font-style: normal;
-  font-weight: 600;
-  src: url("./fonts/spartan-v3-latin-600.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("./fonts/spartan-v3-latin-600.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("./fonts/spartan-v3-latin-600.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("./fonts/spartan-v3-latin-600.woff")
-      format("woff"),
-    /* Modern Browsers */ url("./fonts/spartan-v3-latin-600.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */ url("./fonts/spartan-v3-latin-600.svg#Spartan")
-      format("svg"); /* Legacy iOS */
-}
-/* spartan-800 - latin */
-@font-face {
-  font-family: "Spartan";
-  font-style: normal;
-  font-weight: 800;
-  src: url("./fonts/spartan-v3-latin-800.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("./fonts/spartan-v3-latin-800.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("./fonts/spartan-v3-latin-800.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("./fonts/spartan-v3-latin-800.woff")
-      format("woff"),
-    /* Modern Browsers */ url("./fonts/spartan-v3-latin-800.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */ url("./fonts/spartan-v3-latin-800.svg#Spartan")
-      format("svg"); /* Legacy iOS */
-}
-/* spartan-900 - latin */
-@font-face {
-  font-family: "Spartan";
-  font-style: normal;
-  font-weight: 900;
-  src: url("./fonts/spartan-v3-latin-900.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("./fonts/spartan-v3-latin-900.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("./fonts/spartan-v3-latin-900.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("./fonts/spartan-v3-latin-900.woff")
-      format("woff"),
-    /* Modern Browsers */ url("./fonts/spartan-v3-latin-900.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */ url("./fonts/spartan-v3-latin-900.svg#Spartan")
-      format("svg"); /* Legacy iOS */
-}
+
+
+
+
 body,
 html {
   overflow: hidden;
@@ -170,9 +54,10 @@ a {
   color: #fff;
 }
 .app {
-  font-family: "Spartan";
-  font-size: 14px;
+  font-family: "Arial";
+  font-size: 16px;
   line-height: normal;
+  line-height: 26px;
   font-weight: 400;
 }
 a,
@@ -201,24 +86,33 @@ h4 {
   font-size: 18px;
   font-weight: 600;
   color: #373737;
-  line-height: 24px;
+  line-height: 30px;
 }
 h5 {
   font-size: 17px;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 30px;
 }
-
+h6{
+  font-size: 16px;
+line-height: 26px;
+color: #373737;
+}
 p {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: normal;
   padding-bottom: 10px;
-  line-height: 24px;
+  line-height: 26px;
+}
+.bg-greys{
+  background-color: #fafbfe;
 }
 @media only screen and (max-width: 993px) {
   h1 {
     font-size: 27px;
   }
 }
+
+
 </style>

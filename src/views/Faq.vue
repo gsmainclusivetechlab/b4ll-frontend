@@ -91,9 +91,10 @@
           </div>
           <div class="col-12  col-md-9">
             <div class="search-content">
-              <form class="form-element-frame" action="/action_page.php">
+              <form class="form-element-frame">
                 <input
                   type="text"
+                  v-model="searchQuery"
                   placeholder="Use key words such as Documents, Login…"
                   name="search"
                 />
@@ -101,83 +102,30 @@
               </form>
             </div>
             <div class="right-text-article">
-              <div class="article-blockframe">
-                <h4>How do I login to the app?</h4>
-                <p>
-                  This document outlines the allocation principles applicable to
-                  the International Mobile Equipment Identity (IMEI) numbers.
-                </p>
+              <div
+                v-for="(article, index) in filteredArticles"
+                :key="article.tittle"
+                v-if="index < limitBy"
+              >
+                <div class="article-blockframe">
+                  <h4>{{ article.tittle }}</h4>
+                  <p>
+                    {{ article.content }}
+                  </p>
+                </div>
+                <hr />
               </div>
-              <hr />
-              <div class="article-blockframe">
-                <h4>How can I increase my authentication security?</h4>
-                <p>
-                  This document provides recommendations on a framework for
-                  manufacturers and MNO's (mobile network operators) so they can
-                  technically configure Open Market.
-                </p>
-              </div>
-              <hr />
-              <div class="article-blockframe">
-                <h4>Can I delete my account and biometric data?</h4>
-                <p>
-                  The NFC Test Book stream is part of GSMA NFC activities. The
-                  participating GSMA TSG members have developed a set of test
-                  cases to be used for testing primarily the UICC based NFC
-                  functionality within a Mobile Device.
-                </p>
-              </div>
-              <hr />
-              <div class="article-blockframe">
-                <h4>How do I suggest new use cases?</h4>
-                <p>
-                  Network slicing is a key feature of 5G networks as defined by
-                  3GPP and enables to build dedicated logical networks on a
-                  shared infrastructure.
-                </p>
-              </div>
-              <hr />
-              <div class="article-blockframe">
-                <h4>
-                  IR.67 DNS and ENUM Guidelines for Service Providers and GRX
-                  and IPX Providers v17.0
-                </h4>
-                <p>
-                  IR.67 provides guidelines and technical information for those
-                  who need to set up and/or maintain DNS servers for inter
-                  Service Provider services.
-                </p>
-              </div>
-              <hr />
-              <div class="article-blockframe">
-                <h4>TS.30 IMEI Database Application Forms</h4>
-                <p>
-                  TS.30 provides information which will help manufacturers with
-                  the completion and submission of the different application
-                  forms used within the GSMA IMEI database is defined and
-                  described in detail.
-                </p>
-              </div>
-              <hr />
-              <div class="article-blockframe">
-                <h4>TS.11 Device Field and Lab Test Guidelines</h4>
-                <p>
-                  TS.11 contains a set of guidelines for the tests that should
-                  be performed in the course of Field Test and Lab Tests carried
-                  out on Terminal Devices..
-                </p>
-              </div>
-              <hr />
-              <div class="article-blockframe">
-                <h4>SG.20 Voicemail Security Guidelines</h4>
-                <p>
-                  This PRD describes the security risks posed by voicemail
-                  services, how they can be mitigated with robust technical
-                  configurations and appropriate policies.
-                </p>
-              </div>
-              <div class="btn-outline">
-                <a href="#" class="btn-line">View More</a>
+              <div
+                class="btn-outline"
+                v-if="articles.length == filteredArticles.length"
+              >
+                <a
+                  class="btn-line"
+                  @click="toggleView(articles.length)"
+                  v-if="limitBy === 4"
+                >
+                  View more
+                </a>
               </div>
             </div>
           </div>
@@ -193,6 +141,9 @@ export default {
   name: "Faq",
   components: { AppHeader },
   data: () => ({
+    searchQuery: "",
+    defaultLimit: 4,
+    limitBy: 4,
     props: {
       tittle: "FREQUENTLY ASKED QUESTIONS",
       content: `Protect yourself from unauthorized activity by using your\n biometric as your authentication`,
@@ -201,7 +152,66 @@ export default {
         link: "/faq",
       },
     },
+    articles: [
+      {
+        tittle: "How do I login to the app?",
+        content:
+          "This document outlines the allocation principles applicable to\n the International Mobile Equipment Identity (IMEI) numbers.",
+      },
+      {
+        tittle: "How can I increase my authentication security?",
+        content:
+          "This document provides recommendations on a framework for\n manufacturers and MNO's (mobile network operators) so they can\n technically configure Open Market.",
+      },
+      {
+        tittle: "Can I delete my account and biometric data?",
+        content:
+          " The NFC Test Book stream is part of GSMA NFC activities. The\n participating GSMA TSG members have developed a set of test\n cases to be used for testing primarily the UICC based NFC\n functionality within a Mobile Device.",
+      },
+      {
+        tittle: "How do I suggest new use cases?",
+        content:
+          "Network slicing is a key feature of 5G networks as defined by\n 3GPP and enables to build dedicated logical networks on\n shared infrastructure.",
+      },
+      {
+        tittle:
+          " IR.67 DNS and ENUM Guidelines for Service Providers and GRX\n and IPX Providers v17.0",
+        content:
+          "IR.67 provides guidelines and technical information for those\n who need to set up and/or maintain DNS servers for inter\n Service Provider services.",
+      },
+      {
+        tittle: "TS.30 IMEI Database Application Forms",
+        content:
+          "TS.30 provides information which will help manufacturers with\n the completion and submission of the different application\n forms used within the GSMA IMEI database is defined and\n described in detail.",
+      },
+      {
+        tittle: "TS.11 Device Field and Lab Test Guidelines",
+        content:
+          "TS.11 contains a set of guidelines for the tests that should\n be performed in the course of Field Test and Lab Tests carried\n out on Terminal Devices..",
+      },
+      {
+        tittle: "SG.20 Voicemail Security Guidelines",
+        content:
+          " This PRD describes the security risks posed by voicemail\n services, how they can be mitigated with robust technical\n configurations and appropriate policies.",
+      },
+    ],
   }),
+  methods: {
+    toggleView(filtersLength) {
+      this.limitBy = filtersLength;
+    },
+  },
+  computed: {
+    filteredArticles() {
+      const search = this.searchQuery.toLowerCase().trim();
+
+      if (!search) return this.articles;
+
+      return this.articles.filter(
+        (item) => item.tittle.toLowerCase().indexOf(search) > -1
+      );
+    },
+  },
 };
 </script>
 <style>
@@ -216,7 +226,7 @@ export default {
   border: 1px solid #982a71;
   min-width: 172px;
   min-height: 49px;
-  font-size: 14px;
+  font-size: 16px;
   color: #95236c;
   text-align: center;
   padding-top: 17px;
@@ -250,7 +260,7 @@ export default {
   margin-bottom: 15px;
 }
 .article-wrapper .left-article-content .content-article p {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   color: #373737;
@@ -287,10 +297,10 @@ export default {
   padding: 10px;
   background: #95236c;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
   color: #fff;
-
+  width: auto;
   min-height: 46px;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;

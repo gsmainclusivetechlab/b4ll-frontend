@@ -1,7 +1,368 @@
 <template>
   <div class="home">
     <AppHeader v-bind="props" />
-    <div class="digital-wrapper feature-wrap">
+    <!-- <div class="usecase-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="usecase-main ">
+              <h2>Use Cases</h2>
+              <h6>
+                Our showcase is based on the advantages of using different types
+                of biometrics (such as fingerprint, face and voice recognition)
+                to address its potentials in different business needs. For this,
+                our demonstration has several use cases covering from the
+                biometric enrolment process to the verification to access
+                services. The number of use cases are always growing, and we
+                invite those interested to bring new ideas for us to implement.
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="usecase-three-col-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div
+                class="usecase-frame d-flex justify-content-start align-items-start"
+              >
+                <div class="usecase-img">
+                  <img
+                    src="../assets/images/money-bag.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="usecase-content">
+                  <h4>Account balance</h4>
+                  <h6>
+                    Lorem ipsum is placeholder text commonly used in the
+                    graphic.
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div
+                class="usecase-frame d-flex justify-content-start align-items-start"
+              >
+                <div class="usecase-img">
+                  <img
+                    src="../assets/images/money-transfer.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="usecase-content">
+                  <h4>Make a transfer</h4>
+                  <h6>
+                    Lorem ipsum is placeholder text commonly used in the
+                    graphic.
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div
+                class="usecase-frame d-flex justify-content-start align-items-start"
+              >
+                <div class="usecase-img">
+                  <img
+                    src="../assets/images/mobile-payment.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="usecase-content">
+                  <h4>Pay bill</h4>
+                  <h6>
+                    Lorem ipsum is placeholder text commonly used in the
+                    graphic.
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div
+                class="usecase-frame d-flex justify-content-start align-items-start"
+              >
+                <div class="usecase-img">
+                  <img
+                    src="../assets/images/bank.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="usecase-content">
+                  <h4>Bank Transfer</h4>
+                  <h6>
+                    Lorem ipsum is placeholder text commonly used in the
+                    graphic.
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div
+                class="usecase-frame d-flex justify-content-start align-items-start"
+              >
+                <div class="usecase-img">
+                  <img
+                    src="../assets/images/wifi.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="usecase-content">
+                  <h4>Internet Bills</h4>
+                  <h6>
+                    Lorem ipsum is placeholder text commonly used in the
+                    graphic.
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div
+                class="usecase-frame d-flex justify-content-start align-items-start"
+              >
+                <div class="usecase-img">
+                  <img
+                    src="../assets/images/current.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="usecase-content">
+                  <h4>Electricity Bills</h4>
+                  <h6>
+                    Lorem ipsum is placeholder text commonly used in the
+                    graphic.
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <section class="bio-all">
+      <div class="container">
+        <div class="bio-all-contents">
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <div class="bio-content-wrap">
+                <h2>IVR Call Centre</h2>
+                <p>
+                  One of the B4LL project targets is to demonstrate the
+                  strengths of using voice and speech recognition for
+                  identification and authentication of users to access mobile
+                  services. When adopted by mobile operators or mobile money
+                  operators, the voice recognition makes the services faster and
+                  more affordable, enabling access to a large number of
+                  previously difficult to reach customers. This showcase
+                  consists of an IVR call centre that allows the user to
+                  navigate through a menu of different possibilities, using
+                  voice bots and reducing the need for a real attendant. The use
+                  cases available are a simulation of real services and have the
+                  purpose to demonstrate the use of voice registration and
+                  authentication.
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="img-bio">
+                <img
+                  src="../assets/images/usecase-content.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="two-col-biometric-wrap text-white managing-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-8">
+            <!-- <h2>
+              The App manage everything <br />
+              you need whatever
+            </h2> -->
+            <div class="managing-box">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="twoline-managing-frame">
+                    <div class="img-manage">
+                      <img
+                        src="../assets/images/feature-icon-2.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="content-manage-frame">
+                      <h5>Account balance</h5>
+                      <p>
+                        Lorem ipsum is placeholder text commonly used in the
+                        graphic.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="twoline-managing-frame">
+                    <div class="img-manage">
+                      <img
+                        src="../assets/images/feature-icon-7.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="content-manage-frame">
+                      <h5>Make a transfer</h5>
+                      <p>
+                        Lorem ipsum is placeholder text commonly used in the
+                        graphic.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="twoline-managing-frame">
+                    <div class="img-manage">
+                      <img
+                        src="../assets/images/feature-icon-1.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="content-manage-frame">
+                      <h5>Pay bill</h5>
+                      <p>
+                        Lorem ipsum is placeholder text commonly used in the
+                        graphic.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="twoline-managing-frame">
+                    <div class="img-manage">
+                      <img
+                        src="../assets/images/fingerprint.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="content-manage-frame">
+                      <h5>Use different biometrics</h5>
+                      <p>
+                        Lorem ipsum is placeholder text commonly used in the
+                        graphic.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="twoline-managing-frame">
+                    <div class="img-manage">
+                      <img
+                        src="../assets/images/feature-icon-5.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="content-manage-frame">
+                      <h5>Internet Bills</h5>
+                      <p>
+                        Lorem ipsum is placeholder text commonly used in the
+                        graphic.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="twoline-managing-frame">
+                    <div class="img-manage">
+                      <img
+                        src="../assets/images/feature-icon-6.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="content-manage-frame">
+                      <h5>Electricity Bills</h5>
+                      <p>
+                        Lorem ipsum is placeholder text commonly used in the
+                        graphic.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="right-manage-img">
+              <!-- <img
+                src="../assets/images/mobile-screens-2.png"
+                class="img-fluid"
+                alt=""
+              /> -->
+              <h2 class="mb-0">Use Cases</h2>
+              <p>
+                Our showcase is based on the advantages of using different types
+                of biometrics (such as fingerprint, face and voice recognition)
+                to address its potentials in different business needs. For this,
+                our demonstration has several use cases covering from the
+                biometric enrolment process to the verification to access
+                services. The number of use cases are always growing, and we
+                invite those interested to bring new ideas for us to implement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="mobile-app-content grey-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="app-content-wrap">
+              <h2>Mobile App</h2>
+              <h6>
+                The application was developed to demonstrate the potential of
+                biometrics in emerging markets in a flexible, open-source and
+                adaptable way to attend the needs of mobile operators. When
+                necessary, the app allows the connection with different
+                biometrics suppliers that do not require biometric sensors more
+                than a microphone and a camera.
+              </h6>
+              <h6>
+                Users can use the different types of biometrics, perform the
+                enrolment process and navigate through the different use cases
+                to experience how the use of biometrics helps to increase
+                security when accessing and using services for the most diverse
+                purposes.
+              </h6>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="img-app-wrap">
+              <img
+                src="../assets/images/mobile-app.png"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="digital-wrapper feature-wrap">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -62,140 +423,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <section class="two-col-biometric-wrap text-white managing-content">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-8">
-            <h2>
-              The App manage everything <br />
-              you need whatever
-            </h2>
-            <div class="managing-box">
-              <div class="row">
-                <div class="col-12 col-lg-6">
-                  <div class="twoline-managing-frame">
-                    <div class="img-manage">
-                      <img
-                        src="../assets/images/feature-icon-2.png"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </div>
-                    <div class="content-manage-frame">
-                      <h5>Account balance</h5>
-                      <p>
-                        Lorem ipsum is placeholder text commonly used in the
-                        graphic.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                  <div class="twoline-managing-frame">
-                    <div class="img-manage">
-                      <img
-                        src="../assets/images/feature-icon-7.png"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </div>
-                    <div class="content-manage-frame">
-                      <h5>Make a transfer</h5>
-                      <p>
-                        Lorem ipsum is placeholder text commonly used in the
-                        graphic.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                  <div class="twoline-managing-frame">
-                    <div class="img-manage">
-                      <img
-                        src="../assets/images/feature-icon-1.png"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </div>
-                    <div class="content-manage-frame">
-                      <h5>Pay bill</h5>
-                      <p>
-                        Lorem ipsum is placeholder text commonly used in the
-                        graphic.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                  <div class="twoline-managing-frame">
-                    <div class="img-manage">
-                      <img
-                        src="../assets/images/feature-icon-4.png"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </div>
-                    <div class="content-manage-frame">
-                      <h5>Bank transfer</h5>
-                      <p>
-                        Lorem ipsum is placeholder text commonly used in the
-                        graphic.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                  <div class="twoline-managing-frame">
-                    <div class="img-manage">
-                      <img
-                        src="../assets/images/feature-icon-5.png"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </div>
-                    <div class="content-manage-frame">
-                      <h5>Internet Bills</h5>
-                      <p>
-                        Lorem ipsum is placeholder text commonly used in the
-                        graphic.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                  <div class="twoline-managing-frame">
-                    <div class="img-manage">
-                      <img
-                        src="../assets/images/feature-icon-6.png"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </div>
-                    <div class="content-manage-frame">
-                      <h5>Electricity Bills</h5>
-                      <p>
-                        Lorem ipsum is placeholder text commonly used in the
-                        graphic.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-4">
-            <div class="right-manage-img">
-              <img
-                src="../assets/images/mobile-screens-2.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div> -->
+
     <section class="tutorial-section text-center">
       <div class="container">
         <div class="row">
@@ -221,8 +450,8 @@ export default {
   components: { AppHeader },
   data: () => ({
     props: {
-      tittle: "SECURE YOUR TRANSACTIONS",
-      content: `Protect yourself from unauthorized activity by using your\n biometric as your authentication`,
+      tittle: "These are the features B4LL brings to you",
+      content: `See how the features of our showcase can help mobile operators to bring the power of biometrics`,
       breadCrumb: {
         tittle: "How it works",
         link: "/howitworks",
@@ -233,9 +462,8 @@ export default {
 </script>
 
 <style>
-.feature-wrap .three-col-feature-frame {
-  padding-top: 45px;
-  padding-bottom: 97px;
+.card-wrap h5 {
+  font-weight: bold;
 }
 .card-wrap {
   background-color: #ffffff;
@@ -246,9 +474,12 @@ export default {
   padding-left: 25px;
   padding-bottom: 28px;
   padding-right: 25px;
+  transition: all 0.25s ease-out;
+  height: calc(100% - 30px);
+  margin-bottom: 30px;
 }
 .card-wrap img {
-  padding-bottom: 35px;
+  padding-bottom: 25px;
 }
 .managing-content {
   padding-top: 64px;
@@ -300,10 +531,137 @@ export default {
   height: 290px;
   bottom: 0;
 }
+.usecase-wrapper {
+  padding-top: 40px;
+  padding-bottom: 77px;
+}
+.usecase-wrapper .usecase-main {
+  padding-bottom: 55px;
+}
+.usecase-wrapper .usecase-three-col-content .usecase-frame {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 23px rgba(0, 0, 0, 0.13);
+  min-height: 104px;
+  padding-top: 19px;
+  padding-left: 16px;
+  padding-right: 45px;
+  padding-bottom: 11px;
+  margin-bottom: 37px;
+}
+.usecase-wrapper .usecase-three-col-content .usecase-frame .usecase-img {
+  width: 50px;
+
+  margin-right: 20px;
+}
+.usecase-wrapper .usecase-three-col-content .usecase-frame .usecase-img img {
+  max-width: 41px;
+}
+.grey-bg {
+  background-color: #f3f3f3;
+}
+.mobile-app-content {
+  padding-top: 68px;
+  position: relative;
+}
+.mobile-app-content::after {
+  content: "";
+  background-image: url("../assets/images/bg-5.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  min-height: 291px;
+  top: 0;
+  left: 0;
+  width: 345px;
+}
+.mobile-app-content .app-content-wrap {
+  padding-bottom: 113px;
+}
+.mobile-app-content .img-app-wrap {
+  position: absolute;
+  width: 686px;
+  height: 501px;
+  bottom: -106px;
+  left: 81px;
+}
+.usecase-wrapper {
+  position: relative;
+}
+.usecase-wrapper::before {
+  content: "";
+  background-position: center;
+  background-image: url("../assets/images/Bubble-small.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 259px;
+  height: 261px;
+}
+.usecase-wrapper .usecase-three-col-content::after {
+  content: "";
+  background-position: center;
+  background-image: url("../assets/images/bubblel.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -127px;
+  right: 0;
+  width: 280px;
+  height: 443px;
+  display: block;
+  z-index: -1;
+}
+.usecase-wrapper .usecase-three-col-content {
+  position: relative;
+}
+.bio-all {
+  padding-top: 77px;
+  position: relative;
+  padding-bottom: 85px;
+}
+
+.bio-all::after {
+  content: "";
+  background-image: url("../assets/images/bg-3.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 350px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.bio-all .img-bio {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+}
+.bio-all .img-bio img {
+  margin-left: 85px;
+}
 @media only screen and (max-width: 1024px) {
+  .bio-all .img-bio img {
+    margin-left: 0;
+  }
   .tutorial-section::after {
     width: 250px;
     height: 185px;
+  }
+  .mobile-app-content .img-app-wrap {
+    position: relative;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
   }
 }
 

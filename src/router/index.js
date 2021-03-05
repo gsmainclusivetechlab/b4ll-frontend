@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import HowItWorks from "../views/HowItWorks.vue";
 import Faq from "../views/Faq.vue";
+import TryB4All from "../views/TryB4All.vue";
 
 Vue.use(VueRouter);
 
@@ -22,6 +23,12 @@ const routes = [
     name: "Faq",
     component: Faq,
   },
+  {
+    path: "/tryb4all",
+    name: "TryB4All",
+    component: TryB4All,
+  },
+
   {
     path: "/about",
     name: "About",

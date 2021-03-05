@@ -1,5 +1,33 @@
 <template>
   <div>
+    <!-- <div v-if="showModal && !iframe.loaded" class="loader"></div> -->
+    <div
+      v-if="showModal"
+      class="gsma-form"
+      v-show="iframe.loaded"
+      @click.stop="modalClose"
+    >
+      <transition name="modal">
+        <div class="modal-mask">
+          <div class="modal-wrapper">
+            <div class="modal-container" @click.stop="">
+              <iframe
+                title="form"
+                :src="iframe.source"
+                @load="iframeLoad"
+              ></iframe>
+              <button @click="modalClose">
+                <img
+                  src="../../assets/images/cancel.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </transition>
+    </div>
     <section class="app-downloading-wrapper">
       <div
         class="downloading-frame d-flex justify-content-center align-items-center"
@@ -12,7 +40,7 @@
               </h2>
               <p>
                 Be the innovator in your market. Experience how mobile
-                biometrics can be used to facilitate seamless payments.
+                biometrics can be used to facilitate seamless payments
               </p>
               <ul>
                 <li>
@@ -53,7 +81,12 @@
                   </p>
                 </div>
                 <div class="newscase-btn">
-                  <a href="#" class="btn-newscase">Request Now</a>
+                  <a
+                    id="show-modal"
+                    @click="showModal = true"
+                    class="btn-newscase"
+                    >Request Now</a
+                  >
                 </div>
               </div>
             </div>
@@ -68,11 +101,13 @@
           <b-row class="justify-content-end align-items-center">
             <b-col cols="12" md="3">
               <div class="logo-main-footer">
-                <img
-                  src="../../assets/images/Bitmap.png"
-                  class="img-fluid"
-                  alt=""
-                />
+                <a href="/">
+                  <img
+                    src="../../assets/images/Bitmap.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </a>
               </div>
             </b-col>
             <b-col cols="12" md="9">
@@ -114,15 +149,16 @@
               <div class="footer-bottom text-center">
                 <div class="footer-navigation">
                   <ul>
-                    <li>Home</li>
-                    <li>How it works</li>
-                    <li>Knowledge Base</li>
-                    <li>Tutorials</li>
-                    <li>About</li>
-                    <li>FAQs</li>
-                    <li>Terms and Conditions</li>
-                    <li>Privacy Policy</li>
-                    <li>Legal</li>
+                    <li>
+                      <a href="/">Home </a>
+                    </li>
+                    <li>
+                      <a href="/howitworks">How it works</a>
+                    </li>
+                    <li><a href="/tryb4all">Try B4LL</a></li>
+                    <li><a href="/documentation">Documentation</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/faq">FAQs</a></li>
                   </ul>
                 </div>
                 <p class="copyright">
@@ -164,16 +200,125 @@
 <script>
 export default {
   name: "Footer",
+  data: () => ({
+    iframe: {
+      source: "https://gsma.tfaforms.net/891",
+      loaded: false,
+    },
+    showModal: false,
+  }),
 
   methods: {
     scrollTop() {
       window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
     },
+    modalClose() {
+      this.showModal = false;
+      this.iframe.loaded = false;
+    },
+    iframeLoad() {
+      this.iframe.loaded = true;
+    },
   },
+  // directives: {
+  //   clickoutside: {
+  //     bind: function(el, binding, vnode) {
+  //       el.clickOutsideEvent = function(event) {
+  //         // here I check that click was outside the el and his childrens
+  //         if (!(el == event.target || el.contains(event.target))) {
+  //           // and if it did, call method provided in attribute value
+  //           vnode.context[binding.expression](event);
+  //         }
+  //       };
+  //       document.body.addEventListener("click", el.clickOutsideEvent);
+  //     },
+  //     unbind: function(el) {
+  //       document.body.removeEventListener("click", el.clickOutsideEvent);
+  //     },
+  //     stopProp(event) {
+  //       event.stopPropagation();
+  //     },
+  //   },
+  // },
 };
 </script>
 
 <style>
+.loader {
+  border: 0.2em solid transparent;
+  border-top-color: currentcolor;
+  border-radius: 50%;
+  animation: 1s loader linear infinite;
+  position: relative;
+}
+.loader ::before {
+  content: "";
+  display: block;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: -0.2em;
+  left: -0.2em;
+  border: 0.2em solid currentcolor;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.gsma-form iframe {
+  height: 75vh;
+  width: 75vw;
+  border: none;
+  box-sizing: border-box;
+}
+.gsma-form body {
+  margin: 0;
+}
+.gsma-form button {
+  background: #95236c;
+  position: absolute;
+  top: 15px;
+  right: 40px;
+  width: 30px;
+  height: 30px;
+  line-height: 21px;
+  border: none;
+}
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: table;
+  transition: opacity 0.3s ease;
+}
+
+.modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.modal-container {
+  width: 1300px;
+  height: 800px;
+  margin: 0px auto;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all 0.3s ease;
+}
+
 ul {
   list-style: none;
 }
@@ -247,6 +392,7 @@ div {
   line-height: normal;
   border-radius: 5px;
   margin: 20px 10px;
+  cursor: pointer;
 }
 .footer-wrapper .right-footer-content ul li img {
   padding-right: 5px;
@@ -262,11 +408,11 @@ footer ul li,
 footer ul li a {
   display: inline-block;
   list-style-type: none;
-  font-size: 12px;
+  font-size: 14px;
   line-height: normal;
 }
 footer p.copyright {
-  font-size: 12px;
+  font-size: 14px;
 }
 .footer-wrapper {
   min-height: 308px;
@@ -373,6 +519,15 @@ hr {
   flex-wrap: wrap;
   justify-content: center;
 }
+.new-case-wrapper iframe {
+  height: 100vh;
+  width: 100vw;
+  border: none;
+  box-sizing: border-box;
+}
+.new-case-wrapper body {
+  margin: 0;
+}
 @media only screen and (min-width: 1200px) {
   .footer-wrapper .container {
     max-width: 1171px;
@@ -380,7 +535,7 @@ hr {
 }
 @media only screen and (max-width: 993px) {
   .footer-wrapper {
-    padding-top: 143px;
+    padding-top: 167px;
   }
   .scroll-top {
     display: none;
@@ -409,7 +564,7 @@ hr {
     padding-bottom: 0;
   }
   .footer-wrapper {
-    padding-top: 163px;
+    padding-top: 189px;
   }
   .footer-wrapper .logo-main-footer {
     margin: auto;

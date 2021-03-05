@@ -16,7 +16,7 @@
                 <ul>
                   <li><a href="/">Home</a></li>
                   <li>
-                    <a href=":breadCrumb.link">{{ breadCrumb.tittle }}</a>
+                    {{ breadCrumb.tittle }}
                   </li>
                 </ul>
               </div>
@@ -69,13 +69,13 @@ export default {
 }
 .inner-header .inner-header-wrap::before {
   content: "";
-  background-image: url("../assets/images/banner-bg-gradient.png");
+  background-image: url("../assets/images/inner-dot-bg.png");
   background-position: top;
   position: absolute;
-  top: 2px;
+  top: 0;
   left: 0;
-  width: 421px;
-  height: 360px;
+  width: 226px;
+  height: 235px;
   background-repeat: no-repeat;
 }
 .inner-header .inner-header-wrap {

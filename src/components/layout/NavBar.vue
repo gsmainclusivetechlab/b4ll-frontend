@@ -3,7 +3,7 @@
     <header>
       <b-container fluid>
         <b-navbar toggleable="lg">
-          <b-navbar-brand href="#">
+          <b-navbar-brand href="/">
             <img
               src="../../assets/images/Bitmap.png"
               class="img-fluid normal-logo "
@@ -21,18 +21,15 @@
                 <b-nav-item href="#">
                   <router-link to="/howitworks">How it works</router-link>
                 </b-nav-item>
-                <b-nav-item-dropdown text="Knowledge Base" right>
-                  <b-dropdown-item href="#">Getting Started</b-dropdown-item>
-                  <b-dropdown-item href="#"
-                    >Biometric Authentication</b-dropdown-item
-                  >
-                  <b-dropdown-item href="#">User Management</b-dropdown-item>
-                  <b-dropdown-item href="#"
-                    >Authentication Management</b-dropdown-item
-                  >
-                </b-nav-item-dropdown>
                 <b-nav-item href="#">
-                  <router-link to="/tutorials">Tutorials</router-link>
+                  <!-- <router-link to="/tryb4all">  -->
+                  <a href="#">Try B4LL</a>
+                  <!-- </router-link> -->
+                </b-nav-item>
+                <b-nav-item href="#">
+                  <!-- <router-link to="/documentation">  -->
+                  <a href="#">Documentation</a>
+                  <!-- </router-link> -->
                 </b-nav-item>
                 <b-nav-item href="#">
                   <router-link to="/about">About</router-link>
@@ -46,21 +43,13 @@
         </b-navbar>
         <ul class="lang-menu">
           <li class="init">
-            <a href="#">
-              <img
-                src="../../assets/images/globe-icon.svg"
-                class="img-fluid"
-                alt=""
-            /></a>
-          </li>
-        </ul>
-        <ul class="search-bar">
-          <li>
+            <!-- <a href="#"> -->
             <img
-              src="../../assets/images/search-icon.svg"
+              src="../../assets/images/globe-icon.svg"
               class="img-fluid"
               alt=""
             />
+            <!-- </a> -->
           </li>
         </ul>
       </b-container>
@@ -89,7 +78,7 @@ export default {
 .topbar .navbar-light .navbar-nav .nav-item.dropdown .nav-link a,
 .navbar-light .navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle {
   color: #fff !important;
-  font-size: 14px;
+  font-size: 16px;
   padding: 10px 20px;
   line-height: normal;
   font-weight: 400;
@@ -101,7 +90,7 @@ export default {
 }
 .navbar-light .navbar-nav li a {
   color: #fff !important;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 }
 .topbar .navbar-nav .show > .nav-link {
@@ -124,7 +113,7 @@ export default {
   position: absolute;
   padding-left: 0;
   right: 35px;
-  top: 45px;
+  top: 40px;
 }
 ul.search-bar {
   padding: 0;
@@ -151,7 +140,7 @@ a {
   font-size: 18px;
   position: absolute;
   border: none;
-  bottom: 14px;
+  bottom: 16px;
   right: 0;
   width: 10px;
   height: 10px;
@@ -209,11 +198,12 @@ a {
 }
 @media only screen and (min-width: 1025px) {
   .navbar {
-    padding-left: 40px;
-    margin-right: 40px;
+    padding-left: 29px;
+    margin-right: 0;
+    padding-right: 55px;
   }
   .lang-menu {
-    right: 60px;
+    right: 0px;
   }
   ul.search-bar {
     right: 55px;
@@ -268,7 +258,7 @@ a {
   }
 }
 @media only screen and (max-width: 993px) {
-  .navbar-light .navbar-nav .nav-item .nav-link a.router-link-exact-active{
+  .navbar-light .navbar-nav .nav-item .nav-link a.router-link-exact-active {
     font-weight: 700;
   }
   .navbar-light .navbar-nav .nav-item {
@@ -277,7 +267,9 @@ a {
     align-items: flex-start;
     /* padding-left: 0; */
     flex-direction: column;
+    border-bottom: 1px solid #fff;
   }
+
   .topbar .navbar-light .navbar-nav .nav-link a,
   .topbar .navbar-light .navbar-nav .nav-item.dropdown .nav-link a,
   .navbar-light .navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle {
@@ -311,14 +303,14 @@ a {
     padding-right: 0;
   }
   .lang-menu {
-    right: 89px;
+    right: 40px;
   }
   ul.search-bar {
     right: 85px;
   }
   .navbar .dropdown-toggle:after {
     right: 23px;
-    top: 14px;
+    top: 16px;
     bottom: 0;
   }
 }

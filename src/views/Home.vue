@@ -12,13 +12,11 @@
           img-height="480"
         >
           <b-carousel-slide>
-            <b-container>
+            <!-- <b-container> -->
               <h1>BIOMETRICS FOR ALL</h1>
               <div class="biometric-content-carousal">
                 <h4>
-                  The opportunity of mobile biometrics: Lifting the barriers
-                  <br />
-                  of digital inclusion in emerging markets
+                  An opportunity to lift the barriers of digital inclusion in emerging markets
                 </h4>
                 <div class="os-system-wrap">
                   <ul>
@@ -41,7 +39,7 @@
                   </ul>
                 </div>
               </div>
-            </b-container>
+            <!-- </b-container> -->
             <template #img>
               <img
                 class="img-fluid slider-img"
@@ -53,13 +51,11 @@
             </template>
           </b-carousel-slide>
           <b-carousel-slide>
-            <b-container>
+            <!-- <b-container> -->
               <h1>BIOMETRICS FOR ALL</h1>
               <div class="biometric-content-carousal">
                 <h4>
-                  The opportunity of mobile biometrics: Lifting the barriers
-                  <br />
-                  of digital inclusion in emerging markets
+                	An opportunity to lift the barriers of digital inclusion in emerging markets
                 </h4>
                 <div class="os-system-wrap">
                   <ul>
@@ -82,7 +78,7 @@
                   </ul>
                 </div>
               </div>
-            </b-container>
+            <!-- </b-container> -->
             <template #img>
               <img
                 class="d-block img-fluid slider-img"
@@ -94,13 +90,11 @@
             </template>
           </b-carousel-slide>
           <b-carousel-slide>
-            <b-container>
+            <!-- <b-container> -->
               <h1>BIOMETRICS FOR ALL</h1>
               <div class="biometric-content-carousal">
                 <h4>
-                  The opportunity of mobile biometrics: Lifting the barriers
-                  <br />
-                  of digital inclusion in emerging markets
+               	An opportunity to lift the barriers of digital inclusion in emerging markets
                 </h4>
                 <div class="os-system-wrap">
                   <ul>
@@ -123,7 +117,7 @@
                   </ul>
                 </div>
               </div>
-            </b-container>
+            <!-- </b-container> -->
             <template #img>
               <img
                 class="d-block img-fluid slider-img"
@@ -143,24 +137,19 @@
           <b-col cols="12" md="5">
             <div class="digital-frame-left-content">
               <h3>
-                How it works
+               Unifying the digital identification ecosystem
               </h3>
-              <h4>Unifying the digital identification ecosystem</h4>
+              <h4>Are you a mobile operator or financial services provider looking to adopt biometrics in emerging markets?
+</h4>
               <a href="#" class="btn btn-lap">Learn More</a>
             </div>
           </b-col>
           <b-col cols="12" md="7">
             <div class="content-digital">
               <p>
-                Biometrics For All offers a mobile application as a
-                communication channel integrating biometric vendors with mobile
-                operators and mobile money to enable seamless transactions for
-                everyone in emerging markets.
+               	Biometrics for All offers a Interactive Voice Response (IVR) call centre and mobile application with multiple use cases showcasing the potential of biometrics to advance financial inclusion in emerging markets.
               </p>
-              <p>
-                It currently offers authentication via voice, fingerprint and
-                face with scope to expand to more biometric options/ as more
-                biometric options emerge.
+              <p>It currently offers enrolment and authentication using voice, fingerprint and face with scope to adopt additional solutions.
               </p>
               <a href="#" class="btn btn-mob">Learn More</a>
             </div>
@@ -174,7 +163,7 @@
           <b-col cols="12">
             <div class="full-width-banner text-center">
               <h4>
-                Connect with people all over the world , with your small device
+              	Empower your customers with inclusive biometric solutions
               </h4>
             </div>
             <div class="mobile-group-banner"></div>
@@ -182,7 +171,7 @@
         </b-row>
       </b-container>
     </section>
-    <section class="two-col-biometric-wrap text-white">
+    <!-- <section class="two-col-biometric-wrap text-white">
       <b-container>
         <b-row class="justify-content-start align-items-center">
           <b-col cols="12" xl="6">
@@ -239,7 +228,71 @@
           </b-col>
         </b-row>
       </b-container>
-    </section>
+    </section> -->
+    <div class="digital-wrapper feature-wrap bg-greys">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="feature-content text-center">
+              <h2>Why choose Biometrics for All?</h2>
+              <h6>
+                Drive your business needs and unlock access to new customers
+
+              </h6>
+            </div>
+            <div class="three-col-feature-frame">
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card-wrap">
+                    <img
+                      src="../assets/images/development.png"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <h5>Tailored use cases</h5>
+                    <h6>
+                      Our team is constantly developing new use cases and
+                      customising our assets to meet your specific business
+                      needs/objectives.
+                    </h6>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card-wrap">
+                    <img
+                      src="../assets/images/trusted.png"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <h5>Trusted technical expertise</h5>
+                    <h6>
+                      We provide a [free] consultation service to support you
+                      during your biometrics adoption.
+                    </h6>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card-wrap">
+                    <img
+                      src="../assets/images/smartphones.png"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <h5>Built for low-tech environments</h5>
+                    <h6>
+                      Face and fingerprint authentication via a low- resolution
+                      camera and voice authentication via an IVR call centre
+                      enables the use of biometrics for feature phones and
+                      low-tech smartphones.
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <section class="question-wrapper">
       <b-container>
         <b-row>
@@ -355,9 +408,7 @@ export default {
 </script>
 <style>
 .home-header {
-      background-image: linear-gradient(
-180deg
-, #6b3076 0%, #424985 100%);
+  background-image: linear-gradient(180deg, #6b3076 0%, #424985 100%);
 }
 .home-header::before {
   content: "";
@@ -415,14 +466,16 @@ export default {
 }
 .carousel-caption {
   position: absolute;
-  right: 15%;
+  right: 0;
   bottom: 80px;
-  left: 7%;
+  left: 0;
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
   color: #fff;
   text-align: left;
+   
+    margin-left: 108px;
 }
 .slider-portfolio .carousel-caption h1,
 .slider-portfolio .carousel-caption h4 {
@@ -734,7 +787,18 @@ export default {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 16px;
+}
+.digital-wrapper.feature-wrap {
+  padding-top: 58px;
+}
+.digital-wrapper.feature-wrap .feature-content h2 {
+  margin-bottom: 0;
+  padding-bottom: 16px;
+}
+.feature-wrap .three-col-feature-frame {
+  padding-top: 41px;
+  padding-bottom: 97px;
 }
 @media only screen and (min-width: 1025px) {
   .slider-img {
@@ -748,36 +812,37 @@ export default {
     padding-bottom: 40px;
   }
 }
-@media only screen and (max-width:1024px){
-  .carousel-caption{
+@media only screen and (max-width: 1024px) {
+  .carousel-caption {
     bottom: 100px;
   }
-  .slider-portfolio .carousel-indicators{
-margin-left: 69px;
+  .slider-portfolio .carousel-indicators {
+    margin-left: 69px;
   }
-  .home-header::before{
+  .slider-portfolio .carousel-caption{
+     margin-left: 69px;
+  }
+  .home-header::before {
     height: 505px;
   }
-   .slider-img {
+  .slider-img {
     width: 400px;
     height: 400px !important;
   }
-  .slider-portfolio{
+  .slider-portfolio {
     min-height: 400px;
   }
- 
+
   .questions-frame {
-   
     padding-bottom: 0;
-}
+  }
 }
 @media only screen and (max-width: 993px) {
-
   .mobile-group-banner {
     min-height: 450px;
     background-size: contain;
   }
- 
+
   .slider-portfolio .os-system-wrap ul li {
     padding-bottom: 0;
     padding-top: 15px;
@@ -786,86 +851,83 @@ margin-left: 69px;
     display: none;
   }
 }
-@media only screen and (min-width:768px){
-  .btn-mob{
+@media only screen and (min-width: 768px) {
+  .btn-mob {
     display: none;
   }
 }
-@media only screen and (max-width:767px){
+@media only screen and (max-width: 767px) {
   .digital-wrapper::before {
-  
     width: 150px;
     height: 200px;
     left: -4px;
     top: -18px;
-}
-.digital-wrapper::after{
-display: none;
-}
-.mobile-group-banner {
+  }
+  .digital-wrapper::after {
+    display: none;
+  }
+  .mobile-group-banner {
     min-height: 220px;
-  
-}
-.mobile-group-banner {
-   
+  }
+  .mobile-group-banner {
     margin-bottom: -64px;
-  
-}
-.app-downloading-wrapper .downloading-frame ul, .os-system-wrap{
-  display: inline-flex;
-}
-.app-downloading-wrapper .downloading-frame{
-  padding: 30px 0;
-     padding-bottom: 150px;
-}
+  }
+  .app-downloading-wrapper .downloading-frame ul,
+  .os-system-wrap {
+    display: inline-flex;
+  }
+  .app-downloading-wrapper .downloading-frame {
+    padding: 30px 0;
+    padding-bottom: 150px;
+  }
 
-.two-col-biometric-wrap .bg-biometric, .two-col-biometric-wrap .bg-biometric2, .two-col-biometric-wrap .bg-biometric3 {
-   
+  .two-col-biometric-wrap .bg-biometric,
+  .two-col-biometric-wrap .bg-biometric2,
+  .two-col-biometric-wrap .bg-biometric3 {
     min-height: 145px;
-        margin-bottom: 30px;
+    margin-bottom: 30px;
     width: 100%;
-   
-}
-  .btn-lap{
+  }
+  .btn-lap {
     display: none;
   }
   .slider-img {
     width: 300px;
-    height: 269px!important;
+    height: 269px !important;
     margin: auto;
     text-align: center;
-}
-.carousel-caption {
-   right: 0;
-   text-align: center;
+  }
+  .slider-portfolio .carousel-caption {
+    right: 0;
+    text-align: center;
     left: 0;
-       bottom: -69px;
-}
-.slider-portfolio .carousel-indicators {
-        margin-left: 15%;
+    bottom: -69px;
+    margin: auto;
+  }
+  .slider-portfolio .carousel-indicators {
+   margin: auto;
     justify-content: center;
     bottom: 43px;
-}
-.slider-portfolio .carousel-item img,
-.slider-portfolio .carousel-item{
-  float: none;
-      text-align: center;
+  }
+  .slider-portfolio .carousel-item img,
+  .slider-portfolio .carousel-item {
+    float: none;
+    text-align: center;
     margin: auto;
+  }
+  .slider-portfolio .carousel.pointer-event,
+  .slider-portfolio .carousel-inner {
+    min-height: 400px;
+  }
 }
-.slider-portfolio .carousel.pointer-event,
-.slider-portfolio .carousel-inner{
-  min-height: 400px;
-}
-
-}
-@media only screen and (max-width:480px){
+@media only screen and (max-width: 480px) {
   .home-header::before {
     height: 400px;
     width: 100%;
-}
-.slider-portfolio::after{
-      width: 100%;
+  }
+  .slider-portfolio::after {
+    width: 100%;
     height: 156px;
-}
+  }
 }
 </style>
