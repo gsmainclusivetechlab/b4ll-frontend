@@ -22,9 +22,9 @@
                   <router-link to="/howitworks">How it works</router-link>
                 </b-nav-item>
                 <b-nav-item href="#">
-                  <!-- <router-link to="/tryb4all">  -->
-                  <a href="#">Try B4LL</a>
-                  <!-- </router-link> -->
+                  <router-link to="/tryb4all"> Try B4LL
+                 
+                  </router-link>
                 </b-nav-item>
                 <b-nav-item href="#">
                   <!-- <router-link to="/documentation">  -->

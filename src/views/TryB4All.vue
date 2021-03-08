@@ -1,7 +1,152 @@
 <template>
   <div class="home">
     <AppHeader v-bind="props" />
+    <div class="login-form-frame">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="content-login">
+<h2>Sign up to test our <br>
+IVR Call Centre</h2>
+<p>To test our call center you need to fill out the mini form on the side,
+read and accept theterms and conditions.</p>
+<p>Currently the call centre is working in two numbers</p>
+<h4>UK +1234567890 , +12345677890</h4>
+<p>You can call and follow the instructions to enrol using your voice print
+to then be able to navigate through the use cases.</p>
+<p>If you would like to customise the call centre for a specific purpose to
+attend your business need, please contact the Inclusive Tech Lab or
+suggest a new use case.</p>
+            </div>
+
+          </div>
+          <div class="col-12 col-md-6">
+<div class="sign-up-frame">
+<h2>SignUp</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<form>
+ 
+  <div class="form-group">
+    <label for="inputAddress">Nick Name</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Enter Nick Name">
   </div>
+  <div class="form-group">
+    <label for="inputAddress2">Mobile Number</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Enter Mobile Number">
+  </div>
+
+  <div class="form-group">
+    <div class="form-check">
+     
+       <label class="form-check-label" >
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+       <span class="checkmark"></span>
+     
+       Accept the terms and conditions
+      </label>
+    </div>
+  </div>
+  <a href="#" class="btn">Submit Now</a>
+ 
+</form>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+   <section class="two-col-biometric-wrap text-white">
+      <b-container>
+        <b-row class="justify-content-start align-items-center">
+          <b-col cols="12" xl="6">
+            <div class="biometric-content">
+              <h2>
+               Test Different <br>
+Biometric Providers
+              </h2>
+              <p>
+               The project Biometrics for All allow mobile operators to test different
+solutions available on the market. Our solution was structured with a
+modular and flexible architecture, allowing new biometrics providers
+to include their solutions to showcase both in our IVR call centre
+and in the mobile app. Our team is constantly evolving the assets,
+increasing the range of possible suppliers available. If you are a
+biometric supplier and would like to contribute to our showcase,
+please contact the Inclusive Tech lab.
+              </p>
+
+            </div>
+          </b-col>
+          <b-col cols="12" xl="6">
+            <div class="biometric-img-block">
+              <b-row
+                class="justify-content-center align-items-center gutter-20"
+              >
+                <b-col cols="12" md="6">
+                  <div class="bg-biometric bg-black">
+                    <img
+                      src="../assets/images/biometric-provide-icon-1.svg"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </div>
+                </b-col>
+                <b-col cols="12" md="6">
+                  <div class="biometric-right-col">
+                    <div class="bg-biometric2 bg-white mb-20">
+                      <img
+                        src="../assets/images/biometric-provide-icon-2.svg"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="bg-biometric3 bg-blue">
+                      <img
+                        src="../assets/images/biometric-provide-icon-3.svg"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </b-col>
+              </b-row>
+            </div>
+          </b-col>
+        </b-row>
+      </b-container>
+    </section> 
+       <div class="about-content-wrapper try-frame">
+      <div class="container">
+        <div class="row">
+         
+          <div class="col-12 col-md-6">
+            <div class="img-about-content">
+              <img
+                src="../assets/images/Guide.png"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+          </div>
+           <div class="col-12 col-md-6">
+            <h2>Guide your experience by
+our documentation</h2>
+            <h6>
+             B4LL allows you to experience different possibilities of use cases.
+Our documentation guides you with orientations about the use of
+happy and unhappy flows and what information you should know to
+make the correct use of the showcase. So please visit our
+documentation page and try to go over the flow possibilities we are
+showing. There is an infinite number of open possibilities, so, help us
+to improve bringing your business needs so we can provide a
+customised experience to you.
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 </template>
 
 <script>
@@ -22,4 +167,96 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.try-frame{
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.login-form-frame{
+  padding-top: 71px;
+  padding-bottom: 70px;
+}
+.login-form-frame .btn{
+  width: 100%;
+}
+.login-form-frame .content-login h4{
+  font-weight: bold;
+}
+.login-form-frame .sign-up-frame p{
+  font-size: 14px;
+}
+.login-form-frame .sign-up-frame h2,
+.login-form-frame .sign-up-frame p{
+  text-align: center;
+}
+.login-form-frame .sign-up-frame{
+  background-color: #f9f9f9;
+border-radius: 18px;
+border: 1px solid #f2f2f2;
+width: 485px;
+height: 501px;
+padding-left: 26px;
+padding-top: 34px;
+padding-right: 28px;
+padding-bottom: 51px;
+}
+::placeholder{
+  font-size: 14px;
+}
+.login-form-frame .sign-up-frame .checkmark {
+  position: absolute;
+  top: 5px;
+  margin-right: 5px;
+  left: 0;
+ border: 1px solid #979797;
+width: 14px;
+height: 14px;
+ 
+}
+.login-form-frame .sign-up-frame .form-check{
+  padding-left: 0;
+}
+.login-form-frame .sign-up-frame .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.form-check-label{
+   display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size:14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.form-check-label input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Show the checkmark when checked */
+.form-check-label input:checked ~ .checkmark:after {
+  display: block;
+
+}
+
+/* Style the checkmark/indicator */
+.form-check-label .checkmark:after {
+  left: 3px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid #95236c;
+  border-width: 0 3px 3px 0;
+   /* background-color: #95236c; */
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+</style>
