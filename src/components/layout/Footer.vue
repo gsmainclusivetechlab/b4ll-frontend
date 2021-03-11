@@ -12,6 +12,8 @@
           <div class="modal-wrapper">
             <div class="modal-container" @click.stop="">
               <iframe
+                ref="iframeContent"
+                id="the-iframe"
                 title="form"
                 :src="iframe.source"
                 @load="iframeLoad"
@@ -218,8 +220,23 @@ export default {
     },
     iframeLoad() {
       this.iframe.loaded = true;
+      // const iframe = document.getElementById("the-iframe");
+      const iframe = this.$refs.iframeContent;
+      console.log(iframe);
+      const style = document.createElement("style");
+      style.textContent =
+        "body {" + "  background-color: lime;" + "  color: black;" + "}";
+      iframe.contentDocument.head.appendChild(style);
     },
   },
+  // mounted() {
+  //   const iframe = document.getElementById("the-iframe");
+  //   const style = document.createElement("style");
+  //   style.textContent =
+  //     "body {" + "  background-color: lime;" + "  color: black;" + "}";
+  //   iframe.contentDocument.head.appendChild(style);
+  // },
+
   watch: {
     $route(to, from) {
       this.modalClose();
@@ -513,6 +530,11 @@ hr {
 .new-case-wrapper body {
   margin: 0;
 }
+@media only screen and (max-width: 1024px) {
+  .gsma-form .modal-container {
+    width: 100%;
+  }
+}
 @media only screen and (min-width: 1200px) {
   .footer-wrapper .container {
     max-width: 1171px;
@@ -522,8 +544,18 @@ hr {
   .footer-wrapper {
     padding-top: 167px;
   }
+
   .scroll-top {
-    display: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: auto;
+    text-align: center;
+    bottom: 20px;
+    margin: auto;
+  }
+  .footer-bottom {
+    padding-bottom: 75px;
   }
   .footer-wrapper .footer-bottom ul li {
     display: list-item;

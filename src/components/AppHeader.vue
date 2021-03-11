@@ -1,7 +1,11 @@
 <template>
   <div class="inner-header">
     <NavBar />
-    <div class="inner-header-wrap">
+    <div
+      v-bind:class="[
+        breadCrumb.link === 'tryb4all' ? 'inner-head-try' : 'inner-header-wrap',
+      ]"
+    >
       <div class="inner-banner-wrapper">
         <div class="container">
           <div class=" row">
@@ -56,7 +60,8 @@ export default {
   transition: all 0.5s ease-out;
   background: transparent;
 }
-.inner-header .inner-header-wrap {
+.inner-header .inner-header-wrap,
+.inner-header .inner-head-try {
   width: 100%;
   color: #fff;
   padding: 132px 0 29px;
@@ -67,7 +72,8 @@ export default {
   position: relative;
   z-index: 0;
 }
-.inner-header .inner-header-wrap::before {
+.inner-header .inner-header-wrap::before,
+.inner-header .inner-head-try::before {
   content: "";
   background-image: url("../assets/images/inner-dot-bg.png");
   background-position: top;
@@ -80,6 +86,14 @@ export default {
 }
 .inner-header .inner-header-wrap {
   background-image: url("../assets/images/security.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 374px;
+  width: 100%;
+  color: #fff;
+}
+.inner-header .inner-head-try {
+ background-image: url("../assets/images/banner.png");
   background-position: center;
   background-repeat: no-repeat;
   min-height: 374px;

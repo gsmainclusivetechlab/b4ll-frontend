@@ -99,6 +99,9 @@
                   name="search"
                 />
                 <button type="submit">Search</button>
+                <!-- <button @click="filteredArticles" type="submit">
+                  Search
+                </button> -->
               </form>
             </div>
             <div class="right-text-article">
@@ -128,6 +131,36 @@
                 </a>
               </div>
             </div>
+            <!-- <div class="right-text-article" v-if="showSearch == true">
+              <div
+                v-for="(article, index) in filteredArticles"
+                :key="article.tittle"
+                v-if="index < limitBy"
+              >
+                <div class="article-blockframe">
+                  <h4>{{ article.tittle }}</h4>
+                  <p>
+                    {{ article.content }}
+                  </p>
+                </div>
+                <hr />
+              </div>
+            </div>
+            <div class="right-text-article" v-if="showSearch == false">
+              <div
+                v-for="(article, index) in articles"
+                :key="article.tittle"
+                v-if="index < limitBy"
+              >
+                <div class="article-blockframe">
+                  <h4>{{ article.tittle }}</h4>
+                  <p>
+                    {{ article.content }}
+                  </p>
+                </div>
+                <hr />
+              </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -142,6 +175,7 @@ export default {
   components: { AppHeader },
   data: () => ({
     searchQuery: "",
+    // showSearch: false,
     defaultLimit: 4,
     limitBy: 4,
     props: {
@@ -195,12 +229,23 @@ export default {
           " This PRD describes the security risks posed by voicemail\n services, how they can be mitigated with robust technical\n configurations and appropriate policies.",
       },
     ],
+    filteredArticlesL: [],
   }),
   methods: {
     toggleView(filtersLength) {
       this.limitBy = filtersLength;
     },
+    // searchArticles() {
+    //   const search = this.searchQuery.toLowerCase().trim();
+
+    //   // if (!search) return this.articles;
+    //   this.showSearch = true;
+    //   this.filteredArticlesL = this.articles.filter(
+    //     (item) => item.tittle.toLowerCase().indexOf(search) > -1
+    //   );
+    // },
   },
+
   computed: {
     filteredArticles() {
       const search = this.searchQuery.toLowerCase().trim();
