@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: '/'
+  publicPath:'/b4ll-frontend/'
 };
