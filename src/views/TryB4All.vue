@@ -26,9 +26,18 @@
               <p>
                 If you would like to customise the call centre for a specific
                 purpose to attend your business need, please contact the
-                Inclusive Tech Lab or
-                <a v-on:click="scrollBottom">suggest a new use case.</a>
+                <a
+                  href="https://www.gsma.com/mobilefordevelopment/mobile-money/gsma-inclusive-tech-lab/"
+                  target="_blank"
+                >
+                  Inclusive Tech Lab</a
+                >
+                or
+                <a @click="scrollBottom" class="link-color">
+                  suggest a new use case.</a
+                >
               </p>
+              g
             </div>
           </div>
           <div class="col-12 col-lg-6">
@@ -96,8 +105,13 @@
                 both in our IVR call centre and in the mobile app. Our team is
                 constantly evolving the assets, increasing the range of possible
                 suppliers available. If you are a biometric supplier and would
-                like to contribute to our showcase, please contact the Inclusive
-                Tech lab.
+                like to contribute to our showcase, please
+                <a
+                  href="https://www.gsma.com/mobilefordevelopment/mobile-money/gsma-inclusive-tech-lab/"
+                  target="_blank"
+                >
+                  contact the Inclusive Tech lab.</a
+                >
               </p>
             </div>
           </b-col>
@@ -184,7 +198,6 @@ biometrics`,
   }),
   methods: {
     scrollBottom() {
-      // window.scrollTo({ left: 0, bottom: 0, behavior: "smooth" });
       window.scrollTo({
         top: 10000,
         left: 0,
@@ -230,6 +243,11 @@ biometrics`,
   height: 550px;
   z-index: -1;
 }
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border: 1px solid #95236c;
+}
 .login-form-frame .btn {
   width: 100%;
 }
@@ -237,6 +255,20 @@ biometrics`,
   font-weight: bold;
   position: relative;
   padding-left: 35px;
+}
+.login-form-frame .content-login p a {
+  /* color: #000000; */
+  font-size: 16px;
+}
+.biometric-content p a {
+  color: #fff;
+}
+.biometric-content p a:hover {
+  color: #ae52c4;
+}
+.link-color:hover {
+  color: #ae52c4;
+  cursor: pointer;
 }
 .login-form-frame .content-login h4::before {
   content: "";

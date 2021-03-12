@@ -19,11 +19,7 @@
                 @load="iframeLoad"
               ></iframe>
               <button @click="modalClose">
-                <img
-                  src="../../assets/images/cancel.png"
-                  class="img-fluid"
-                  alt=""
-                />
+                X
               </button>
             </div>
           </div>
@@ -44,7 +40,7 @@
                 Be the innovator in your market. Experience how mobile
                 biometrics can be used to facilitate seamless payments
               </p>
-              <ul>
+              <!-- <ul>
                 <li>
                   <a href="#">
                     <img
@@ -61,7 +57,8 @@
                       alt=""
                   /></a>
                 </li>
-              </ul>
+              </ul> -->
+              <h4 class="text-white">Mobile app coming soon</h4>
             </b-col>
           </b-row>
         </b-container>
@@ -288,10 +285,17 @@ export default {
   position: absolute;
   top: 15px;
   right: 40px;
-  width: 30px;
-  height: 30px;
+  width: auto;
+  height: auto;
+  color: #fff;
   line-height: 21px;
   border: none;
+  text-align: center;
+  margin: auto;
+}
+.gsma-form button img {
+  width: 30px;
+  height: 17px;
 }
 .modal-mask {
   position: fixed;
@@ -412,6 +416,7 @@ footer ul li a {
   list-style-type: none;
   font-size: 14px;
   line-height: normal;
+  color: #fff;
 }
 footer p.copyright {
   font-size: 14px;

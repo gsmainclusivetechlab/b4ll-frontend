@@ -99,7 +99,7 @@
               Contact us to support you to pilot a <br />
               project in your market
             </h2>
-            <a class="btn">Contact</a>
+            <a  href="https://www.gsma.com/mobilefordevelopment/mobile-money/gsma-inclusive-tech-lab/" target="_blank" class="btn">Contact</a>
           </div>
         </div>
       </div>
@@ -199,7 +199,9 @@ your authentication`,
 .bio-all-content .img-bio-content {
   padding-bottom: 121px;
 }
-
+.two-col-biometric-wrap .bio-all-content p a{
+  color: #fff;
+}
 @media only screen and (max-width: 1024px) {
   .two-col-biometric-wrap.bio-all-content {
     padding-top: 40px;

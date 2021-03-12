@@ -202,8 +202,7 @@
                     <div class="content-manage-frame">
                       <h5>Account balance</h5>
                       <p>
-                        Lorem ipsum is placeholder text commonly used in the
-                        graphic.
+                       The user can gather information about the current account balance
                       </p>
                     </div>
                   </div>
@@ -220,8 +219,8 @@
                     <div class="content-manage-frame">
                       <h5>Make a transfer</h5>
                       <p>
-                        Lorem ipsum is placeholder text commonly used in the
-                        graphic.
+                        Simulate a money transference for another account.
+
                       </p>
                     </div>
                   </div>
@@ -238,8 +237,8 @@
                     <div class="content-manage-frame">
                       <h5>Pay bill</h5>
                       <p>
-                        Lorem ipsum is placeholder text commonly used in the
-                        graphic.
+                        Experience how simple it can be to pay a bill using your mobile.
+
                       </p>
                     </div>
                   </div>
@@ -256,8 +255,7 @@
                     <div class="content-manage-frame">
                       <h5>Use different biometrics</h5>
                       <p>
-                        Lorem ipsum is placeholder text commonly used in the
-                        graphic.
+                        Check how different types of biometric can be used to access services
                       </p>
                     </div>
                   </div>
@@ -274,8 +272,7 @@
                     <div class="content-manage-frame">
                       <h5>Internet Bills</h5>
                       <p>
-                        Lorem ipsum is placeholder text commonly used in the
-                        graphic.
+                       See how easy specific services like internet bill can be easy accessed using biometrics.
                       </p>
                     </div>
                   </div>
@@ -292,8 +289,7 @@
                     <div class="content-manage-frame">
                       <h5>Electricity Bills</h5>
                       <p>
-                        Lorem ipsum is placeholder text commonly used in the
-                        graphic.
+                       Simulate the payment of your electricity bill using the money in your balance.
                       </p>
                     </div>
                   </div>
@@ -432,7 +428,7 @@ bring new ideas for us to implement.</p>
               print, and publishing <br />
               industries for previewing layouts and visual mockups.
             </p>
-            <img src="../assets/images/button.png" class="img-fluid" alt="" />
+            <img src="../assets/images/Call.png" class="img-fluid" alt="" />
           </div>
         </div>
       </div>

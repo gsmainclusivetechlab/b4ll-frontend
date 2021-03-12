@@ -123,13 +123,13 @@ ul.search-bar {
   top: 45px;
 }
 a:hover {
-  color: #ffffff;
+  /* color: #ffffff; */
   text-decoration: none;
 }
 a {
   font-weight: 400;
   font-size: 16px;
-  color: #fdfdfe;
+  color: #000;
 }
 .navbar .dropdown-toggle:after {
   content: "";

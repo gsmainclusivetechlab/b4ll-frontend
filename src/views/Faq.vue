@@ -278,6 +278,7 @@ export default {
   padding-bottom: 18px;
   padding-left: 44px;
   padding-right: 63px;
+  cursor: pointer;
 }
 .btn-outline a:hover {
   color: #95236c;

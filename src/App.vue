@@ -48,10 +48,11 @@ body,
 html {
   overflow: hidden;
   overflow-y: auto;
+  color: #000000;
 }
 a {
   font-weight: bold;
-  color: #fff;
+  /* color: #fff; */
 }
 .app {
   font-family: "Arial";
@@ -63,6 +64,11 @@ a {
 a,
 a:hover {
   text-decoration: none;
+  /* color:#ae52c4; */
+}
+a:hover,
+p a:hover{
+color:#ae52c4;
 }
 h1 {
   font-size: 42px;

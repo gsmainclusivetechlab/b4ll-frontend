@@ -127,6 +127,10 @@ export default {
 .pagination-content ul li,
 .pagination-content ul li a {
   font-size: 13px;
+  color: #fff;
+}
+.pagination-content ul li a:hover{
+  color:#fff;
 }
 .pagination-content ul li {
   display: inline-block;

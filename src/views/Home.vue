@@ -19,7 +19,7 @@
                   An opportunity to lift the barriers of digital inclusion in emerging markets
                 </h4>
                 <div class="os-system-wrap">
-                  <ul>
+                  <!-- <ul>
                     <li>
                       <a href="#">
                         <img
@@ -36,7 +36,8 @@
                           alt=""
                       /></a>
                     </li>
-                  </ul>
+                  </ul> -->
+                 <h4 class="text-white">Mobile app coming soon</h4>
                 </div>
               </div>
             <!-- </b-container> -->
@@ -58,7 +59,7 @@
                 	An opportunity to lift the barriers of digital inclusion in emerging markets
                 </h4>
                 <div class="os-system-wrap">
-                  <ul>
+                  <!-- <ul>
                     <li>
                       <a href="#">
                         <img
@@ -75,8 +76,9 @@
                           alt=""
                       /></a>
                     </li>
-                  </ul>
-                </div>
+                  </ul> -->
+                
+                 <h4 class="text-white">Mobile app coming soon</h4></div>
               </div>
             <!-- </b-container> -->
             <template #img>
@@ -97,7 +99,7 @@
                	An opportunity to lift the barriers of digital inclusion in emerging markets
                 </h4>
                 <div class="os-system-wrap">
-                  <ul>
+                  <!-- <ul>
                     <li>
                       <a href="#">
                         <img
@@ -114,7 +116,8 @@
                           alt=""
                       /></a>
                     </li>
-                  </ul>
+                  </ul> -->
+                 <h4 class="text-white">Mobile app coming soon</h4>
                 </div>
               </div>
             <!-- </b-container> -->
