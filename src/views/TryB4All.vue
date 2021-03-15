@@ -17,7 +17,7 @@
               <p>Currently the call centre is working in two numbers</p>
               <h4>
                 UK <a href="tel:+1234567890">+1234567890</a> ,
-                <a href="tel:+12345677890">+12345677890</a>
+               US <a href="tel:+12345677890">+12345677890</a>
               </h4>
               <p>
                 You can call and follow the instructions to enrol using your
@@ -263,7 +263,8 @@ biometrics`,
 .biometric-content p a {
   color: #fff;
 }
-.biometric-content p a:hover {
+.biometric-content p a:hover,
+.biometric-content p a {
   color: #ae52c4;
 }
 .link-color:hover {

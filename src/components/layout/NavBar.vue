@@ -5,7 +5,7 @@
         <b-navbar toggleable="lg">
           <b-navbar-brand href="/">
             <img
-              src="../../assets/images/Bitmap.png"
+              src="../../assets/images/Logol1img.jpg"
               class="img-fluid normal-logo "
               alt="Logo"
           /></b-navbar-brand>
@@ -22,13 +22,13 @@
                   <router-link to="/howitworks">How it works</router-link>
                 </b-nav-item>
                 <b-nav-item href="#">
-                  <router-link to="/tryb4all"> Try B4LL
-                 
-                  </router-link>
+                  <router-link to="/tryb4all"> Try B4LL </router-link>
                 </b-nav-item>
                 <b-nav-item href="#">
                   <!-- <router-link to="/documentation">  -->
-                  <a href="#">Documentation</a>
+                  <a href=" https://docs.biometrics.gsmainclusivetechlab.io/ "
+                    >Documentation</a
+                  >
                   <!-- </router-link> -->
                 </b-nav-item>
                 <b-nav-item href="#">

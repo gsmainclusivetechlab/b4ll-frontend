@@ -16,7 +16,6 @@
                 id="the-iframe"
                 title="form"
                 :src="iframe.source"
-                @load="iframeLoad"
               ></iframe>
               <button @click="modalClose">
                 X
@@ -102,7 +101,7 @@
               <div class="logo-main-footer">
                 <a href="/">
                   <img
-                    src="../../assets/images/Bitmap.png"
+                    src="../../assets/images/Logol1img.jpg"
                     class="img-fluid"
                     alt=""
                   />
@@ -155,7 +154,12 @@
                       <a href="/howitworks">How it works</a>
                     </li>
                     <li><a href="/tryb4all">Try B4LL</a></li>
-                    <li><a href="/documentation">Documentation</a></li>
+                    <li>
+                      <a
+                        href=" https://docs.biometrics.gsmainclusivetechlab.io/ "
+                        >Documentation</a
+                      >
+                    </li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/faq">FAQs</a></li>
                   </ul>
@@ -201,7 +205,7 @@ export default {
   name: "Footer",
   data: () => ({
     iframe: {
-      source: "https://gsma.tfaforms.net/891",
+      source: "./requestForm.html",
       loaded: false,
     },
     showModal: false,
@@ -215,24 +219,7 @@ export default {
       this.showModal = false;
       this.iframe.loaded = false;
     },
-    iframeLoad() {
-      this.iframe.loaded = true;
-      // const iframe = document.getElementById("the-iframe");
-      const iframe = this.$refs.iframeContent;
-      console.log(iframe);
-      const style = document.createElement("style");
-      style.textContent =
-        "body {" + "  background-color: lime;" + "  color: black;" + "}";
-      iframe.contentDocument.head.appendChild(style);
-    },
   },
-  // mounted() {
-  //   const iframe = document.getElementById("the-iframe");
-  //   const style = document.createElement("style");
-  //   style.textContent =
-  //     "body {" + "  background-color: lime;" + "  color: black;" + "}";
-  //   iframe.contentDocument.head.appendChild(style);
-  // },
 
   watch: {
     $route(to, from) {
@@ -534,6 +521,10 @@ hr {
 }
 .new-case-wrapper body {
   margin: 0;
+}
+.footer-wrapper .logo-main-footer img {
+  width: 46px;
+  height: 45px;
 }
 @media only screen and (max-width: 1024px) {
   .gsma-form .modal-container {

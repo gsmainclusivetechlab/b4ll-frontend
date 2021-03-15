@@ -67,7 +67,8 @@ a:hover {
   /* color:#ae52c4; */
 }
 a:hover,
-p a:hover{
+p a:hover,
+p a{
 color:#ae52c4;
 }
 h1 {
