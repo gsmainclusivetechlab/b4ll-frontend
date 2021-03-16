@@ -440,7 +440,7 @@ export default {
   components: { AppHeader },
   data: () => ({
     props: {
-      tittle: "These are the features B4LL brings to you",
+      tittle: "FEATURES B4LL BRINGS TO YOU",
       breadCrumb: {
         tittle: "How it works",
         link: "/howitworks",
