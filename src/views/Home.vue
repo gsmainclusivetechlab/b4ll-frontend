@@ -19,25 +19,25 @@
                   An opportunity to lift the barriers of digital inclusion in emerging markets
                 </h4>
                 <div class="os-system-wrap">
-                  <!-- <ul>
+                  <ul>
                     <li>
-                      <a href="#">
+                      <!--<a href="#">-->
                         <img
                           src="../assets/images/ios.svg"
                           class="img-fluid"
                           alt=""
-                      /></a>
+                      />
                     </li>
                     <li>
-                      <a href="#">
+                      <!--<a href="#">-->
                         <img
                           src="../assets/images/google.svg"
                           class="img-fluid"
                           alt=""
                       /></a>
                     </li>
-                  </ul> -->
-                 <h4 class="text-white">Mobile app coming soon</h4>
+                    <h4 class="text-white"><em>Mobile app coming soon!</em></h4>
+                  </ul>
                 </div>
               </div>
             <!-- </b-container> -->
@@ -59,26 +59,26 @@
                 	An opportunity to lift the barriers of digital inclusion in emerging markets
                 </h4>
                 <div class="os-system-wrap">
-                  <!-- <ul>
+                  <ul>
                     <li>
-                      <a href="#">
+                      <!--<a href="#">-->
                         <img
                           src="../assets/images/ios.svg"
                           class="img-fluid"
                           alt=""
-                      /></a>
+                      />
                     </li>
                     <li>
-                      <a href="#">
+                      <!--<a href="#">-->
                         <img
                           src="../assets/images/google.svg"
                           class="img-fluid"
                           alt=""
                       /></a>
                     </li>
-                  </ul> -->
-                
-                 <h4 class="text-white">Mobile app coming soon</h4></div>
+                    <h4 class="text-white"><em>Mobile app coming soon!</em></h4>
+                  </ul>
+                 </div>
               </div>
             <!-- </b-container> -->
             <template #img>
@@ -99,25 +99,25 @@
                	An opportunity to lift the barriers of digital inclusion in emerging markets
                 </h4>
                 <div class="os-system-wrap">
-                  <!-- <ul>
+                  <ul>
                     <li>
-                      <a href="#">
+                      <!--<a href="#">-->
                         <img
                           src="../assets/images/ios.svg"
                           class="img-fluid"
                           alt=""
-                      /></a>
+                      />
                     </li>
                     <li>
-                      <a href="#">
+                      <!--<a href="#">-->
                         <img
                           src="../assets/images/google.svg"
                           class="img-fluid"
                           alt=""
                       /></a>
                     </li>
-                  </ul> -->
-                 <h4 class="text-white"><em>Mobile app coming soon</em></h4>
+                    <h4 class="text-white"><em>Mobile app coming soon!</em></h4>
+                  </ul>                 
                 </div>
               </div>
             <!-- </b-container> -->
