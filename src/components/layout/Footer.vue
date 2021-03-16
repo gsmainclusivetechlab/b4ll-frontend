@@ -33,12 +33,13 @@
           <b-row>
             <b-col cols="12">
               <h2>
-                Ready? Download the showcase app now or test our IVR Call Centre
+                Ready? Test our IVR Call Centre Now.
               </h2>
-              <p>
+              <h4 class="text-white">And keep your eyes peeled for the mobile app we are launching soon.</h4>
+              <p><em>
                 Be the innovator in your market. Experience how mobile
                 biometrics can be used to facilitate seamless payments
-              </p>
+              </em></p>
               <!-- <ul>
                 <li>
                   <a href="#">
