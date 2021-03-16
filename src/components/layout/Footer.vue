@@ -116,7 +116,7 @@
                       src="../../assets/images/mail.svg"
                       class="img-fluid"
                       alt=""
-                    />support@biometric.com
+                    />inclusivetechlab@gsma.com
                   </li>
                   <li>
                     <img
@@ -153,7 +153,7 @@
                     <li>
                       <a href="/howitworks">How it works</a>
                     </li>
-                    <li><a href="/tryb4all">Try B4LL</a></li>
+                    <li><a href="/tryb4all">Try B4LL</a></li> 
                     <li>
                       <a
                         href=" https://docs.biometrics.gsmainclusivetechlab.io/ "
