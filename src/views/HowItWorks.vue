@@ -8,13 +8,12 @@
             <div class="usecase-main ">
               <h2>Use Cases</h2>
               <h6>
-                Our showcase is based on the advantages of using different types
-                of biometrics (such as fingerprint, face and voice recognition)
-                to address its potentials in different business needs. For this,
-                our demonstration has several use cases covering from the
-                biometric enrolment process to the verification to access
-                services. The number of use cases are always growing, and we
-                invite those interested to bring new ideas for us to implement.
+                Our  showcase is based on the advantages of using different types of biometrics 
+                (currently voice, but fingerprint and face coming soon with the mobile app) 
+                to address its potential in different business needs. For this, our demonstration 
+                covers several use cases from the biometric enrolment process to verification and 
+                accessing services. The number of use cases is always growing, and we invite those 
+                interested to bring new ideas for us to implement.
               </h6>
             </div>
           </div>
@@ -155,18 +154,18 @@
             <div class="bio-content-wrap">
               <h2>IVR Call Centre</h2>
               <p>
-                One of the B4LL project targets is to demonstrate the strengths
-                of using voice and speech recognition for identification and
-                authentication of users to access mobile services. When adopted
-                by mobile operators or mobile money operators, the voice
-                recognition makes the services faster and more affordable,
-                enabling access to a large number of previously difficult to
-                reach customers. This showcase consists of an IVR call centre
-                that allows the user to navigate through a menu of different
-                possibilities, using voice bots and reducing the need for a real
-                attendant. The use cases available are a simulation of real
-                services and have the purpose to demonstrate the use of voice
-                registration and authentication.
+                One of the B4LL project targets is to demonstrate the strengths of using 
+                voice and speech recognition for identification and authentication of users 
+                to access mobile services. 
+              </p>
+              <p>
+                This showcase consists of an IVR call centre that allows the user to navigate 
+                through a menu of different possibilities, using voice bots which can be an 
+                alternative to requiring someone to present physical ID and is more cost saving.
+              </p>
+              <p>
+                The use cases available are a simulation of real services and aim to demonstrate 
+                the use of voice registration and authentication.
               </p>
             </div>
           </div>
@@ -194,15 +193,15 @@
                   <div class="twoline-managing-frame">
                     <div class="img-manage">
                       <img
-                        src="../assets/images/feature-icon-2.png"
+                        src="../assets/images/feature-icon-1.png"
                         class="img-fluid"
                         alt=""
                       />
                     </div>
                     <div class="content-manage-frame">
-                      <h5>Account balance</h5>
+                      <h5>Pay Utility Bills</h5>
                       <p>
-                       The user can gather information about the current account balance
+                        Experience how simple it can be to pay a bill using your mobile.
                       </p>
                     </div>
                   </div>
@@ -220,25 +219,6 @@
                       <h5>Make a transfer</h5>
                       <p>
                         Simulate a money transference for another account.
-
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="twoline-managing-frame">
-                    <div class="img-manage">
-                      <img
-                        src="../assets/images/feature-icon-1.png"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </div>
-                    <div class="content-manage-frame">
-                      <h5>Pay bill</h5>
-                      <p>
-                        Experience how simple it can be to pay a bill using your mobile.
-
                       </p>
                     </div>
                   </div>
@@ -253,9 +233,26 @@
                       />
                     </div>
                     <div class="content-manage-frame">
-                      <h5>Use different biometrics</h5>
+                      <h5>Different biometrics types</h5>
                       <p>
                         Check how different types of biometric can be used to access services
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="twoline-managing-frame">
+                    <div class="img-manage">
+                      <img
+                        src="../assets/images/feature-icon-2.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="content-manage-frame">
+                      <h5>Simulate Alerts</h5>
+                      <p>
+                       Use incoming calls with voice verification to simulate alerts which requires user’s approval.
                       </p>
                     </div>
                   </div>
@@ -270,9 +267,10 @@
                       />
                     </div>
                     <div class="content-manage-frame">
-                      <h5>Internet Bills</h5>
+                      <h5>Multiple Passphrases</h5>
                       <p>
-                       See how easy specific services like internet bill can be easy accessed using biometrics.
+                       Increase the access security using multiples passphrase. During the user’s verification, 
+                       one of the passphrases is randomly chosen.
                       </p>
                     </div>
                   </div>
@@ -287,9 +285,10 @@
                       />
                     </div>
                     <div class="content-manage-frame">
-                      <h5>Electricity Bills</h5>
+                      <h5>Constant Indenty Verification</h5>
                       <p>
-                       Simulate the payment of your electricity bill using the money in your balance.
+                       The biometric verification is required after a determined period of time to 
+                       keep your access and account safe.
                       </p>
                     </div>
                   </div>
@@ -305,15 +304,17 @@
                 alt=""
               /> -->
                <h2 class="mb-0">Use Cases</h2>
-              <p>Our showcase is based on the advantages of using
-different types of biometrics (such as fingerprint,
-face and voice recognition) to address its potentials
-in different business needs. For this, our
-demonstration has several use cases covering from
-the biometric enrolment process to the verification to
-access services. The number of use cases are
-always growing, and we invite those interested to
-bring new ideas for us to implement.</p>
+              <p>
+              Our showcase is based on the advantages of using
+              different types of biometrics (such as fingerprint,
+              face and voice recognition) to address its potentials
+              in different business needs. For this, our
+              demonstration has several use cases covering from
+              the biometric enrolment process to the verification to
+              access services. The number of use cases are
+              always growing, and we invite those interested to
+              bring new ideas for us to implement.
+              </p>
             </div>
           </div>
         </div>
@@ -327,19 +328,15 @@ bring new ideas for us to implement.</p>
             <div class="app-content-wrap">
               <h2>Mobile App</h2>
               <h6>
-                The application was developed to demonstrate the potential of
-                biometrics in emerging markets in a flexible, open-source and
-                adaptable way to attend the needs of mobile operators. When
-                necessary, the app allows the connection with different
-                biometrics suppliers that do not require biometric sensors more
-                than a microphone and a camera.
+                The mobile application demonstrates the potential of biometrics in emerging 
+                markets as a flexible, open-source and adaptable way to attend the needs of 
+                mobile operators. When necessary, the app allows the connection with different 
+                biometrics suppliers that do not require biometric sensors more than a microphone and a camera. 
               </h6>
               <h6>
-                Users can use the different types of biometrics, perform the
-                enrolment process and navigate through the different use cases
-                to experience how the use of biometrics helps to increase
-                security when accessing and using services for the most diverse
-                purposes.
+                Users can use the different types of biometrics, perform the enrolment process 
+                and navigate through the different use cases to experience how the use of biometrics 
+                helps to increase security when accessing and using services.
               </h6>
             </div>
           </div>
@@ -443,8 +440,7 @@ export default {
   components: { AppHeader },
   data: () => ({
     props: {
-      tittle: "These are the features B4LL brings to you",
-      content: `See how the features of our showcase can help mobile operators to bring the power of biometrics`,
+      tittle: "FEATURES B4LL BRINGS TO YOU",
       breadCrumb: {
         tittle: "How it works",
         link: "/howitworks",

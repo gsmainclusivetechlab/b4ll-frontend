@@ -33,12 +33,13 @@
           <b-row>
             <b-col cols="12">
               <h2>
-                Ready? Download the showcase app now or test our IVR Call Centre
+                Ready? Test our IVR Call Centre Now.
               </h2>
-              <p>
+              <h4 class="text-white">And keep your eyes peeled for the mobile app we are launching soon.</h4>
+              <p><em>
                 Be the innovator in your market. Experience how mobile
                 biometrics can be used to facilitate seamless payments
-              </p>
+              </em></p>
               <!-- <ul>
                 <li>
                   <a href="#">
@@ -116,7 +117,7 @@
                       src="../../assets/images/mail.svg"
                       class="img-fluid"
                       alt=""
-                    />support@biometric.com
+                    />inclusivetechlab@gsma.com
                   </li>
                   <li>
                     <img
@@ -153,7 +154,7 @@
                     <li>
                       <a href="/howitworks">How it works</a>
                     </li>
-                    <li><a href="/tryb4all">Try B4LL</a></li>
+                    <li><a href="/tryb4all">Try B4LL</a></li> 
                     <li>
                       <a
                         href=" https://docs.biometrics.gsmainclusivetechlab.io/ "
