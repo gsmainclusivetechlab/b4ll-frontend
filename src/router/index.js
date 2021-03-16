@@ -4,7 +4,6 @@ import Home from "../views/Home.vue";
 import HowItWorks from "../views/HowItWorks.vue";
 import Faq from "../views/Faq.vue";
 import TryB4All from "../views/TryB4All.vue";
-import NotFound from "../views/NotFound.vue";
 
 Vue.use(VueRouter);
 
@@ -29,9 +28,6 @@ const routes = [
     name: "TryB4All",
     component: TryB4All,
   },
-  { path: "/404", name: "NotFound", component: NotFound },
-
-  { path: "*", redirect: "/404" },
 
   {
     path: "/about",

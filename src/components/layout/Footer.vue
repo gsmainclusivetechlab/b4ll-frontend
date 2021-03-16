@@ -34,11 +34,17 @@
           <b-row>
             <b-col cols="12">
               <h2>
-                Ready? Download the showcase app now or test our IVR Call Centre
+                Ready? Test our IVR Call Centre Now.
               </h2>
+              <h4 class="text-white">
+                And keep your eyes peeled for the mobile app we are launching
+                soon.
+              </h4>
               <p>
-                Be the innovator in your market. Experience how mobile
-                biometrics can be used to facilitate seamless payments
+                <em>
+                  Be the innovator in your market. Experience how mobile
+                  biometrics can be used to facilitate seamless payments
+                </em>
               </p>
               <!-- <ul>
                 <li>
@@ -104,7 +110,7 @@
                   <img
                     src="../../assets/images/Logol1img.jpg"
                     class="img-fluid"
-                    alt="logo"
+                    alt=""
                   />
                 </a>
               </div>
@@ -116,18 +122,18 @@
                     <img
                       src="../../assets/images/mail.svg"
                       class="img-fluid"
-                      alt="mail"
-                    />support@biometric.com
+                      alt=""
+                    />inclusivetechlab@gsma.com
                   </li>
                   <li>
                     <img
                       src="../../assets/images/globe-icon.svg"
                       class="img-fluid"
-                      alt="globe-icon"
+                      alt=""
                     />English
                     <img
                       src="../../assets/images/arrow-white.svg"
-                      alt="arrow-white"
+                      alt="Logo"
                       class="img-fluid"
                     />
                   </li>
@@ -135,7 +141,7 @@
                     <img
                       src="../../assets/images/help-circle.svg"
                       class="img-fluid"
-                      alt="help-circle"
+                      alt=""
                     />Help
                   </li>
                 </ul>
@@ -172,7 +178,7 @@
                       <img
                         src="../../assets/images/copyright-symbol.png"
                         class="img-fluid "
-                        alt="copyright-symbol"
+                        alt=""
                       /> </span
                   ></span>
 
@@ -182,7 +188,7 @@
                   <img
                     src="../../assets/images/backtotop-arrow.svg"
                     class="img-fluid "
-                    alt="backtotop-arrow"
+                    alt=""
                   />
                 </div>
               </div>
@@ -193,7 +199,7 @@
           <img
             src="../../assets/images/footer-bg-image.svg"
             class="img-fluid"
-            alt="footer-bg-image"
+            alt=""
           />
         </div>
       </div>
@@ -206,7 +212,6 @@ export default {
   name: "Footer",
   data: () => ({
     iframe: {
-      // source: "https://gsma.tfaforms.net/891",
       source: "./requestForm.html",
       loaded: false,
     },
@@ -223,22 +228,8 @@ export default {
     },
     iframeLoad() {
       this.iframe.loaded = true;
-
-      // const iframe = this.$refs.iframeContent;
-      // console.log(iframe);
-      // const style = document.createElement("style");
-      // style.textContent =
-      //   "body {" + "  background-color: lime;" + "  color: black;" + "}";
-      // iframe.contentDocument.head.appendChild(style);
     },
   },
-  // mounted() {
-  //   const iframe = document.getElementById("the-iframe");
-  //   const style = document.createElement("style");
-  //   style.textContent =
-  //     "body {" + "  background-color: lime;" + "  color: black;" + "}";
-  //   iframe.contentDocument.head.appendChild(style);
-  // },
 
   watch: {
     $route(to, from) {
@@ -330,10 +321,7 @@ export default {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
   transition: all 0.3s ease;
 }
-.modal-container html{
-  overflow: hidden;
-  overflow-y: auto;
-}
+
 ul {
   list-style: none;
 }

@@ -47,7 +47,7 @@
             <img
               src="../../assets/images/globe-icon.svg"
               class="img-fluid"
-              alt="globe"
+              alt=""
             />
             <!-- </a> -->
           </li>

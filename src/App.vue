@@ -115,6 +115,9 @@ p {
 .bg-greys{
   background-color: #fafbfe;
 }
+.blue-text{
+  color: #95236c;
+}
 @media only screen and (max-width: 993px) {
   h1 {
     font-size: 27px;
