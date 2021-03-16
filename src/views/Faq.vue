@@ -14,7 +14,7 @@
                   <img
                     src="../assets/images/book.svg"
                     class="img-fluid"
-                    alt=""
+                    alt="book"
                   />
                 </div>
                 <div class="content-article">
@@ -31,7 +31,7 @@
                   <img
                     src="../assets/images/book.svg"
                     class="img-fluid"
-                    alt=""
+                    alt="book"
                   />
                 </div>
                 <div class="content-article">
@@ -48,7 +48,7 @@
                   <img
                     src="../assets/images/book.svg"
                     class="img-fluid"
-                    alt=""
+                    alt="book"
                   />
                 </div>
                 <div class="content-article">
@@ -66,7 +66,7 @@
                   <img
                     src="../assets/images/book.svg"
                     class="img-fluid"
-                    alt=""
+                    alt="book"
                   />
                 </div>
                 <div class="content-article">
@@ -80,7 +80,7 @@
                   <img
                     src="../assets/images/book.svg"
                     class="img-fluid"
-                    alt=""
+                    alt="book"
                   />
                 </div>
                 <div class="content-article">

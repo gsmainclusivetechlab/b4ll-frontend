@@ -117,7 +117,7 @@
                       /></a>
                     </li>
                   </ul> -->
-                 <h4 class="text-white"><em>Mobile app coming soon</em></h4>
+                 <h4 class="text-white">Mobile app coming soon</h4>
                 </div>
               </div>
             <!-- </b-container> -->
@@ -142,18 +142,15 @@
               <h3>
                Unifying the digital identification ecosystem
               </h3>
-              <h4>Are you a mobile operator or financial services provider looking to adopt 
-              biometrics in emerging markets?
-              </h4>
-              <a href="/howitworks" class="btn btn-lap">Learn More</a>
+              <h4>Are you a mobile operator or financial services provider looking to adopt biometrics in emerging markets?
+</h4>
+              <a href="#" class="btn btn-lap">Learn More</a>
             </div>
           </b-col>
           <b-col cols="12" md="7">
             <div class="content-digital">
               <p>
-               	o	Biometrics For All offers an Interactive Voice Response (IVR) call centre and 
-                 mobile application with multiple use cases showcasing the potential of biometrics 
-                 to advance financial inclusion in emerging markets.
+               	Biometrics for All offers a Interactive Voice Response (IVR) call centre and mobile application with multiple use cases showcasing the potential of biometrics to advance financial inclusion in emerging markets.
               </p>
               <p>It currently offers enrolment and authentication using voice, fingerprint and face with scope to adopt additional solutions.
               </p>
@@ -171,7 +168,6 @@
               <h4>
               	Empower your customers with inclusive biometric solutions
               </h4>
-              <em> App comming soon </em>
             </div>
             <div class="mobile-group-banner"></div>
           </b-col>
@@ -241,9 +237,10 @@
         <div class="row">
           <div class="col-12">
             <div class="feature-content text-center">
-              <h2>Why choose Biometrics For All?</h2>
+              <h2>Why choose Biometrics for All?</h2>
               <h6>
-                Drive your business to unlock new security technologies for your customers
+                Drive your business needs and unlock access to new customers
+
               </h6>
             </div>
             <div class="three-col-feature-frame">
@@ -253,13 +250,13 @@
                     <img
                       src="../assets/images/development.png"
                       class="img-fluid"
-                      alt=""
+                      alt="development"
                     />
                     <h5>Tailored use cases</h5>
                     <h6>
-                      We understand that every business is unique, so our team 
-                      is continuously developing new use cases and customising 
-                      our assets to meet your business needs and objectives.
+                      Our team is constantly developing new use cases and
+                      customising our assets to meet your specific business
+                      needs/objectives.
                     </h6>
                   </div>
                 </div>
@@ -268,13 +265,12 @@
                     <img
                       src="../assets/images/trusted.png"
                       class="img-fluid"
-                      alt=""
+                      alt="trusted"
                     />
                     <h5>Trusted technical expertise</h5>
                     <h6>
-                      Adopting a new technology/service can be tricky to navigate, 
-                      so we provide expertise to support you in understanding the 
-                      impacts of using biometrics and during the adoption of biometrics solutions.
+                      We provide a [free] consultation service to support you
+                      during your biometrics adoption.
                     </h6>
                   </div>
                 </div>
@@ -283,12 +279,14 @@
                     <img
                       src="../assets/images/smartphones.png"
                       class="img-fluid"
-                      alt=""
+                      alt="smartphones"
                     />
                     <h5>Built for low-tech environments</h5>
                     <h6>
-                      Our solutions are built to be used on feature phones and 
-                      low-tech smartphones with a low-resolution camera or no camera at all.
+                      Face and fingerprint authentication via a low- resolution
+                      camera and voice authentication via an IVR call centre
+                      enables the use of biometrics for feature phones and
+                      low-tech smartphones.
                     </h6>
                   </div>
                 </div>
@@ -392,7 +390,7 @@
             </div>
             <div class="questions-frame text-center">
               <p>
-                Still have a question?<span class="question-bold">
+                Still have a question ?<span class="question-bold">
                   <a href="#"> Ask your question here</a></span
                 >
               </p>
@@ -898,7 +896,7 @@ export default {
   }
   .slider-img {
     width: 300px;
-    height: 269px !important;
+    height: 377px !important;
     margin: auto;
     text-align: center;
   }
@@ -906,7 +904,7 @@ export default {
     right: 0;
     text-align: center;
     left: 0;
-    bottom: -69px;
+    top: 0;
     margin: auto;
   }
   .slider-portfolio .carousel-indicators {

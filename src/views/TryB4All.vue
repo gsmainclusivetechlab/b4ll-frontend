@@ -10,18 +10,22 @@
                 Sign up to test our <br />
                 IVR Call Centre
               </h2>
-              <p>The call centre is currently operating using two numbers:</p>
+              <p>
+                To test our call center you need to fill out the mini form on
+                the side, read and accept the terms and conditions.
+              </p>
+              <p>Currently the call centre is working in two numbers</p>
               <h4>
-               <p>UK <a href="tel:+441904803378">+44 1904 803378</a></p>
-               <p>US <a href="tel:+17372450200">+1 737 245 0200</a></p>
+                UK <a href="tel:+1234567890">+1234567890</a> , US
+                <a href="tel:+12345677890">+12345677890</a>
               </h4>
               <p>
-                Follow the instructions to enrol using your voice print, 
-                enabling you to navigate through the use cases.
+                You can call and follow the instructions to enrol using your
+                voice print to then be able to navigate through the use cases.
               </p>
               <p>
-                If you would like to suggest a new use case to meet your business needs, 
-                contact the 
+                If you would like to customise the call centre for a specific
+                purpose to attend your business need, please contact the
                 <a
                   href="https://www.gsma.com/mobilefordevelopment/mobile-money/gsma-inclusive-tech-lab/"
                   target="_blank"
@@ -33,29 +37,35 @@
                   suggest a new use case.</a
                 >
               </p>
+              g
             </div>
           </div>
           <div class="col-12 col-lg-6">
             <div class="sign-up-frame">
-              <h2>Sign up</h2>
+              <h2>SignUp</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
               <form>
                 <div class="form-group">
-                  <label for="inputAddress">Nickname</label>
+                  <label for="inputAddress">Nick Name</label>
                   <input
                     type="text"
                     class="form-control"
                     id="inputAddress"
-                    placeholder="Enter nickname"
+                    placeholder="Enter Nick Name"
                   />
                 </div>
                 <div class="form-group">
-                  <label for="inputAddress2">Mobile number</label>
-                  <input
+                  <label for="inputAddress2">Mobile Number</label>
+                  <!-- <input
                     type="text"
                     class="form-control"
                     id="inputAddress2"
-                    placeholder="Enter mobile number"
-                  />
+                    placeholder="Enter Mobile Number"
+                  /> -->
+                  <vue-tel-input v-model="phone"></vue-tel-input>
                 </div>
 
                 <div class="form-group">
@@ -89,13 +99,14 @@
                 Biometric Providers
               </h2>
               <p>
-                Biometrics For All allows mobile money providers to test multiple 
-                biometrics solutions available in the market. Our solution was structured 
-                with a modular and flexible architecture, allowing new biometrics providers 
-                to include their solutions to showcase both in our IVR call centre and in 
-                the mobile app. Our team is constantly evolving the assets, increasing the 
-                range of possible suppliers available. If you are a biometric supplier and 
-                would like to contribute to our showcase, please 
+                The project Biometrics for All allow mobile operators to test
+                different solutions available on the market. Our solution was
+                structured with a modular and flexible architecture, allowing
+                new biometrics providers to include their solutions to showcase
+                both in our IVR call centre and in the mobile app. Our team is
+                constantly evolving the assets, increasing the range of possible
+                suppliers available. If you are a biometric supplier and would
+                like to contribute to our showcase, please
                 <a
                   href="https://www.gsma.com/mobilefordevelopment/mobile-money/gsma-inclusive-tech-lab/"
                   target="_blank"
@@ -115,7 +126,7 @@
                     <img
                       src="../assets/images/biometric-provide-icon-1.svg"
                       class="img-fluid"
-                      alt=""
+                      alt="biometric-provide-icon-1"
                     />
                   </div>
                 </b-col>
@@ -125,14 +136,14 @@
                       <img
                         src="../assets/images/biometric-provide-icon-2.svg"
                         class="img-fluid"
-                        alt=""
+                        alt="biometric-provide-icon-2"
                       />
                     </div>
                     <div class="bg-biometric3 bg-blue">
                       <img
                         src="../assets/images/biometric-provide-icon-3.svg"
                         class="img-fluid"
-                        alt=""
+                        alt="biometric-provide-icon-3"
                       />
                     </div>
                   </div>
@@ -148,18 +159,24 @@
         <div class="row">
           <div class="col-12 col-md-6">
             <div class="img-about-content">
-              <img src="../assets/images/Guide.png" class="img-fluid" alt="" />
+              <img
+                src="../assets/images/Guide.png"
+                class="img-fluid"
+                alt="Guide"
+              />
             </div>
           </div>
           <div class="col-12 col-md-6">
-            <h2>Use our documentation to get the most out of your experience</h2>
+            <h2>Guide your experience by our documentation</h2>
             <h6>
-              B4LL allows you to experience different use cases. Our documentation 
-              guides you through happy and unhappy flows and tells you everything 
-              you need to know to make the correct use of the showcase. So please 
-              visit our documentation page and try to go over the flows which are outlined. 
-              There is an infinite number of open possibilities, so, help us to improve 
-              bringing your business needs so we can provide a customised experience to you.
+              B4LL allows you to experience different possibilities of use
+              cases. Our documentation guides you with orientations about the
+              use of happy and unhappy flows and what information you should
+              know to make the correct use of the showcase. So please visit our
+              documentation page and try to go over the flow possibilities we
+              are showing. There is an infinite number of open possibilities,
+              so, help us to improve bringing your business needs so we can
+              provide a customised experience to you.
             </h6>
           </div>
         </div>
@@ -170,12 +187,15 @@
 
 <script>
 import AppHeader from "../components/AppHeader";
+import { VueTelInput } from "vue-tel-input";
 export default {
   name: "TryB4All",
   components: { AppHeader },
   data: () => ({
     props: {
       tittle: "EXPERIENCE THE BIOMETRICS SHOWCASE",
+      content: `See how the features of our showcase can help mobile operators to bring the power of
+biometrics`,
       breadCrumb: {
         tittle: "Try B4 All",
         link: "tryb4all",
