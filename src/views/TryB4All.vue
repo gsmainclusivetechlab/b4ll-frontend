@@ -176,8 +176,6 @@ export default {
   data: () => ({
     props: {
       tittle: "EXPERIENCE THE BIOMETRICS SHOWCASE",
-      content: `See how the features of our showcase can help mobile operators to bring the power of
-biometrics`,
       breadCrumb: {
         tittle: "Try B4 All",
         link: "tryb4all",
