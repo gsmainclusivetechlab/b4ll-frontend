@@ -117,7 +117,7 @@
                       /></a>
                     </li>
                   </ul> -->
-                 <h4 class="text-white">Mobile app coming soon</h4>
+                 <h4 class="text-white"><em>Mobile app coming soon</em></h4>
                 </div>
               </div>
             <!-- </b-container> -->
@@ -145,7 +145,7 @@
               <h4>Are you a mobile operator or financial services provider looking to adopt 
               biometrics in emerging markets?
               </h4>
-              <a href="#" class="btn btn-lap">Learn More</a>
+              <a href="/howitworks" class="btn btn-lap">Learn More</a>
             </div>
           </b-col>
           <b-col cols="12" md="7">
