@@ -12,16 +12,16 @@
               </h2>
               <p>The call centre is currently operating using two numbers:</p>
               <h4>
-               <p>UK <a href="tel:+441904803378">+44 1904 803378</a></p>
-               <p>US <a href="tel:+17372450200">+1 737 245 0200</a></p>
+                <p>UK <a href="tel:+441904803378">+44 1904 803378</a></p>
+                <p>US <a href="tel:+17372450200">+1 737 245 0200</a></p>
               </h4>
               <p>
-                Follow the instructions to enrol using your voice print, 
+                Follow the instructions to enrol using your voice print,
                 enabling you to navigate through the use cases.
               </p>
               <p>
-                If you would like to suggest a new use case to meet your business needs, 
-                contact the 
+                If you would like to suggest a new use case to meet your
+                business needs, contact the
                 <a
                   href="https://www.gsma.com/mobilefordevelopment/mobile-money/gsma-inclusive-tech-lab/"
                   target="_blank"
@@ -50,12 +50,13 @@
                 </div>
                 <div class="form-group">
                   <label for="inputAddress2">Mobile number</label>
-                  <input
+                  <!-- <input
                     type="text"
                     class="form-control"
                     id="inputAddress2"
                     placeholder="Enter mobile number"
-                  />
+                  /> -->
+                  <vue-tel-input v-model="value"></vue-tel-input>
                 </div>
 
                 <div class="form-group">
@@ -81,7 +82,7 @@
     </div>
     <section class="two-col-biometric-wrap text-white">
       <b-container>
-        <b-row class="justify-content-start align-items-center">
+        <b-row class="justify-content-start align-items-center ">
           <b-col cols="12" xl="6">
             <div class="biometric-content">
               <h2>
@@ -89,13 +90,15 @@
                 Biometric Providers
               </h2>
               <p>
-                Biometrics For All allows mobile money providers to test multiple 
-                biometrics solutions available in the market. Our solution was structured 
-                with a modular and flexible architecture, allowing new biometrics providers 
-                to include their solutions to showcase both in our IVR call centre and in 
-                the mobile app. Our team is constantly evolving the assets, increasing the 
-                range of possible suppliers available. If you are a biometric supplier and 
-                would like to contribute to our showcase, please 
+                Biometrics For All allows mobile money providers to test
+                multiple biometrics solutions available in the market. Our
+                solution was structured with a modular and flexible
+                architecture, allowing new biometrics providers to include their
+                solutions to showcase both in our IVR call centre and in the
+                mobile app. Our team is constantly evolving the assets,
+                increasing the range of possible suppliers available. If you are
+                a biometric supplier and would like to contribute to our
+                showcase, please
                 <a
                   href="https://www.gsma.com/mobilefordevelopment/mobile-money/gsma-inclusive-tech-lab/"
                   target="_blank"
@@ -108,7 +111,7 @@
           <b-col cols="12" xl="6">
             <div class="biometric-img-block">
               <b-row
-                class="justify-content-center align-items-center gutter-20"
+                class="justify-content-center align-items-center gutter-20 flex-column"
               >
                 <b-col cols="12" md="6">
                   <div class="bg-biometric bg-black">
@@ -152,14 +155,17 @@
             </div>
           </div>
           <div class="col-12 col-md-6">
-            <h2>Use our documentation to get the most out of your experience</h2>
+            <h2>
+              Use our documentation to get the most out of your experience
+            </h2>
             <h6>
-              B4LL allows you to experience different use cases. Our documentation 
-              guides you through happy and unhappy flows and tells you everything 
-              you need to know to make the correct use of the showcase. So please 
-              visit our documentation page and try to go over the flows which are outlined. 
-              There is an infinite number of open possibilities, so, help us to improve 
-              bringing your business needs so we can provide a customised experience to you.
+              B4LL allows you to experience different use cases. Our
+              documentation guides you through happy and unhappy flows and tells
+              you everything you need to know to make the correct use of the
+              showcase. So please visit our documentation page and try to go
+              over the flows which are outlined. There is an infinite number of
+              open possibilities, so, help us to improve bringing your business
+              needs so we can provide a customised experience to you.
             </h6>
           </div>
         </div>
@@ -170,9 +176,10 @@
 
 <script>
 import AppHeader from "../components/AppHeader";
+import { VueTelInput } from "vue-tel-input";
 export default {
   name: "TryB4All",
-  components: { AppHeader },
+  components: { AppHeader, VueTelInput },
   data: () => ({
     props: {
       tittle: "EXPERIENCE THE BIOMETRICS SHOWCASE",
@@ -195,6 +202,9 @@ export default {
 </script>
 
 <style>
+.login-form-frame .sign-up-frame .vti__dropdown:focus{
+  border: 1px solid #ddd!important;
+}
 .try-frame {
   padding-top: 90px;
   padding-bottom: 90px;
@@ -273,6 +283,7 @@ export default {
 .login-form-frame .sign-up-frame p {
   font-size: 14px;
 }
+
 .login-form-frame .sign-up-frame h2,
 .login-form-frame .sign-up-frame p {
   text-align: center;

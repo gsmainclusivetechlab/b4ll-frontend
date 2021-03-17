@@ -34,7 +34,8 @@
           <b-row>
             <b-col cols="12">
               <h2>
-                Ready? Test our IVR Call Centre Now.
+                Ready? Test our IVR Calln
+                 Centre Now.
               </h2>
               <h4 class="text-white">
                 And keep your eyes peeled for the mobile app we are launching
@@ -64,7 +65,7 @@
                   /></a>
                 </li>
               </ul> -->
-              <h4 class="text-white">Mobile app coming soon</h4>
+              <h4 class="text-white">Mobile app coming soon <span class="img-soon"><img src="../../assets/images/bannermob.png" class="img-fluid" alt="bannermob"></span></h4>
             </b-col>
           </b-row>
         </b-container>
@@ -240,6 +241,9 @@ export default {
 </script>
 
 <style>
+span.img-soon img {
+    max-width: 95px;
+}
 .loader {
   border: 0.2em solid transparent;
   border-top-color: currentcolor;
@@ -539,7 +543,15 @@ hr {
 @media only screen and (max-width: 1024px) {
   .gsma-form .modal-container {
     width: 100%;
+    height: 100%;
   }
+  .gsma-form iframe {
+  height: 75vh;
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  margin-top: 21px;
+}
 }
 @media only screen and (min-width: 1200px) {
   .footer-wrapper .container {

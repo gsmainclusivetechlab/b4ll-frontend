@@ -37,7 +37,7 @@
                       /></a>
                     </li>
                   </ul> -->
-                 <h4 class="text-white">Mobile app coming soon</h4>
+                 <h4 class="text-white">Mobile app coming soon  <span class="img-soon"><img src="../assets/images/bannermob.png" class="img-fluid" alt="bannermob"></span></h4>
                 </div>
               </div>
             <!-- </b-container> -->
@@ -78,7 +78,7 @@
                     </li>
                   </ul> -->
                 
-                 <h4 class="text-white">Mobile app coming soon</h4></div>
+                 <h4 class="text-white">Mobile app coming soon  <span class="img-soon"><img src="../assets/images/bannermob.png" class="img-fluid" alt="bannermob"></span></h4></div>
               </div>
             <!-- </b-container> -->
             <template #img>
@@ -117,7 +117,7 @@
                       /></a>
                     </li>
                   </ul> -->
-                 <h4 class="text-white"><em>Mobile app coming soon</em></h4>
+                 <h4 class="text-white"><em>Mobile app coming soon  <span class="img-soon"><img src="../assets/images/bannermob.png" class="img-fluid" alt="bannermob"></span></em></h4>
                 </div>
               </div>
             <!-- </b-container> -->
@@ -412,6 +412,7 @@ export default {
 };
 </script>
 <style>
+
 .home-header {
   background-image: linear-gradient(180deg, #6b3076 0%, #424985 100%);
 }
@@ -462,7 +463,7 @@ export default {
 .slider-portfolio .carousel-indicators {
   justify-content: flex-start;
   margin-left: 108px;
-  bottom: 75px;
+  bottom: 63px;
 }
 .slider-portfolio .carousel-indicators li:focus,
 .slider-portfolio .carousel-indicators li.active {
@@ -509,7 +510,20 @@ export default {
   padding-left: 0;
   margin: auto;
   text-align: left;
+  position: relative;
 }
+.slider-portfolio .os-system-wrap .img-soon{
+  position: absolute;
+      bottom: 9px;
+      top: 0;
+}
+.slider-portfolio .os-system-wrap  span.img-soon img {
+    max-width: 90px;
+    height: auto;
+    margin-top: -16px;
+}
+
+
 .slider-portfolio .os-system-wrap ul li {
   display: inline-block;
   list-style-type: none;

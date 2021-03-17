@@ -149,56 +149,62 @@
     <section class="bio-all">
       <div class="container">
         <div class="bio-all-contents">
-  <div class="row">
-          <div class="col-12 col-lg-6">
-            <div class="bio-content-wrap">
-              <h2>IVR Call Centre</h2>
-              <p>
-                One of the B4LL project targets is to demonstrate the strengths of using 
-                voice and speech recognition for identification and authentication of users 
-                to access mobile services. 
-              </p>
-              <p>
-                This showcase consists of an IVR call centre that allows the user to navigate 
-                through a menu of different possibilities, using voice bots which can be an 
-                alternative to requiring someone to present physical ID and is more cost saving.
-              </p>
-              <p>
-                The use cases available are a simulation of real services and aim to demonstrate 
-                the use of voice registration and authentication.
-              </p>
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <div class="bio-content-wrap">
+                <h2>IVR Call Centre</h2>
+                <p>
+                  One of the B4LL project targets is to demonstrate the
+                  strengths of using voice and speech recognition for
+                  identification and authentication of users to access mobile
+                  services.
+                </p>
+                <p>
+                  This showcase consists of an IVR call centre that allows the
+                  user to navigate through a menu of different possibilities,
+                  using voice bots which can be an alternative to requiring
+                  someone to present physical ID and is more cost saving.
+                </p>
+                <p>
+                  The use cases available are a simulation of real services and
+                  aim to demonstrate the use of voice registration and
+                  authentication.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="col-12 col-lg-6">
-            <div class="img-bio">
-              <img src="../assets/images/usecase-content.png" class="img-fluid" alt="" />
+            <div class="col-12 col-lg-6">
+              <div class="img-bio">
+                <img
+                  src="../assets/images/usecase-content.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         </div>
-        </div>
-      
       </div>
     </section>
-     <section class="two-col-biometric-wrap text-white managing-content">
+    <section class="two-col-biometric-wrap text-white managing-content">
       <div class="container">
         <div class="row">
-           <div class="col-12 col-lg-4">
+          <div class="col-12 col-lg-4">
             <div class="right-manage-img">
               <!-- <img
                 src="../assets/images/mobile-screens-2.png"
                 class="img-fluid"
                 alt=""
               /> -->
-               <h2 class="mb-0">Use Cases</h2>
-              <p>Our showcase is based on the advantages of using
-different types of biometrics (such as fingerprint,
-face and voice recognition) to address its potentials
-in different business needs. For this, our
-demonstration has several use cases covering from
-the biometric enrolment process to the verification to
-access services. The number of use cases are
-always growing, and we invite those interested to
-bring new ideas for us to implement.</p>
+              <h2 class="mb-0">Use Cases</h2>
+              <p>
+                Our showcase is based on the advantages of using different types
+                of biometrics (such as fingerprint, face and voice recognition)
+                to address its potentials in different business needs. For this,
+                our demonstration has several use cases covering from the
+                biometric enrolment process to the verification to access
+                services. The number of use cases are always growing, and we
+                invite those interested to bring new ideas for us to implement.
+              </p>
             </div>
           </div>
           <div class="col-12 col-lg-8">
@@ -220,7 +226,8 @@ bring new ideas for us to implement.</p>
                     <div class="content-manage-frame">
                       <h5>Pay Utility Bills</h5>
                       <p>
-                        Experience how simple it can be to pay a bill using your mobile.
+                        Experience how simple it can be to pay a bill using your
+                        mobile.
                       </p>
                     </div>
                   </div>
@@ -254,7 +261,8 @@ bring new ideas for us to implement.</p>
                     <div class="content-manage-frame">
                       <h5>Different biometrics types</h5>
                       <p>
-                        Check how different types of biometric can be used to access services
+                        Check how different types of biometric can be used to
+                        access services
                       </p>
                     </div>
                   </div>
@@ -271,7 +279,8 @@ bring new ideas for us to implement.</p>
                     <div class="content-manage-frame">
                       <h5>Simulate Alerts</h5>
                       <p>
-                       Use incoming calls with voice verification to simulate alerts which requires user’s approval.
+                        Use incoming calls with voice verification to simulate
+                        alerts which requires user’s approval.
                       </p>
                     </div>
                   </div>
@@ -288,8 +297,9 @@ bring new ideas for us to implement.</p>
                     <div class="content-manage-frame">
                       <h5>Multiple Passphrases</h5>
                       <p>
-                       Increase the access security using multiples passphrase. During the user’s verification, 
-                       one of the passphrases is randomly chosen.
+                        Increase the access security using multiples passphrase.
+                        During the user’s verification, one of the passphrases
+                        is randomly chosen.
                       </p>
                     </div>
                   </div>
@@ -306,8 +316,9 @@ bring new ideas for us to implement.</p>
                     <div class="content-manage-frame">
                       <h5>Constant Indenty Verification</h5>
                       <p>
-                       The biometric verification is required after a determined period of time to 
-                       keep your access and account safe.
+                        The biometric verification is required after a
+                        determined period of time to keep your access and
+                        account safe.
                       </p>
                     </div>
                   </div>
@@ -315,7 +326,6 @@ bring new ideas for us to implement.</p>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
           <div class="col-12 col-lg-4">
             <div class="right-manage-img">
               <!-- <img
@@ -323,23 +333,19 @@ bring new ideas for us to implement.</p>
                 class="img-fluid"
                 alt=""
               /> -->
-               <h2 class="mb-0">Use Cases</h2>
+              <h2 class="mb-0">Use Cases</h2>
               <p>
-              Our showcase is based on the advantages of using
-              different types of biometrics (such as fingerprint,
-              face and voice recognition) to address its potentials
-              in different business needs. For this, our
-              demonstration has several use cases covering from
-              the biometric enrolment process to the verification to
-              access services. The number of use cases are
-              always growing, and we invite those interested to
-              bring new ideas for us to implement.
+                Our showcase is based on the advantages of using different types
+                of biometrics (currently voice, but fingerprint and face coming
+                soon with the mobile app) to address its potential in different
+                business needs. For this, our demonstration covers several use
+                cases from the biometric enrolment process to verification and
+                accessing services. The number of use cases is always growing,
+                and we invite those interested to bring new ideas for us to
+                implement.
               </p>
             </div>
           </div>
-=======
-         
->>>>>>> 86c71ac1f013286c530f4bd7db14768f2e1fba24
         </div>
       </div>
     </section>
@@ -359,20 +365,22 @@ bring new ideas for us to implement.</p>
             <div class="app-content-wrap">
               <h2>Mobile App</h2>
               <h6>
-                The mobile application demonstrates the potential of biometrics in emerging 
-                markets as a flexible, open-source and adaptable way to attend the needs of 
-                mobile operators. When necessary, the app allows the connection with different 
-                biometrics suppliers that do not require biometric sensors more than a microphone and a camera. 
+                The mobile application demonstrates the potential of biometrics
+                in emerging markets as a flexible, open-source and adaptable way
+                to attend the needs of mobile operators. When necessary, the app
+                allows the connection with different biometrics suppliers that
+                do not require biometric sensors more than a microphone and a
+                camera.
               </h6>
               <h6>
-                Users can use the different types of biometrics, perform the enrolment process 
-                and navigate through the different use cases to experience how the use of biometrics 
-                helps to increase security when accessing and using services.
+                Users can use the different types of biometrics, perform the
+                enrolment process and navigate through the different use cases
+                to experience how the use of biometrics helps to increase
+                security when accessing and using services.
               </h6>
             </div>
           </div>
-<<<<<<< HEAD
-             <div class="col-12 col-lg-6">
+          <div class="col-12 col-lg-6">
             <div class="img-app-wrap">
               <img
                 src="../assets/images/mobile-app.png"
@@ -381,9 +389,6 @@ bring new ideas for us to implement.</p>
               />
             </div>
           </div>
-=======
-          
->>>>>>> 86c71ac1f013286c530f4bd7db14768f2e1fba24
         </div>
       </div>
     </div>
@@ -449,7 +454,7 @@ bring new ideas for us to implement.</p>
         </div>
       </div>
     </div> -->
-   
+
     <section class="tutorial-section text-center">
       <div class="container">
         <div class="row">
@@ -486,8 +491,7 @@ export default {
 </script>
 
 <style>
-
-.card-wrap h5{
+.card-wrap h5 {
   font-weight: bold;
 }
 .card-wrap {
@@ -563,18 +567,18 @@ export default {
 .usecase-wrapper .usecase-main {
   padding-bottom: 55px;
 }
-.usecase-wrapper .usecase-three-col-content .usecase-frame{
-background-color: #ffffff;
-border-radius: 8px;
-box-shadow: 0 2px 23px rgba(0, 0, 0, .13);
-min-height: 104px;
-padding-top: 19px;
-padding-left: 16px;
-padding-right: 45px;
-padding-bottom: 11px;
-margin-bottom: 37px;
+.usecase-wrapper .usecase-three-col-content .usecase-frame {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 23px rgba(0, 0, 0, 0.13);
+  min-height: 104px;
+  padding-top: 19px;
+  padding-left: 16px;
+  padding-right: 45px;
+  padding-bottom: 11px;
+  margin-bottom: 37px;
 }
-.usecase-wrapper .usecase-three-col-content .usecase-frame .usecase-img{
+.usecase-wrapper .usecase-three-col-content .usecase-frame .usecase-img {
   width: 50px;
 
   margin-right: 20px;
@@ -605,11 +609,11 @@ margin-bottom: 37px;
   padding-bottom: 113px;
 }
 .mobile-app-content .img-app-wrap {
-    position: absolute;
-    width: 686px;
-    height: 501px;
-    bottom: -106px;
-    left:0;
+  position: absolute;
+  width: 686px;
+  height: 501px;
+  bottom: -106px;
+  left: 0;
 }
 .usecase-wrapper {
   position: relative;
@@ -643,14 +647,14 @@ margin-bottom: 37px;
 .usecase-wrapper .usecase-three-col-content {
   position: relative;
 }
-.bio-all{
+.bio-all {
   padding-top: 77px;
   position: relative;
   padding-bottom: 85px;
 }
 
-.bio-all::after{
-  content: '';
+.bio-all::after {
+  content: "";
   background-image: url("../assets/images/bg-3.png");
   background-position: center;
   background-size: contain;
@@ -662,25 +666,25 @@ margin-bottom: 37px;
   right: 0;
   z-index: -1;
 }
-.bio-all .img-bio{
+.bio-all .img-bio {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   height: 100%;
 }
-.bio-all .img-bio img{
+.bio-all .img-bio img {
   margin-left: 85px;
 }
 @media only screen and (max-width: 1024px) {
-  .bio-all .img-bio img{
-  margin-left: 0;
-}
+  .bio-all .img-bio img {
+    margin-left: 0;
+  }
   .tutorial-section::after {
     width: 250px;
     height: 185px;
   }
   .mobile-app-content .img-app-wrap {
-        position: relative;
+    position: relative;
     width: 100%;
     height: auto;
     bottom: 0;
@@ -689,7 +693,6 @@ margin-bottom: 37px;
     margin: auto;
     margin-bottom: 20px;
   }
-
 }
 
 @media only screen and (max-width: 993px) {
