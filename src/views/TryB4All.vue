@@ -12,12 +12,8 @@
               </h2>
               <p>The call centre is currently operating using two numbers:</p>
               <h4>
-                <p>
-                  <b>UK: </b> <a href="tel:+441904803378"> +44 1904 803378</a>
-                </p>
-                <p>
-                  <b>US: </b> <a href="tel:+17372450200"> +1 737 245 0200</a>
-                </p>
+                <p>UK <a href="tel:+441904803378">+44 1904 803378</a></p>
+                <p>US <a href="tel:+17372450200">+1 737 245 0200</a></p>
               </h4>
               <p>
                 Follow the instructions to enrol using your voice print,
@@ -112,7 +108,7 @@
               </p>
             </div>
           </b-col>
-          <b-col cols="1" xl="6">
+          <b-col cols="12" xl="6">
             <div class="biometric-img-block">
               <b-row
                 class="justify-content-center align-items-center gutter-20 flex-column"
@@ -206,8 +202,8 @@ export default {
 </script>
 
 <style>
-.login-form-frame .sign-up-frame .vti__dropdown:focus {
-  border: 1px solid #ddd !important;
+.login-form-frame .sign-up-frame .vti__dropdown:focus{
+  border: 1px solid #ddd!important;
 }
 .try-frame {
   padding-top: 90px;

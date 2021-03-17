@@ -124,7 +124,7 @@
                       src="../../assets/images/mail.svg"
                       class="img-fluid"
                       alt=""
-                    /><a  href="mailto:inclusivetechlab@gsma.com?subject=I’m interested in Biometrics For All" target="_blank">inclusivetechlab@gsma.com</a>
+                    />inclusivetechlab@gsma.com
                   </li>
                   <li>
                     <img
@@ -165,8 +165,8 @@
                     <li>
                       <a
                         href=" https://docs.biometrics.gsmainclusivetechlab.io/ "
-                        >Documentation
-                      </a>
+                        >Documentation</a
+                      >
                     </li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/faq">FAQs</a></li>

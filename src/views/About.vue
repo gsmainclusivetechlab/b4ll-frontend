@@ -44,18 +44,20 @@
                 This benefit is even more evident in places where the number of national ID holders is reduced. Thus, in some developing countries, starting from a scenario where access to national ID is difficult, the registration and authentication of users on mobile operators may be compromised. In this sense, the use of biometrics allows the use of non-transferable information, leading to greater adherence by users. This makes biometrics the ideal and more accurate solution for validating personal data. 
                 more.
               </h6>
-              <h6>
-              If well implemented, biometrics authentication can unlock access to a large number of previously difficult to reach customers, such as: people with disabilities, less literate populations, people with lack of national ID, featured phones users and much more. 
-              </h6>
+              
             </div>
           </div>
           <div class="col-12 col-lg-6">
             <div class="img-bio-content">
               <h6>
+              If well implemented, biometrics authentication can unlock access to a large number of previously difficult to reach customers, such as: people with disabilities, less literate populations, people with lack of national ID, featured phones users and much more. 
+              </h6>
+              <h6>
                 The use of biometrics can increase the security to execute mobile money transactions, such as international remittance. Inscribed within well-designed platforms would not only enable them to make greater and better use of their mobile wallets, but also make usage more secure and attractive.
               </h6>
               <h6>
                 The GSMA is working with its members and mobile money industry partners to support the process of implementing biometrics in their markets.
+
               </h6>
             </div>
             <div class="img-bottom">
