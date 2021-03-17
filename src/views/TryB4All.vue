@@ -12,8 +12,8 @@
               </h2>
               <p>The call centre is currently operating using two numbers:</p>
               <h4>
-                <p>UK <a href="tel:+441904803378">+44 1904 803378</a></p>
-                <p>US <a href="tel:+17372450200">+1 737 245 0200</a></p>
+                <p> <span class="phone-call-frame mr-10"><img src="../assets/images/phone-call-blue.png" class="img-fluid" alt="phone-call-blue"> </span> <b> UK </b><a href="tel:+441904803378">+44 1904 803378</a></p>
+                <p> <span class="phone-call-frame mr-10"><img src="../assets/images/phone-call-blue.png" class="img-fluid" alt="phone-call-blue"> </span><b>US </b> <a href="tel:+17372450200">+1 737 245 0200</a></p>
               </h4>
               <p>
                 Follow the instructions to enrol using your voice print,
@@ -68,8 +68,8 @@
                         id="gridCheck"
                       />
                       <span class="checkmark"></span>
-
-                      Accept the terms and conditions
+<a href="Biometric-Showcase-Application-terms-and-Condition.pdf" target="_blank"> Accept the terms and conditions</a>
+                     
                     </label>
                   </div>
                 </div>
@@ -108,34 +108,43 @@
               </p>
             </div>
           </b-col>
-          <b-col cols="12" xl="6">
+          <b-col cols="1" xl="6">
             <div class="biometric-img-block">
               <b-row
                 class="justify-content-center align-items-center gutter-20 flex-column"
               >
-                <b-col cols="12" md="6">
+                <b-col cols="12" md="7">
                   <div class="bg-biometric bg-black">
                     <img
                       src="../assets/images/biometric-provide-icon-1.svg"
                       class="img-fluid"
-                      alt=""
+                      alt="biometric-provide-icon-1"
                     />
+
+                    
+                  </div>
+                  
+                
+                </b-col>
+                <b-col cols="12">
+<div class="coming-soon-frame text-white text-center">
+  <h4>Coming Soon</h4>
                   </div>
                 </b-col>
-                <b-col cols="12" md="6">
+                <b-col cols="12" md="5">
                   <div class="biometric-right-col">
-                    <div class="bg-biometric2 bg-white mb-20">
+                    <div class="bg-biometric2 bg-white ">
                       <img
                         src="../assets/images/biometric-provide-icon-2.svg"
                         class="img-fluid"
-                        alt=""
+                        alt="biometric-provide-icon-2"
                       />
                     </div>
                     <div class="bg-biometric3 bg-blue">
                       <img
                         src="../assets/images/biometric-provide-icon-3.svg"
                         class="img-fluid"
-                        alt=""
+                        alt="biometric-provide-icon-3"
                       />
                     </div>
                   </div>
@@ -151,7 +160,7 @@
         <div class="row">
           <div class="col-12 col-md-6">
             <div class="img-about-content">
-              <img src="../assets/images/Guide.png" class="img-fluid" alt="" />
+              <img src="../assets/images/Guide.png" class="img-fluid" alt="Guide" />
             </div>
           </div>
           <div class="col-12 col-md-6">
@@ -202,8 +211,57 @@ export default {
 </script>
 
 <style>
-.login-form-frame .sign-up-frame .vti__dropdown:focus{
+.login-form-frame  .vti__dropdown.open:focus{
   border: 1px solid #ddd!important;
+}
+.login-form-frame .vue-tel-input .vti__dropdown:focus{
+  border: 1px solid #ddd;
+}
+.login-form-frame .vue-tel-input{
+  position: relative;
+}
+.login-form-frame .vue-tel-input .vti__dropdown{
+  position: absolute;
+      height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+        border-right: 1px solid #ddd;
+}
+
+.login-form-frame .vue-tel-input:focus{
+  border: 1px solid #95236c;
+}
+.login-form-frame .vue-tel-input  .vti__dropdown-arrow{
+  color: #95236c;
+}
+.login-form-frame .vue-tel-input .vti__dropdown-list{
+    background: #fff;
+    height: 200px;
+    overflow: auto;
+        display: block;
+    z-index: 99;
+    position: relative;
+}
+.login-form-frame .vue-tel-input  input{
+display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+        padding-left: 50px!important;
+    line-height: 1.5;
+    color: #495057;
+    width: 100%;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ddd;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.coming-soon-frame h4{
+  margin-bottom: 0;
+  color: #fff;
+  padding-top: 10px;
 }
 .try-frame {
   padding-top: 90px;
@@ -247,10 +305,13 @@ export default {
 .login-form-frame .btn {
   width: 100%;
 }
+.mr-10{
+  margin-right: 10px;
+}
 .login-form-frame .content-login h4 {
   font-weight: bold;
   position: relative;
-  padding-left: 35px;
+  /* padding-left: 35px; */
 }
 .login-form-frame .content-login p a {
   /* color: #000000; */
@@ -267,7 +328,7 @@ export default {
   color: #ae52c4;
   cursor: pointer;
 }
-.login-form-frame .content-login h4::before {
+/* .login-form-frame .content-login h4::before {
   content: "";
   position: absolute;
   background-image: url("../assets/images/phone-call-blue.png");
@@ -279,7 +340,7 @@ export default {
   bottom: 0;
   width: 25px;
   height: 25px;
-}
+} */
 .login-form-frame .sign-up-frame p {
   font-size: 14px;
 }
@@ -378,6 +439,11 @@ export default {
     width: 224px;
     height: 330px;
     z-index: -1;
+  }
+}
+@media only screen and (max-width:767px){
+  .coming-soon-frame h4{
+    margin-bottom: 30px;
   }
 }
 </style>

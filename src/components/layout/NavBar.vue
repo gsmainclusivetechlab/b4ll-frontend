@@ -24,7 +24,7 @@
                 <b-nav-item href="#">
                   <router-link to="/tryb4all"> Try B4LL </router-link>
                 </b-nav-item>
-                <b-nav-item href="#">
+                <b-nav-item href="https://docs.biometrics.gsmainclusivetechlab.io/">
                   <!-- <router-link to="/documentation">  -->
                   <a href=" https://docs.biometrics.gsmainclusivetechlab.io/ "
                     >Documentation</a
@@ -47,7 +47,7 @@
             <img
               src="../../assets/images/globe-icon.svg"
               class="img-fluid"
-              alt=""
+              alt="globe-icon"
             />
             <!-- </a> -->
           </li>

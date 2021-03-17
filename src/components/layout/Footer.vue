@@ -65,7 +65,7 @@
                   /></a>
                 </li>
               </ul> -->
-              <h4 class="text-white">Mobile app coming soon <span class="img-soon"><img src="../../assets/images/bannermob.png" class="img-fluid" alt="bannermob"></span></h4>
+              <h4 class="text-white">Mobile app coming soon </h4>
             </b-col>
           </b-row>
         </b-container>
@@ -111,7 +111,7 @@
                   <img
                     src="../../assets/images/Logol1img.jpg"
                     class="img-fluid"
-                    alt=""
+                    alt="Logol1img"
                   />
                 </a>
               </div>
@@ -123,14 +123,14 @@
                     <img
                       src="../../assets/images/mail.svg"
                       class="img-fluid"
-                      alt=""
-                    />inclusivetechlab@gsma.com
+                      alt="mail"
+                    /><a href="mailto:inclusivetechlab@gsma.com?subject=I’m interested in Biometrics For All" target="_blank">inclusivetechlab@gsma.com</a>
                   </li>
                   <li>
                     <img
                       src="../../assets/images/globe-icon.svg"
                       class="img-fluid"
-                      alt=""
+                      alt="globe-icon"
                     />English
                     <img
                       src="../../assets/images/arrow-white.svg"
@@ -142,7 +142,7 @@
                     <img
                       src="../../assets/images/help-circle.svg"
                       class="img-fluid"
-                      alt=""
+                      alt="help-circle"
                     />Help
                   </li>
                 </ul>
@@ -165,8 +165,8 @@
                     <li>
                       <a
                         href=" https://docs.biometrics.gsmainclusivetechlab.io/ "
-                        >Documentation</a
-                      >
+                        >Documentation</a>
+                      
                     </li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/faq">FAQs</a></li>
@@ -179,7 +179,7 @@
                       <img
                         src="../../assets/images/copyright-symbol.png"
                         class="img-fluid "
-                        alt=""
+                        alt="copyright-symbol"
                       /> </span
                   ></span>
 
@@ -189,7 +189,7 @@
                   <img
                     src="../../assets/images/backtotop-arrow.svg"
                     class="img-fluid "
-                    alt=""
+                    alt="backtotop-arrow"
                   />
                 </div>
               </div>
@@ -200,7 +200,7 @@
           <img
             src="../../assets/images/footer-bg-image.svg"
             class="img-fluid"
-            alt=""
+            alt="footer-bg-image"
           />
         </div>
       </div>
@@ -241,9 +241,7 @@ export default {
 </script>
 
 <style>
-span.img-soon img {
-    max-width: 95px;
-}
+
 .loader {
   border: 0.2em solid transparent;
   border-top-color: currentcolor;
