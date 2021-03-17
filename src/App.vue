@@ -1,6 +1,8 @@
 <template>
   <div id="app" class="app">
     <router-view />
+    <Footer />
+    <notifications />
   </div>
 </template>
 

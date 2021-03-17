@@ -138,13 +138,13 @@
                       class="img-fluid"
                     />
                   </li>
-                  <li>
+                  <!--<li>
                     <img
                       src="../../assets/images/help-circle.svg"
                       class="img-fluid"
                       alt="help-circle"
                     />Help
-                  </li>
+                  </li>-->
                 </ul>
               </div>
             </b-col>

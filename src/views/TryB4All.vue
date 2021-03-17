@@ -55,13 +55,13 @@
           <div class="col-12 col-lg-6">
             <div class="sign-up-frame">
               <h2>Sign up</h2>
-              <form @submit.prevent=" processForm" method="post">
-                 <p v-if="errors.length">
+              <form @submit.prevent="processForm" method="post">
+                <!-- <p v-if="errors.length">
                    <strong>Please correct the following error(s):</strong>
                     <ul>
                       <li v-for="error in errors" >{{ error }}</li>
                     </ul>
-                 </p>
+                 </p> -->
                 <div class="form-group">
                   <label for="inputAddress">Nickname</label>
                   <input
@@ -81,8 +81,10 @@
                     placeholder="Enter mobile number"
                     v-model="phone"
                   /> -->
-                   <vue-tel-input v-model="value" mode="international"></vue-tel-input>
-                   
+                  <vue-tel-input
+                    v-model="inputNumber"
+                    mode="international"
+                  ></vue-tel-input>
                 </div>
 
                 <div class="form-group">
@@ -100,11 +102,22 @@
                     </label>
                   </div>
                 </div>
-                <!-- <a href="#" class="btn">Submit Now</a> -->
-                <a href="#" class="btn">
-                  <input class="btn" type="submit" value="Submit Now" />
-                </a>
+                <a href="#">
+                  <button
+                    @click="registerNumber(inputNumber)"
+                    type="button"
+                    class="btn"
+                  >
+                    Submit Now
+                  </button></a
+                >
               </form>
+              <notifications
+                group="register"
+                animation-type="css"
+                animation-name="slide"
+                width="30%"
+              />
             </div>
           </div>
         </div>
@@ -215,12 +228,13 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import axios from 'axios'
-import VueAxios from 'vue-axios'
-Vue.use(VueAxios, axios)
+// import Vue from 'vue'
+// import axios from 'axios'
+// import VueAxios from 'vue-axios'
+// Vue.use(VueAxios, axios)
 import AppHeader from "../components/AppHeader";
 import Footer from "../components/layout/Footer";
+import axios from "axios";
 import { VueTelInput } from "vue-tel-input";
 export default {
   name: "TryB4All",
@@ -233,10 +247,11 @@ export default {
         link: "tryb4all",
       },
     },
-    value: "",
-    phone: "",
-    nickName: "",
-    errors : [],
+    // value: "",
+    // phone: "",
+    // nickName: "",
+    // errors : [],
+    inputNumber: "",
   }),
   methods: {
     scrollBottom() {
@@ -246,32 +261,58 @@ export default {
         behavior: "smooth",
       });
     },
-    processForm(e) {
-      console.log({ name: this.nickName, phone: this.value });
-      if (this.value && this.nickName) {
-        let postData={
-          nickName:this.nickName,
-          phone:this.value
-        };
-        this.axios.post("https://wsze0741d6.execute-api.eu-west-2.amazonaws.com/Stage/{lang}",postData);
-        return true;
-      }
-      this.errors=[];
-      if (!this.nickName) {
-        this.errors.push("Nick Name required.");
-      }
-      if (!this.value) {
-        this.errors.push("Phone required.");
-      }
+    //   processForm(e) {
+    //     console.log({ name: this.nickName, phone: this.value });
+    //     if (this.value && this.nickName) {
+    //       let postData={
+    //         nickName:this.nickName,
+    //         phone:this.value
+    //       };
+    //       this.axios.post("https://wsze0741d6.execute-api.eu-west-2.amazonaws.com/Stage/{lang}",postData);
+    //       return true;
+    //     }
+    //     this.errors=[];
+    //     if (!this.nickName) {
+    //       this.errors.push("Nick Name required.");
+    //     }
+    //     if (!this.value) {
+    //       this.errors.push("Phone required.");
+    //     }
 
-      e.preventDefault();
+    //     e.preventDefault();
+    //   },
+    // },
+    registerNumber(inputNumber) {
+      const number = encodeURIComponent(inputNumber.split(" ").join(""));
+      const handlerURL =
+        process.env.VUE_APP_API_HOST + "/en-GB/register?Caller=" + number;
+      axios.get(handlerURL).then((response) => {
+        if (response.data.status == "OK") {
+          console.log({ state: "SUCCESS" });
+          this.$notify({
+            group: "register",
+            type: "success",
+            title: "Success!",
+            text:
+              "Your number has been successfully approved! You may now call and use the call centre.",
+          });
+        } else {
+          console.log({ state: "ERROR" });
+          this.$notify({
+            group: "register",
+            type: "error",
+            title: "ERROR!",
+            text:
+              "There was a problem adding your number. It may already be approved or the format is incorrect. Please verify your number is correct and try again.",
+          });
+        }
+      });
     },
   },
 };
 </script>
 <style src="vue-tel-input/dist/vue-tel-input.css"></style>
 <style>
-
 .coming-soon-frame h4 {
   margin-bottom: 0;
   color: #fff;
