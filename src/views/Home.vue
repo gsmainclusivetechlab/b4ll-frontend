@@ -304,7 +304,6 @@
           <b-col cols="12">
             <div class="headline-accordion-wrap text-center bg-dark-color ">
               <h2>Frequently Asked Questions</h2>
-              <p>Lorem ipsum</p>
             </div>
 
             <div class="accordion" role="tablist">
@@ -315,7 +314,7 @@
                     v-b-toggle.accordion-1
                     variant="light"
                     class="card-link"
-                    >Accordion 1</b-button
+                    >I want to showcase my biometric solution on B4LL. How can I do that?</b-button
                   >
                 </b-card-header>
                 <b-collapse
@@ -326,11 +325,7 @@
                 >
                   <b-card-body>
                     <b-card-text
-                      >Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat.</b-card-text
+                      >We are always happy to engage with new partners. If you think you have a biometric solution that may be suitable to be showcased through B4LL, please get in touch with us.</b-card-text
                     >
                   </b-card-body>
                 </b-collapse>
@@ -343,7 +338,7 @@
                     v-b-toggle.accordion-2
                     variant="light"
                     class="card-link"
-                    >Accordion 2</b-button
+                    >Is the GSMA ITL providing biometric verification solutions through B4LL commercially?</b-button
                   >
                 </b-card-header>
                 <b-collapse
@@ -353,11 +348,7 @@
                 >
                   <b-card-body>
                     <b-card-text
-                      >Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat.</b-card-text
+                      >No, B4LL is a completely free facility. The solutions housed within B4LL are not commercial offerings from the GSMA ITL. If service providers like the general experience of the solutions housed within B4LL, they are free to adopt them commercially in their markets. The GSMA ITL would not be privy to any such commercial adoption of biometric solutions by service providers. </b-card-text
                     >
                   </b-card-body>
                 </b-collapse>
@@ -370,7 +361,7 @@
                     v-b-toggle.accordion-3
                     variant="light"
                     class="card-link"
-                    >Accordion 3</b-button
+                    >Is it possible to see the call centre working in a different languages or dialects?</b-button
                   >
                 </b-card-header>
                 <b-collapse
@@ -380,11 +371,7 @@
                 >
                   <b-card-body>
                     <b-card-text
-                      >Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat.</b-card-text
+                      >Sure! This is another potential of using call centres and voice verification. You can have the call centre working in any language or dialect, or even multiple of them.</b-card-text
                     >
                   </b-card-body>
                 </b-collapse>
