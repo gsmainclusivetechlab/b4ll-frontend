@@ -199,15 +199,17 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import AppHeader from "../components/AppHeader";
+import Footer from "../components/layout/Footer";
 import { VueTelInput } from "vue-tel-input";
 export default {
   name: "TryB4All",
-  components: { AppHeader, VueTelInput },
+  components: { AppHeader, Footer, VueTelInput },
   data: () => ({
     props: {
       tittle: "EXPERIENCE THE BIOMETRICS SHOWCASE",

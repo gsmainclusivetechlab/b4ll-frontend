@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- <div v-if="showModal && !iframe.loaded" class="loader"></div> -->
-    <div
+    <!-- <div
       v-if="showModal"
       class="gsma-form"
       v-show="iframe.loaded"
@@ -25,7 +25,7 @@
           </div>
         </div>
       </transition>
-    </div>
+    </div> -->
     <section class="app-downloading-wrapper">
       <div
         class="downloading-frame d-flex justify-content-center align-items-center"
@@ -34,8 +34,7 @@
           <b-row>
             <b-col cols="12">
               <h2>
-                Ready? Test our IVR Calln
-                 Centre Now.
+                Ready? Test our IVR Calln Centre Now.
               </h2>
               <h4 class="text-white">
                 And keep your eyes peeled for the mobile app we are launching
@@ -65,7 +64,7 @@
                   /></a>
                 </li>
               </ul> -->
-              <h4 class="text-white">Mobile app coming soon </h4>
+              <h4 class="text-white">Mobile app coming soon</h4>
             </b-col>
           </b-row>
         </b-container>
@@ -87,12 +86,7 @@
                   </p>
                 </div>
                 <div class="newscase-btn">
-                  <a
-                    id="show-modal"
-                    @click="showModal = true"
-                    class="btn-newscase"
-                    >Request Now</a
-                  >
+                  <a href="requestform" class="btn-newscase">Request Now</a>
                 </div>
               </div>
             </div>
@@ -124,7 +118,11 @@
                       src="../../assets/images/mail.svg"
                       class="img-fluid"
                       alt="mail"
-                    /><a href="mailto:inclusivetechlab@gsma.com?subject=I’m interested in Biometrics For All" target="_blank">inclusivetechlab@gsma.com</a>
+                    /><a
+                      href="mailto:inclusivetechlab@gsma.com?subject=I’m interested in Biometrics For All"
+                      target="_blank"
+                      >inclusivetechlab@gsma.com</a
+                    >
                   </li>
                   <li>
                     <img
@@ -165,8 +163,8 @@
                     <li>
                       <a
                         href=" https://docs.biometrics.gsmainclusivetechlab.io/ "
-                        >Documentation</a>
-                      
+                        >Documentation</a
+                      >
                     </li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/faq">FAQs</a></li>
@@ -241,7 +239,6 @@ export default {
 </script>
 
 <style>
-
 .loader {
   border: 0.2em solid transparent;
   border-top-color: currentcolor;
@@ -544,12 +541,12 @@ hr {
     height: 100%;
   }
   .gsma-form iframe {
-  height: 75vh;
-  width: 100%;
-  border: none;
-  box-sizing: border-box;
-  margin-top: 21px;
-}
+    height: 75vh;
+    width: 100%;
+    border: none;
+    box-sizing: border-box;
+    margin-top: 21px;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .footer-wrapper .container {
