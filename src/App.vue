@@ -1,48 +1,37 @@
 <template>
   <div id="app" class="app">
     <router-view />
-    <Footer />
   </div>
 </template>
 
 <script>
-import Footer from "./components/layout/Footer";
 export default {
   name: "app",
-  components: {
-    Footer,
-  },
 };
 </script>
 <style>
-
 @font-face {
-
-       font-family: 'Arial';
-         font-style: normal;
+  font-family: "Arial";
+  font-style: normal;
   font-weight: normal;
-  src: url('./fonts/arialregular.eot'); /* IE9 Compat Modes */
-  src: url('./fonts/arialregular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./fonts/arialregular.woff') format('woff'), /* Modern Browsers */
-       url('./fonts/arialregular.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('./fonts/arialregular.svg#Arial') format('svg'); /* Legacy iOS */
+  src: url("./fonts/arialregular.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/arialregular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("./fonts/arialregular.woff") format("woff"),
+    /* Modern Browsers */ url("./fonts/arialregular.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("./fonts/arialregular.svg#Arial")
+      format("svg"); /* Legacy iOS */
 }
 
 @font-face {
- 
-
-       font-family: 'Arial';
-         font-style: normal;
+  font-family: "Arial";
+  font-style: normal;
   font-weight: bold;
-  src: url('./fonts/arialbold.eot'); /* IE9 Compat Modes */
-  src: url('./fonts/arialbold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./fonts/arialbold.woff') format('woff'), /* Modern Browsers */
-       url('./fonts/arialbold.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('./fonts/arialbold.svg#Arial') format('svg'); /* Legacy iOS */
+  src: url("./fonts/arialbold.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/arialbold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("./fonts/arialbold.woff") format("woff"),
+    /* Modern Browsers */ url("./fonts/arialbold.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("./fonts/arialbold.svg#Arial") format("svg"); /* Legacy iOS */
 }
-
-
-
 
 body,
 html {
@@ -68,8 +57,8 @@ a:hover {
 }
 a:hover,
 p a:hover,
-p a{
-color:#ae52c4;
+p a {
+  color: #ae52c4;
 }
 h1 {
   font-size: 42px;
@@ -79,7 +68,7 @@ h1 {
 h2 {
   font-size: 30px;
   font-weight: bold;
-    line-height: 43px;
+  line-height: 43px;
   padding-bottom: 18px;
 }
 h3 {
@@ -100,10 +89,10 @@ h5 {
   font-weight: bold;
   line-height: 30px;
 }
-h6{
+h6 {
   font-size: 16px;
-line-height: 26px;
-color: #373737;
+  line-height: 26px;
+  color: #373737;
 }
 p {
   font-weight: 400;
@@ -112,10 +101,10 @@ p {
   padding-bottom: 10px;
   line-height: 26px;
 }
-.bg-greys{
+.bg-greys {
   background-color: #fafbfe;
 }
-.blue-text{
+.blue-text {
   color: #95236c;
 }
 @media only screen and (max-width: 993px) {
@@ -123,6 +112,4 @@ p {
     font-size: 27px;
   }
 }
-
-
 </style>

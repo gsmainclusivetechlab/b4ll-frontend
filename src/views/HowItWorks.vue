@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <AppHeader v-bind="props" />
-  
+
     <section class="bio-all">
       <div class="container">
         <div class="bio-all-contents">
@@ -46,15 +46,15 @@
         <div class="row">
           <div class="col-12 col-lg-4">
             <div class="right-manage-img">
-             
               <h2 class="mb-0">Use Cases</h2>
               <p>
                 Our showcase is based on the advantages of using different types
                 of biometrics (such as fingerprint, face and voice recognition)
                 to address its potentials in different business needs.
-              </p><p> For this,
-                our demonstration has several use cases covering from the
-                biometric enrolment process to the verification to access
+              </p>
+              <p>
+                For this, our demonstration has several use cases covering from
+                the biometric enrolment process to the verification to access
                 services. The number of use cases are always growing, and we
                 invite those interested to bring new ideas for us to implement.
               </p>
@@ -62,7 +62,6 @@
           </div>
           <div class="col-12 col-lg-1"></div>
           <div class="col-12 col-lg-7">
-          
             <div class="managing-box">
               <div class="row">
                 <div class="col-12 col-md-6">
@@ -177,7 +176,6 @@
               </div>
             </div>
           </div>
-        
         </div>
       </div>
     </section>
@@ -225,7 +223,6 @@
       </div>
     </div>
 
-
     <!-- <section class="tutorial-section text-center">
       <div class="container">
         <div class="row">
@@ -241,14 +238,16 @@
         </div>
       </div>
     </section> -->
+    <Footer />
   </div>
 </template>
 
 <script>
 import AppHeader from "../components/AppHeader";
+import Footer from "../components/layout/Footer";
 export default {
   name: "HowItWorks",
-  components: { AppHeader },
+  components: { AppHeader, Footer },
   data: () => ({
     props: {
       tittle: "FEATURES B4LL BRINGS TO YOU",

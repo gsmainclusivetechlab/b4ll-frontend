@@ -122,13 +122,15 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 <script>
 import AppHeader from "../components/AppHeader";
+import Footer from "../components/layout/Footer";
 export default {
   name: "About",
-  components: { AppHeader },
+  components: { AppHeader, Footer },
   data: () => ({
     props: {
       tittle: "ABOUT",

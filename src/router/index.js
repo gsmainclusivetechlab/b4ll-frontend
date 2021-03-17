@@ -4,6 +4,8 @@ import Home from "../views/Home.vue";
 import HowItWorks from "../views/HowItWorks.vue";
 import Faq from "../views/Faq.vue";
 import TryB4All from "../views/TryB4All.vue";
+import RequestForm from "../views/RequestForm.vue";
+import NotFound from "../views/NotFound.vue";
 
 Vue.use(VueRouter);
 
@@ -28,6 +30,13 @@ const routes = [
     name: "TryB4All",
     component: TryB4All,
   },
+  {
+    path: "/requestform",
+    name: "RequestForm",
+    component: RequestForm,
+  },
+  { path: "/404", component: NotFound },
+  { path: "*", redirect: "/404" },
 
   {
     path: "/about",
