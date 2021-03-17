@@ -66,7 +66,7 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label for="inputAddress2">Mobile number</label>
+                  <label for="inputAddress2" >Mobile number</label>
                   <!-- <input
                     type="text"
                     class="form-control"
@@ -74,7 +74,7 @@
                     placeholder="Enter mobile number"
                     v-model="phone"
                   /> -->
-                  <vue-tel-input v-model="value" mode="international"></vue-tel-input>
+                  <vue-tel-input v-model="inputNumber" mode="international" ></vue-tel-input>
                 </div>
 
                 <div class="form-group">
@@ -92,8 +92,10 @@
                     </label>
                   </div>
                 </div>
-                <a href="#" class="btn">Submit Now</a>
+                <a href="#">
+                  <button @click="registerNumber(inputNumber)" type="button" class="btn" >Submit Now</button></a>
               </form>
+              <notifications group="register" animation-type="css" animation-name="slide" width="30%" />
             </div>
           </div>
         </div>
@@ -204,6 +206,7 @@
 
 <script>
 import AppHeader from "../components/AppHeader";
+import axios from 'axios'
 import { VueTelInput } from "vue-tel-input";
 export default {
   name: "TryB4All",
@@ -216,7 +219,7 @@ export default {
         link: "tryb4all",
       },
     },
-    value: "",
+    inputNumber: "",
   }),
   methods: {
     scrollBottom() {
@@ -226,7 +229,30 @@ export default {
         behavior: "smooth",
       });
     },
-  },
+    registerNumber(inputNumber) {
+      const number = encodeURIComponent(inputNumber.split(' ').join(''));
+      const handlerURL = process.env.VUE_APP_API_HOST+'/en-GB/register?Caller='+number;
+      axios.get(handlerURL).then( response => {
+        if (response.data.status == 'OK') {
+            console.log({ state: 'SUCCESS' });
+            this.$notify({
+              group: 'register',
+              type: 'success',
+              title: 'Success!',
+              text: 'Your number has been successfully approved! You may now call and use the call centre.',
+            })
+        } else {
+            console.log({ state: 'ERROR' });
+              this.$notify({
+                group: 'register',
+                type: 'error',
+                title: 'ERROR!',
+                text: 'There was a problem adding your number. It may already be approved or the format is incorrect. Please verify your number is correct and try again.',
+            })
+        }
+      });
+    },
+  }
 };
 </script>
 <style src="vue-tel-input/dist/vue-tel-input.css"></style>
