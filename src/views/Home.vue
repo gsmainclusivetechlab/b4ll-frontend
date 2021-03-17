@@ -19,25 +19,25 @@
                   An opportunity to lift the barriers of digital inclusion in emerging markets
                 </h4>
                 <div class="os-system-wrap">
-                  <!-- <ul>
+                  <ul>
                     <li>
-                      <a href="#">
+                      <!-- <a href="#"></a> -->
                         <img
                           src="../assets/images/ios.svg"
                           class="img-fluid"
                           alt=""
-                      /></a>
+                      />
                     </li>
                     <li>
-                      <a href="#">
+                        <!-- <a href="#"></a> -->
                         <img
                           src="../assets/images/google.svg"
                           class="img-fluid"
                           alt=""
-                      /></a>
+                      />
                     </li>
-                  </ul> -->
-                 <h4 class="text-white">Mobile app coming soon  <span class="img-soon"><img src="../assets/images/bannermob.png" class="img-fluid" alt="bannermob"></span></h4>
+                  </ul>
+                 <h4 class="text-white">Mobile app coming soon </h4>
                 </div>
               </div>
             <!-- </b-container> -->
@@ -59,26 +59,26 @@
                 	An opportunity to lift the barriers of digital inclusion in emerging markets
                 </h4>
                 <div class="os-system-wrap">
-                  <!-- <ul>
+                  <ul>
                     <li>
-                      <a href="#">
+                      <!-- <a href="#"></a> -->
                         <img
                           src="../assets/images/ios.svg"
                           class="img-fluid"
                           alt=""
-                      /></a>
+                      />
                     </li>
                     <li>
-                      <a href="#">
+                      <!-- <a href="#"></a> -->
                         <img
                           src="../assets/images/google.svg"
                           class="img-fluid"
                           alt=""
-                      /></a>
+                      />
                     </li>
-                  </ul> -->
+                  </ul>
                 
-                 <h4 class="text-white">Mobile app coming soon  <span class="img-soon"><img src="../assets/images/bannermob.png" class="img-fluid" alt="bannermob"></span></h4></div>
+                 <h4 class="text-white">Mobile app coming soon  </h4></div>
               </div>
             <!-- </b-container> -->
             <template #img>
@@ -99,25 +99,25 @@
                	An opportunity to lift the barriers of digital inclusion in emerging markets
                 </h4>
                 <div class="os-system-wrap">
-                  <!-- <ul>
+                  <ul>
                     <li>
-                      <a href="#">
+                      <!-- <a href="#"></a> -->
                         <img
                           src="../assets/images/ios.svg"
                           class="img-fluid"
                           alt=""
-                      /></a>
+                      />
                     </li>
                     <li>
-                      <a href="#">
+                      <!-- <a href="#"></a> -->
                         <img
                           src="../assets/images/google.svg"
                           class="img-fluid"
                           alt=""
-                      /></a>
+                      />
                     </li>
-                  </ul> -->
-                 <h4 class="text-white"><em>Mobile app coming soon  <span class="img-soon"><img src="../assets/images/bannermob.png" class="img-fluid" alt="bannermob"></span></em></h4>
+                  </ul>
+                 <h4 class="text-white"><em>Mobile app coming soon  </em></h4>
                 </div>
               </div>
             <!-- </b-container> -->
@@ -151,7 +151,7 @@
           <b-col cols="12" md="7">
             <div class="content-digital">
               <p>
-               	o	Biometrics For All offers an Interactive Voice Response (IVR) call centre and 
+               	Biometrics For All offers an Interactive Voice Response (IVR) call centre and 
                  mobile application with multiple use cases showcasing the potential of biometrics 
                  to advance financial inclusion in emerging markets.
               </p>
@@ -253,7 +253,7 @@
                     <img
                       src="../assets/images/development.png"
                       class="img-fluid"
-                      alt=""
+                      alt="development"
                     />
                     <h5>Tailored use cases</h5>
                     <h6>
@@ -268,7 +268,7 @@
                     <img
                       src="../assets/images/trusted.png"
                       class="img-fluid"
-                      alt=""
+                      alt="trusted"
                     />
                     <h5>Trusted technical expertise</h5>
                     <h6>
@@ -283,7 +283,7 @@
                     <img
                       src="../assets/images/smartphones.png"
                       class="img-fluid"
-                      alt=""
+                      alt="smartphones"
                     />
                     <h5>Built for low-tech environments</h5>
                     <h6>
@@ -512,7 +512,7 @@ export default {
   text-align: left;
   position: relative;
 }
-.slider-portfolio .os-system-wrap .img-soon{
+/* .slider-portfolio .os-system-wrap .img-soon{
   position: absolute;
       bottom: 9px;
       top: 0;
@@ -521,7 +521,7 @@ export default {
     max-width: 90px;
     height: auto;
     margin-top: -16px;
-}
+} */
 
 
 .slider-portfolio .os-system-wrap ul li {
@@ -615,15 +615,22 @@ export default {
   position: relative;
 }
 .two-col-biometric-wrap .bg-biometric{
-  width: 216px;
-   min-width: 216px;
-  min-height: 188px;
+     width: 100%;
+    min-width: 188px;
+    min-height: 188px;
 }
 .two-col-biometric-wrap .bg-biometric2,
 .two-col-biometric-wrap .bg-biometric3{
-  width: 163px;
-   min-width: 180px;
-  min-height: 163px;
+       width: 160px;
+    min-width: 160px;
+    min-height: 163px;
+    /* height: 163px; */
+    padding: 10px;
+    margin-top: 20px;
+    /* margin-right: 20px; */
+}
+.two-col-biometric-wrap .bg-biometric3.bg-blue {
+    margin-left: 20px;
 }
 .two-col-biometric-wrap .bg-biometric::before {
   content: "";
@@ -632,7 +639,7 @@ export default {
   background-position: center;
   background-size: contain;
   left: -132px;
-  top: -108px;
+     top: -47px;
   background-repeat: no-repeat;
   width: 150px;
   min-height: 150px;
@@ -645,7 +652,7 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  right: -121px;
+      right: 128px;
   top: -54px;
   width: 150px;
   min-height: 150px;
@@ -658,8 +665,8 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  left: -121px;
-  bottom: -54px;
+      left: 105px;
+    bottom: -71px;
   width: 150px;
   min-height: 150px;
   z-index: -1;
@@ -688,7 +695,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  flex-direction: column;
+  flex-direction: row;
   height: 100%;
 }
 .card-header {
@@ -886,6 +893,17 @@ export default {
   }
 }
 @media only screen and (max-width: 767px) {
+  .two-col-biometric-wrap .biometric-right-col{
+    flex-direction: column; 
+
+  }
+  .two-col-biometric-wrap .bg-biometric3.bg-blue{
+    margin-left: 0;
+  }
+  .two-col-biometric-wrap .bg-biometric2, .two-col-biometric-wrap .bg-biometric3{
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
   .digital-wrapper::before {
     width: 150px;
     height: 200px;

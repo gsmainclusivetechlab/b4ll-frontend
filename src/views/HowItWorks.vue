@@ -1,151 +1,7 @@
 <template>
   <div class="home">
     <AppHeader v-bind="props" />
-    <!-- <div class="usecase-wrapper">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="usecase-main ">
-              <h2>Use Cases</h2>
-              <h6>
-                Our  showcase is based on the advantages of using different types of biometrics 
-                (currently voice, but fingerprint and face coming soon with the mobile app) 
-                to address its potential in different business needs. For this, our demonstration 
-                covers several use cases from the biometric enrolment process to verification and 
-                accessing services. The number of use cases is always growing, and we invite those 
-                interested to bring new ideas for us to implement.
-              </h6>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="usecase-three-col-content">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-md-6 col-lg-4">
-              <div
-                class="usecase-frame d-flex justify-content-start align-items-start"
-              >
-                <div class="usecase-img">
-                  <img
-                    src="../assets/images/money-bag.png"
-                    class="img-fluid"
-                    alt=""
-                  />
-                </div>
-                <div class="usecase-content">
-                  <h4>Account balance</h4>
-                  <h6>
-                    Lorem ipsum is placeholder text commonly used in the
-                    graphic.
-                  </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div
-                class="usecase-frame d-flex justify-content-start align-items-start"
-              >
-                <div class="usecase-img">
-                  <img
-                    src="../assets/images/money-transfer.png"
-                    class="img-fluid"
-                    alt=""
-                  />
-                </div>
-                <div class="usecase-content">
-                  <h4>Make a transfer</h4>
-                  <h6>
-                    Lorem ipsum is placeholder text commonly used in the
-                    graphic.
-                  </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div
-                class="usecase-frame d-flex justify-content-start align-items-start"
-              >
-                <div class="usecase-img">
-                  <img
-                    src="../assets/images/mobile-payment.png"
-                    class="img-fluid"
-                    alt=""
-                  />
-                </div>
-                <div class="usecase-content">
-                  <h4>Pay bill</h4>
-                  <h6>
-                    Lorem ipsum is placeholder text commonly used in the
-                    graphic.
-                  </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div
-                class="usecase-frame d-flex justify-content-start align-items-start"
-              >
-                <div class="usecase-img">
-                  <img
-                    src="../assets/images/bank.png"
-                    class="img-fluid"
-                    alt=""
-                  />
-                </div>
-                <div class="usecase-content">
-                  <h4>Bank Transfer</h4>
-                  <h6>
-                    Lorem ipsum is placeholder text commonly used in the
-                    graphic.
-                  </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div
-                class="usecase-frame d-flex justify-content-start align-items-start"
-              >
-                <div class="usecase-img">
-                  <img
-                    src="../assets/images/wifi.png"
-                    class="img-fluid"
-                    alt=""
-                  />
-                </div>
-                <div class="usecase-content">
-                  <h4>Internet Bills</h4>
-                  <h6>
-                    Lorem ipsum is placeholder text commonly used in the
-                    graphic.
-                  </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div
-                class="usecase-frame d-flex justify-content-start align-items-start"
-              >
-                <div class="usecase-img">
-                  <img
-                    src="../assets/images/current.png"
-                    class="img-fluid"
-                    alt=""
-                  />
-                </div>
-                <div class="usecase-content">
-                  <h4>Electricity Bills</h4>
-                  <h6>
-                    Lorem ipsum is placeholder text commonly used in the
-                    graphic.
-                  </h6>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
+  
     <section class="bio-all">
       <div class="container">
         <div class="bio-all-contents">
@@ -177,7 +33,7 @@
                 <img
                   src="../assets/images/usecase-content.png"
                   class="img-fluid"
-                  alt=""
+                  alt="usecase-content"
                 />
               </div>
             </div>
@@ -190,16 +46,13 @@
         <div class="row">
           <div class="col-12 col-lg-4">
             <div class="right-manage-img">
-              <!-- <img
-                src="../assets/images/mobile-screens-2.png"
-                class="img-fluid"
-                alt=""
-              /> -->
+             
               <h2 class="mb-0">Use Cases</h2>
               <p>
                 Our showcase is based on the advantages of using different types
                 of biometrics (such as fingerprint, face and voice recognition)
-                to address its potentials in different business needs. For this,
+                to address its potentials in different business needs.
+              </p><p> For this,
                 our demonstration has several use cases covering from the
                 biometric enrolment process to the verification to access
                 services. The number of use cases are always growing, and we
@@ -207,11 +60,9 @@
               </p>
             </div>
           </div>
-          <div class="col-12 col-lg-8">
-            <!-- <h2>
-              The App manage everything <br />
-              you need whatever
-            </h2> -->
+          <div class="col-12 col-lg-1"></div>
+          <div class="col-12 col-lg-7">
+          
             <div class="managing-box">
               <div class="row">
                 <div class="col-12 col-md-6">
@@ -220,7 +71,7 @@
                       <img
                         src="../assets/images/feature-icon-1.png"
                         class="img-fluid"
-                        alt=""
+                        alt="feature-icon-1"
                       />
                     </div>
                     <div class="content-manage-frame">
@@ -238,7 +89,7 @@
                       <img
                         src="../assets/images/feature-icon-7.png"
                         class="img-fluid"
-                        alt=""
+                        alt="Alerts"
                       />
                     </div>
                     <div class="content-manage-frame">
@@ -253,9 +104,9 @@
                   <div class="twoline-managing-frame">
                     <div class="img-manage">
                       <img
-                        src="../assets/images/fingerprint.png"
+                        src="../assets/images/biometrics-types.png"
                         class="img-fluid"
-                        alt=""
+                        alt="biometrics-types"
                       />
                     </div>
                     <div class="content-manage-frame">
@@ -271,9 +122,9 @@
                   <div class="twoline-managing-frame">
                     <div class="img-manage">
                       <img
-                        src="../assets/images/feature-icon-2.png"
+                        src="../assets/images/Alerts.png"
                         class="img-fluid"
-                        alt=""
+                        alt="feature-icon-2"
                       />
                     </div>
                     <div class="content-manage-frame">
@@ -289,9 +140,9 @@
                   <div class="twoline-managing-frame">
                     <div class="img-manage">
                       <img
-                        src="../assets/images/feature-icon-5.png"
+                        src="../assets/images/passphrases.png"
                         class="img-fluid"
-                        alt=""
+                        alt="passphrases"
                       />
                     </div>
                     <div class="content-manage-frame">
@@ -308,9 +159,9 @@
                   <div class="twoline-managing-frame">
                     <div class="img-manage">
                       <img
-                        src="../assets/images/feature-icon-6.png"
+                        src="../assets/images/fingerprint.png"
                         class="img-fluid"
-                        alt=""
+                        alt="feature-icon-6"
                       />
                     </div>
                     <div class="content-manage-frame">
@@ -326,26 +177,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-4">
-            <div class="right-manage-img">
-              <!-- <img
-                src="../assets/images/mobile-screens-2.png"
-                class="img-fluid"
-                alt=""
-              /> -->
-              <h2 class="mb-0">Use Cases</h2>
-              <p>
-                Our showcase is based on the advantages of using different types
-                of biometrics (currently voice, but fingerprint and face coming
-                soon with the mobile app) to address its potential in different
-                business needs. For this, our demonstration covers several use
-                cases from the biometric enrolment process to verification and
-                accessing services. The number of use cases is always growing,
-                and we invite those interested to bring new ideas for us to
-                implement.
-              </p>
-            </div>
-          </div>
+        
         </div>
       </div>
     </section>
@@ -385,91 +217,30 @@
               <img
                 src="../assets/images/mobile-app.png"
                 class="img-fluid"
-                alt=""
+                alt="mobile-app"
               />
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div class="digital-wrapper feature-wrap">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="feature-content text-center">
-              <h2>Our Features</h2>
-              <p>
-                Lorem ipsum is placeholder text commonly used in the graphic,
-                print, and publishing <br />
-                industries for previewing layouts and visual mockups.
-              </p>
-            </div>
-            <div class="three-col-feature-frame">
-              <div class="row justify-content-center">
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div class="card-wrap">
-                    <img
-                      src="../assets/images/our-feature-icon-1.svg"
-                      class="img-fluid"
-                      alt=""
-                    />
-                    <h5>Data safety with supplier</h5>
-                    <p>
-                      Lorem ipsum is placeholder text commonly used in the
-                      graphic, print, and publishing industries.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div class="card-wrap">
-                    <img
-                      src="../assets/images/our-feature-icon-2.svg"
-                      class="img-fluid"
-                      alt=""
-                    />
-                    <h5>Data safety with supplier</h5>
-                    <p>
-                      Lorem ipsum is placeholder text commonly used in the
-                      graphic, print, and publishing industries.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div class="card-wrap">
-                    <img
-                      src="../assets/images/our-feature-icon-3.svg"
-                      class="img-fluid"
-                      alt=""
-                    />
-                    <h5>Data safety with supplier</h5>
-                    <p>
-                      Lorem ipsum is placeholder text commonly used in the
-                      graphic, print, and publishing industries.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
-    <section class="tutorial-section text-center">
+
+    <!-- <section class="tutorial-section text-center">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h2>Watch a Quick Tutorial</h2>
+          <h2>Test our call centre now!</h2>
             <p>
-              Lorem ipsum is placeholder text commonly used in the graphic,
-              print, and publishing <br />
-              industries for previewing layouts and visual mockups.
+              Access our documentation and get the most out your experience, <br/>
+              If you cannot find the use cases you need, please contact us  <br/>
+              Let's  
             </p>
-            <img src="../assets/images/Call.png" class="img-fluid" alt="" />
+            <img src="../assets/images/Call.png" class="img-fluid" alt="Call" />
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
