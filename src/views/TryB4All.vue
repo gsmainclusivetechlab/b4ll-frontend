@@ -55,7 +55,13 @@
           <div class="col-12 col-lg-6">
             <div class="sign-up-frame">
               <h2>Sign up</h2>
-              <form>
+              <form @submit="checkForm">
+                 <p v-if="errors.length">
+                   <strong>Please correct the following error(s):</strong>
+                    <ul>
+                      <li v-for="error in errors" >{{ error }}</li>
+                    </ul>
+                 </p>
                 <div class="form-group">
                   <label for="inputAddress">Nickname</label>
                   <input
@@ -63,18 +69,19 @@
                     class="form-control"
                     id="inputAddress"
                     placeholder="Enter nickname"
+                    v-model="nickName"
                   />
                 </div>
                 <div class="form-group">
                   <label for="inputAddress2">Mobile number</label>
-                  <!-- <input
+                  <input
                     type="text"
                     class="form-control"
                     id="inputAddress2"
                     placeholder="Enter mobile number"
                     v-model="phone"
-                  /> -->
-                  <vue-tel-input v-model="value"></vue-tel-input>
+                  />
+                  <!-- <vue-tel-input v-model="value"></vue-tel-input> -->
                 </div>
 
                 <div class="form-group">
@@ -92,7 +99,10 @@
                     </label>
                   </div>
                 </div>
-                <a href="#" class="btn">Submit Now</a>
+                <!-- <a href="#" class="btn">Submit Now</a> -->
+                <a href="#" class="btn">
+                  <input class="btn" type="submit" value="Submit Now" />
+                </a>
               </form>
             </div>
           </div>
@@ -219,6 +229,9 @@ export default {
       },
     },
     value: "",
+    phone: "",
+    nickName: "",
+    errors : [],
   }),
   methods: {
     scrollBottom() {
@@ -227,6 +240,20 @@ export default {
         left: 0,
         behavior: "smooth",
       });
+    },
+    checkForm(e) {
+      if (this.phone && this.nickName) {
+        return true;
+      }
+      this.errors=[];
+      if (!this.nickName) {
+        this.errors.push("Nick Name required.");
+      }
+      if (!this.phone) {
+        this.errors.push("Phone required.");
+      }
+
+      e.preventDefault();
     },
   },
 };
