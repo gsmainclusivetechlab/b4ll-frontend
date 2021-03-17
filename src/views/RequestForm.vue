@@ -1,15 +1,16 @@
 <template>
   <div class="home">
-    <AppHeader v-bind="props" />
+    <RequestFormNav />
     <iframe title="form" :src="source" width="100%" height="100%"></iframe>
   </div>
 </template>
 
 <script>
 import AppHeader from "../components/AppHeader";
+import RequestFormNav from "../components/layout/RequestFormNav";
 export default {
   name: "RequestForm",
-  components: { AppHeader },
+  components: { AppHeader, RequestFormNav },
   data: () => ({
     props: {
       tittle: "Request Form",
