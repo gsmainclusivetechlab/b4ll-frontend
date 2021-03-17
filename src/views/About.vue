@@ -7,11 +7,25 @@
           <div class="col-12 col-md-6">
             <h2>Inclusive Tech Lab</h2>
             <h6>
-              The <a
-                  href="https://www.gsma.com/mobilefordevelopment/mobile-money/gsma-inclusive-tech-lab/"
-                  target="_blank"
-                >
-                  GSMA Inclusive Tech Lab</a> supports the mobile money industry to develop the mobile financial ecosystem, to enable a broad range of digital transactions and make mobile wallets central to the lives of the financially excluded and underserved, providing them with better solutions to manage their financial resources and face economic shocks. Mobile money has evolved to a platform of more than 1 billion accounts reaching emerging market consumers and bringing financial access to the previously underserved and excluded. The Inclusive Tech Lab has published a set of harmonised Mobile Money Application Programming Interfaces (APIs) and is now looking at expanding the potential of mobile money through the use of biometrics for financial transactions. 
+              The
+              <a
+                href="https://www.gsma.com/mobilefordevelopment/mobile-money/gsma-inclusive-tech-lab/"
+                target="_blank"
+              >
+                GSMA Inclusive Tech Lab</a
+              >
+              supports the mobile money industry to develop the mobile financial
+              ecosystem, to enable a broad range of digital transactions and
+              make mobile wallets central to the lives of the financially
+              excluded and underserved, providing them with better solutions to
+              manage their financial resources and face economic shocks. Mobile
+              money has evolved to a platform of more than 1 billion accounts
+              reaching emerging market consumers and bringing financial access
+              to the previously underserved and excluded. The Inclusive Tech Lab
+              has published a set of harmonised Mobile Money Application
+              Programming Interfaces (APIs) and is now looking at expanding the
+              potential of mobile money through the use of biometrics for
+              financial transactions.
             </h6>
           </div>
           <div class="col-12 col-md-6">
@@ -37,31 +51,54 @@
           <div class="col-12 col-lg-6">
             <div class="bio-all-content-wrap">
               <h6>
-                Biometrics for All seeks to show operators the advantages and possibilities of using biometric solutions in low-tech environments, including the possibility of integration with a MMAPI. The main advantage of using biometrics in low tech environments comes from the need to reach a larger audience of users.
-
+                Biometrics for All seeks to show operators the advantages and
+                possibilities of using biometric solutions in low-tech
+                environments, including the possibility of integration with a
+                MMAPI. The main advantage of using biometrics in low tech
+                environments comes from the need to reach a larger audience of
+                users.
               </h6>
               <h6>
-                This benefit is even more evident in places where the number of national ID holders is reduced. Thus, in some developing countries, starting from a scenario where access to national ID is difficult, the registration and authentication of users on mobile operators may be compromised. In this sense, the use of biometrics allows the use of non-transferable information, leading to greater adherence by users. This makes biometrics the ideal and more accurate solution for validating personal data. 
+                This benefit is even more evident in places where the number of
+                national ID holders is reduced. Thus, in some developing
+                countries, starting from a scenario where access to national ID
+                is difficult, the registration and authentication of users on
+                mobile operators may be compromised. In this sense, the use of
+                biometrics allows the use of non-transferable information,
+                leading to greater adherence by users. This makes biometrics the
+                ideal and more accurate solution for validating personal data.
                 more.
               </h6>
-               <h6>
-              If well implemented, biometrics authentication can unlock access to a large number of previously difficult to reach customers, such as: people with disabilities, less literate populations, people with lack of national ID, featured phones users and much more. 
+              <h6>
+                If well implemented, biometrics authentication can unlock access
+                to a large number of previously difficult to reach customers,
+                such as: people with disabilities, less literate populations,
+                people with lack of national ID, featured phones users and much
+                more.
               </h6>
             </div>
           </div>
           <div class="col-12 col-lg-6">
             <div class="img-bio-content">
-              
               <h6>
-                The use of biometrics can increase the security to execute mobile money transactions, such as international remittance. Inscribed within well-designed platforms would not only enable them to make greater and better use of their mobile wallets, but also make usage more secure and attractive.
+                The use of biometrics can increase the security to execute
+                mobile money transactions, such as international remittance.
+                Inscribed within well-designed platforms would not only enable
+                them to make greater and better use of their mobile wallets, but
+                also make usage more secure and attractive.
               </h6>
               <h6>
-                The GSMA is working with its members and mobile money industry partners to support the process of implementing biometrics in their markets.
-
+                The GSMA is working with its members and mobile money industry
+                partners to support the process of implementing biometrics in
+                their markets.
               </h6>
             </div>
             <div class="img-bottom">
-              <img src="../assets/images/Biomet.png" class="img-fluid" alt="Biomet" />
+              <img
+                src="../assets/images/Biomet.png"
+                class="img-fluid"
+                alt="Biomet"
+              />
             </div>
           </div>
         </div>
@@ -75,7 +112,12 @@
               Contact us to support you to pilot a <br />
               project in your market
             </h2>
-            <a  href="mailto:inclusivetechlab@gsma.com?subject=I’m interested in Biometrics For All" target="_blank" class="btn">Contact</a>
+            <a
+              href="mailto:inclusivetechlab@gsma.com?subject=I’m interested in Biometrics For All"
+              target="_blank"
+              class="btn"
+              >Contact</a
+            >
           </div>
         </div>
       </div>
@@ -92,7 +134,7 @@ export default {
       tittle: "ABOUT",
       breadCrumb: {
         tittle: "About",
-        link: "/about",
+        link: "about",
       },
     },
   }),
@@ -173,7 +215,7 @@ export default {
 .bio-all-content .img-bio-content {
   padding-bottom: 121px;
 }
-.two-col-biometric-wrap .bio-all-content p a{
+.two-col-biometric-wrap .bio-all-content p a {
   color: #fff;
 }
 @media only screen and (max-width: 1024px) {

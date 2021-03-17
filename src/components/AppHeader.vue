@@ -5,8 +5,8 @@
       v-bind:class="[
         breadCrumb.link === 'tryb4all'
           ? 'inner-head-try'
-          : breadCrumb.link === 'tryb4all'
-          ? 'inner-head-try'
+          : breadCrumb.link === 'about'
+          ? 'inner-head-about'
           : 'inner-header-wrap',
       ]"
     >
@@ -97,6 +97,14 @@ export default {
   color: #fff;
 }
 .inner-header .inner-head-try {
+  background-image: url("../assets/images/bg-try.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 374px;
+  width: 100%;
+  color: #fff;
+}
+.inner-header .inner-head-about {
   background-image: url("../assets/images/banner.png");
   background-position: center;
   background-repeat: no-repeat;

@@ -72,6 +72,7 @@
                     class="form-control"
                     id="inputAddress2"
                     placeholder="Enter mobile number"
+                    v-model="phone"
                   /> -->
                   <vue-tel-input v-model="value"></vue-tel-input>
                 </div>
@@ -215,6 +216,7 @@ export default {
         link: "tryb4all",
       },
     },
+    value: "",
   }),
   methods: {
     scrollBottom() {
