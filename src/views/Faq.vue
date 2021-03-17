@@ -165,14 +165,16 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import AppHeader from "../components/AppHeader";
+import Footer from "../components/layout/Footer";
 export default {
   name: "Faq",
-  components: { AppHeader },
+  components: { AppHeader, Footer },
   data: () => ({
     searchQuery: "",
     // showSearch: false,
