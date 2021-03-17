@@ -3,7 +3,11 @@
     <NavBar />
     <div
       v-bind:class="[
-        breadCrumb.link === 'tryb4all' ? 'inner-head-try' : 'inner-header-wrap',
+        breadCrumb.link === 'tryb4all'
+          ? 'inner-head-try'
+          : breadCrumb.link === 'tryb4all'
+          ? 'inner-head-try'
+          : 'inner-header-wrap',
       ]"
     >
       <div class="inner-banner-wrapper">
@@ -93,7 +97,7 @@ export default {
   color: #fff;
 }
 .inner-header .inner-head-try {
- background-image: url("../assets/images/banner.png");
+  background-image: url("../assets/images/banner.png");
   background-position: center;
   background-repeat: no-repeat;
   min-height: 374px;
@@ -129,8 +133,8 @@ export default {
   font-size: 13px;
   color: #fff;
 }
-.pagination-content ul li a:hover{
-  color:#fff;
+.pagination-content ul li a:hover {
+  color: #fff;
 }
 .pagination-content ul li {
   display: inline-block;

@@ -12,8 +12,25 @@
               </h2>
               <p>The call centre is currently operating using two numbers:</p>
               <h4>
-                <p> <span class="phone-call-frame mr-10"><img src="../assets/images/phone-call-blue.png" class="img-fluid" alt="phone-call-blue"> </span> <b> UK </b><a href="tel:+441904803378">+44 1904 803378</a></p>
-                <p> <span class="phone-call-frame mr-10"><img src="../assets/images/phone-call-blue.png" class="img-fluid" alt="phone-call-blue"> </span><b>US </b> <a href="tel:+17372450200">+1 737 245 0200</a></p>
+                <p>
+                  <span class="phone-call-frame mr-10"
+                    ><img
+                      src="../assets/images/phone-call-blue.png"
+                      class="img-fluid"
+                      alt="phone-call-blue"
+                    />
+                  </span>
+                  <b> UK </b><a href="tel:+441904803378">+44 1904 803378</a>
+                </p>
+                <p>
+                  <span class="phone-call-frame mr-10"
+                    ><img
+                      src="../assets/images/phone-call-blue.png"
+                      class="img-fluid"
+                      alt="phone-call-blue"
+                    /> </span
+                  ><b>US </b> <a href="tel:+17372450200">+1 737 245 0200</a>
+                </p>
               </h4>
               <p>
                 Follow the instructions to enrol using your voice print,
@@ -68,8 +85,9 @@
                         id="gridCheck"
                       />
                       <span class="checkmark"></span>
-<a href="Biometric-Showcase-Application-terms-and-Condition.pdf" target="_blank"> Accept the terms and conditions</a>
-                     
+                      <a href="./terms-and-condition.pdf" target="_blank"
+                        >Accept the terms and conditions</a
+                      >
                     </label>
                   </div>
                 </div>
@@ -120,15 +138,11 @@
                       class="img-fluid"
                       alt="biometric-provide-icon-1"
                     />
-
-                    
                   </div>
-                  
-                
                 </b-col>
                 <b-col cols="12">
-<div class="coming-soon-frame text-white text-center">
-  <h4>Coming Soon</h4>
+                  <div class="coming-soon-frame text-white text-center">
+                    <h4>Coming Soon</h4>
                   </div>
                 </b-col>
                 <b-col cols="12" md="5">
@@ -160,7 +174,11 @@
         <div class="row">
           <div class="col-12 col-md-6">
             <div class="img-about-content">
-              <img src="../assets/images/Guide.png" class="img-fluid" alt="Guide" />
+              <img
+                src="../assets/images/Guide.png"
+                class="img-fluid"
+                alt="Guide"
+              />
             </div>
           </div>
           <div class="col-12 col-md-6">
@@ -211,54 +229,54 @@ export default {
 </script>
 
 <style>
-.login-form-frame  .vti__dropdown.open:focus{
-  border: 1px solid #ddd!important;
+.login-form-frame .vti__dropdown.open:focus {
+  border: 1px solid #ddd !important;
 }
-.login-form-frame .vue-tel-input .vti__dropdown:focus{
+.login-form-frame .vue-tel-input .vti__dropdown:focus {
   border: 1px solid #ddd;
 }
-.login-form-frame .vue-tel-input{
+.login-form-frame .vue-tel-input {
   position: relative;
 }
-.login-form-frame .vue-tel-input .vti__dropdown{
+.login-form-frame .vue-tel-input .vti__dropdown {
   position: absolute;
-      height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-        border-right: 1px solid #ddd;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  border-right: 1px solid #ddd;
 }
 
-.login-form-frame .vue-tel-input:focus{
+.login-form-frame .vue-tel-input:focus {
   border: 1px solid #95236c;
 }
-.login-form-frame .vue-tel-input  .vti__dropdown-arrow{
+.login-form-frame .vue-tel-input .vti__dropdown-arrow {
   color: #95236c;
 }
-.login-form-frame .vue-tel-input .vti__dropdown-list{
-    background: #fff;
-    height: 200px;
-    overflow: auto;
-        display: block;
-    z-index: 99;
-    position: relative;
+.login-form-frame .vue-tel-input .vti__dropdown-list {
+  background: #fff;
+  height: 200px;
+  overflow: auto;
+  display: block;
+  z-index: 99;
+  position: relative;
 }
-.login-form-frame .vue-tel-input  input{
-display: block;
-    width: 100%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-        padding-left: 50px!important;
-    line-height: 1.5;
-    color: #495057;
-    width: 100%;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ddd;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+.login-form-frame .vue-tel-input input {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  padding-left: 50px !important;
+  line-height: 1.5;
+  color: #495057;
+  width: 100%;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-.coming-soon-frame h4{
+.coming-soon-frame h4 {
   margin-bottom: 0;
   color: #fff;
   padding-top: 10px;
@@ -305,7 +323,7 @@ display: block;
 .login-form-frame .btn {
   width: 100%;
 }
-.mr-10{
+.mr-10 {
   margin-right: 10px;
 }
 .login-form-frame .content-login h4 {
@@ -441,8 +459,8 @@ display: block;
     z-index: -1;
   }
 }
-@media only screen and (max-width:767px){
-  .coming-soon-frame h4{
+@media only screen and (max-width: 767px) {
+  .coming-soon-frame h4 {
     margin-bottom: 30px;
   }
 }
