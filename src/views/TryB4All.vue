@@ -74,7 +74,7 @@
                     placeholder="Enter mobile number"
                     v-model="phone"
                   /> -->
-                  <vue-tel-input v-model="value"></vue-tel-input>
+                  <vue-tel-input v-model="value" mode="international"></vue-tel-input>
                 </div>
 
                 <div class="form-group">
@@ -229,55 +229,8 @@ export default {
   },
 };
 </script>
-
+<style src="vue-tel-input/dist/vue-tel-input.css"></style>
 <style>
-.login-form-frame .vti__dropdown.open:focus {
-  border: 1px solid #ddd !important;
-}
-.login-form-frame .vue-tel-input .vti__dropdown:focus {
-  border: 1px solid #ddd;
-}
-.login-form-frame .vue-tel-input {
-  position: relative;
-}
-.login-form-frame .vue-tel-input .vti__dropdown {
-  position: absolute;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
-  border-right: 1px solid #ddd;
-}
-
-.login-form-frame .vue-tel-input:focus {
-  border: 1px solid #95236c;
-}
-.login-form-frame .vue-tel-input .vti__dropdown-arrow {
-  color: #95236c;
-}
-.login-form-frame .vue-tel-input .vti__dropdown-list {
-  background: #fff;
-  height: 200px;
-  overflow: auto;
-  display: block;
-  z-index: 99;
-  position: relative;
-}
-.login-form-frame .vue-tel-input input {
-  display: block;
-  width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  padding-left: 50px !important;
-  line-height: 1.5;
-  color: #495057;
-  width: 100%;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ddd;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
 .coming-soon-frame h4 {
   margin-bottom: 0;
   color: #fff;
