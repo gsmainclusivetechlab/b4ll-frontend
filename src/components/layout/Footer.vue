@@ -100,7 +100,7 @@
                       >inclusivetechlab@gsma.com</a
                     >
                   </li>
-                  <li>
+                  <!--<li>
                     <img
                       src="../../assets/images/globe-icon.svg"
                       class="img-fluid"
@@ -112,7 +112,7 @@
                       class="img-fluid"
                     />
                   </li>
-                  <!--<li>
+                  <li>
                     <img
                       src="../../assets/images/help-circle.svg"
                       class="img-fluid"
@@ -212,7 +212,7 @@ ul {
   list-style: none;
 }
 .app-downloading-wrapper .downloading-frame {
-  background-image: url("../../assets/images/woman-3083376_1920.svg");
+  background-image: url("../../assets/images/woman-3083376_1920.png");
   min-height: 386px;
   text-align: center;
   background-position: center;
