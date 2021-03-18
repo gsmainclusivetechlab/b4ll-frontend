@@ -543,7 +543,7 @@ export default {
   padding-bottom: 30px;
 }
 .mobile-group-banner {
-  background-image: url("../assets/images/group10.svg");
+  background-image: url("../assets/images/group10.png");
   min-height: 621px;
   background-size: contain;
   background-repeat: no-repeat;
