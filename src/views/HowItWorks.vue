@@ -10,16 +10,10 @@
               <div class="bio-content-wrap">
                 <h2>IVR Call Centre</h2>
                 <p>
-                  One of the B4LL project targets is to demonstrate the
-                  strengths of using voice and speech recognition for
-                  identification and authentication of users to access mobile
-                  services.
+                  One of the targets of the B4LL project is to demonstrate the advantages of using voice and speech recognition for identification and authentication of users to access digital services.
                 </p>
                 <p>
-                  This showcase consists of an IVR call centre that allows the
-                  user to navigate through a menu of different possibilities,
-                  using voice bots which can be an alternative to requiring
-                  someone to present physical ID and is more cost saving.
+                  This showcase consists of an IVR call centre that allows the user to navigate through a menu of different possibilities, using voice bots which can be an alternative to requiring someone to present physical ID.
                 </p>
                 <p>
                   The use cases available are a simulation of real services and
@@ -164,7 +158,7 @@
                       />
                     </div>
                     <div class="content-manage-frame">
-                      <h5>Constant Indenty Verification</h5>
+                      <h5>Constant Indentity Verification</h5>
                       <p>
                         The biometric verification is required after a
                         determined period of time to keep your access and

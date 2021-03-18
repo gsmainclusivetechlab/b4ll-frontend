@@ -240,7 +240,7 @@ export default {
       },
       {
         tittle: "13.	Is it possible to see the call centre working in a different languages or dialects?",
-        content: "Sure! This is another potential of using call centres and voice verification. You can have the call centre working in any language or dialect, or even multiple of them.",
+        content: "o	Sure! You can have the call centre working in any language or dialect, or even multiple languages.",
       },
       {
         tittle: "14.	How do I test/use the call centre?",

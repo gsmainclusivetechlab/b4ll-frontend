@@ -82,6 +82,7 @@
                     v-model="phone"
                   />
                   -->
+                  <label for="inputAddress2">Mobile number</label>
                   <vue-tel-input
                     v-model="inputNumber"
                     mode="international"
