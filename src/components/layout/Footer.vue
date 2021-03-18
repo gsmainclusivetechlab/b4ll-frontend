@@ -197,13 +197,6 @@ export default {
     scrollTop() {
       window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
     },
-    modalClose() {
-      this.showModal = false;
-      this.iframe.loaded = false;
-    },
-    iframeLoad() {
-      this.iframe.loaded = true;
-    },
   },
 
   watch: {
@@ -215,88 +208,6 @@ export default {
 </script>
 
 <style>
-.loader {
-  border: 0.2em solid transparent;
-  border-top-color: currentcolor;
-  border-radius: 50%;
-  animation: 1s loader linear infinite;
-  position: relative;
-}
-.loader ::before {
-  content: "";
-  display: block;
-  width: inherit;
-  height: inherit;
-  position: absolute;
-  top: -0.2em;
-  left: -0.2em;
-  border: 0.2em solid currentcolor;
-  border-radius: 50%;
-  opacity: 0.5;
-}
-
-@keyframes loader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.gsma-form iframe {
-  height: 75vh;
-  width: 75vw;
-  border: none;
-  box-sizing: border-box;
-}
-.gsma-form body {
-  margin: 0;
-}
-.gsma-form button {
-  background: #95236c;
-  position: absolute;
-  top: 15px;
-  right: 40px;
-  width: auto;
-  height: auto;
-  color: #fff;
-  line-height: 21px;
-  border: none;
-  text-align: center;
-  margin: auto;
-}
-.gsma-form button img {
-  width: 30px;
-  height: 17px;
-}
-.modal-mask {
-  position: fixed;
-  z-index: 9998;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: table;
-  transition: opacity 0.3s ease;
-}
-
-.modal-wrapper {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.modal-container {
-  width: 1300px;
-  height: 800px;
-  margin: 0px auto;
-  padding: 20px 30px;
-  background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
-  transition: all 0.3s ease;
-}
-
 ul {
   list-style: none;
 }
