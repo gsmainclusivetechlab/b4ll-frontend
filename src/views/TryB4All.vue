@@ -228,10 +228,6 @@
 </template>
 
 <script>
-// import Vue from 'vue'
-// import axios from 'axios'
-// import VueAxios from 'vue-axios'
-// Vue.use(VueAxios, axios)
 import AppHeader from "../components/AppHeader";
 import Footer from "../components/layout/Footer";
 import axios from "axios";
@@ -249,7 +245,7 @@ export default {
     },
     // value: "",
     // phone: "",
-    // nickName: "",
+    nickName: "",
     // errors : [],
     inputNumber: "",
   }),
@@ -284,8 +280,11 @@ export default {
     // },
     registerNumber(inputNumber) {
       const number = encodeURIComponent(inputNumber.split(" ").join(""));
+      // const handlerURL =
+      //   process.env.VUE_APP_API_HOST + "/en-GB/register?Caller=" + number;
       const handlerURL =
-        process.env.VUE_APP_API_HOST + "/en-GB/register?Caller=" + number;
+        "https://epsnd32ep4.execute-api.eu-west-2.amazonaws.com/Stage/en-GBregister?Caller=" +
+        number;
       axios.get(handlerURL).then((response) => {
         if (response.data.status == "OK") {
           console.log({ state: "SUCCESS" });
