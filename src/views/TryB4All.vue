@@ -55,7 +55,13 @@
           <div class="col-12 col-lg-6">
             <div class="sign-up-frame">
               <h2>Sign up</h2>
-              <form>
+              <form @submit.prevent="processForm" method="post">
+                <!-- <p v-if="errors.length">
+                   <strong>Please correct the following error(s):</strong>
+                    <ul>
+                      <li v-for="error in errors" >{{ error }}</li>
+                    </ul>
+                 </p> -->
                 <div class="form-group">
                   <label for="inputAddress">Nickname</label>
                   <input
@@ -63,10 +69,11 @@
                     class="form-control"
                     id="inputAddress"
                     placeholder="Enter nickname"
+                    v-model="nickName"
                   />
                 </div>
                 <div class="form-group">
-                  <label for="inputAddress2" >Mobile number</label>
+                  <label for="inputAddress2">Mobile number</label>
                   <!-- <input
                     type="text"
                     class="form-control"
@@ -74,7 +81,10 @@
                     placeholder="Enter mobile number"
                     v-model="phone"
                   /> -->
-                  <vue-tel-input v-model="inputNumber" mode="international" ></vue-tel-input>
+                  <vue-tel-input
+                    v-model="inputNumber"
+                    mode="international"
+                  ></vue-tel-input>
                 </div>
 
                 <div class="form-group">
@@ -93,9 +103,21 @@
                   </div>
                 </div>
                 <a href="#">
-                  <button @click="registerNumber(inputNumber)" type="button" class="btn" >Submit Now</button></a>
+                  <button
+                    @click="registerNumber(inputNumber)"
+                    type="button"
+                    class="btn"
+                  >
+                    Submit Now
+                  </button></a
+                >
               </form>
-              <notifications group="register" animation-type="css" animation-name="slide" width="30%" />
+              <notifications
+                group="register"
+                animation-type="css"
+                animation-name="slide"
+                width="30%"
+              />
             </div>
           </div>
         </div>
@@ -201,16 +223,18 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import AppHeader from "../components/AppHeader";
-import axios from 'axios'
+import Footer from "../components/layout/Footer";
+import axios from "axios";
 import { VueTelInput } from "vue-tel-input";
 export default {
   name: "TryB4All",
-  components: { AppHeader, VueTelInput },
+  components: { AppHeader, Footer, VueTelInput },
   data: () => ({
     props: {
       tittle: "EXPERIENCE THE BIOMETRICS SHOWCASE",
@@ -219,6 +243,10 @@ export default {
         link: "tryb4all",
       },
     },
+    // value: "",
+    // phone: "",
+    nickName: "",
+    // errors : [],
     inputNumber: "",
   }),
   methods: {
@@ -229,30 +257,57 @@ export default {
         behavior: "smooth",
       });
     },
+    //   processForm(e) {
+    //     console.log({ name: this.nickName, phone: this.value });
+    //     if (this.value && this.nickName) {
+    //       let postData={
+    //         nickName:this.nickName,
+    //         phone:this.value
+    //       };
+    //       this.axios.post("https://wsze0741d6.execute-api.eu-west-2.amazonaws.com/Stage/{lang}",postData);
+    //       return true;
+    //     }
+    //     this.errors=[];
+    //     if (!this.nickName) {
+    //       this.errors.push("Nick Name required.");
+    //     }
+    //     if (!this.value) {
+    //       this.errors.push("Phone required.");
+    //     }
+
+    //     e.preventDefault();
+    //   },
+    // },
     registerNumber(inputNumber) {
-      const number = encodeURIComponent(inputNumber.split(' ').join(''));
-      const handlerURL = process.env.VUE_APP_API_HOST+'/en-GB/register?Caller='+number;
-      axios.get(handlerURL).then( response => {
-        if (response.data.status == 'OK') {
-            console.log({ state: 'SUCCESS' });
-            this.$notify({
-              group: 'register',
-              type: 'success',
-              title: 'Success!',
-              text: 'Your number has been successfully approved! You may now call and use the call centre.',
-            })
+      const number = encodeURIComponent(inputNumber.split(" ").join(""));
+      // const handlerURL =
+      //   process.env.VUE_APP_API_HOST + "/en-GB/register?Caller=" + number;
+      const handlerURL =
+        "https://epsnd32ep4.execute-api.eu-west-2.amazonaws.com/Stage/en-GBregister?Caller=" +
+        number;
+      axios.get(handlerURL).then((response) => {
+        if (response.data.status == "OK") {
+          console.log({ state: "SUCCESS" });
+          this.$notify({
+            group: "register",
+            type: "success",
+            title: "Success!",
+            text:
+              "Your number has been successfully approved! You may now call and use the call centre.",
+          });
         } else {
-            console.log({ state: 'ERROR' });
-              this.$notify({
-                group: 'register',
-                type: 'error',
-                title: 'ERROR!',
-                text: 'There was a problem adding your number. It may already be approved or the format is incorrect. Please verify your number is correct and try again.',
-            })
+          console.log({ state: "ERROR" });
+          this.$notify({
+            group: "register",
+            type: "error",
+            title: "ERROR!",
+            text:
+              "There was a problem adding your number. It may already be approved or the format is incorrect. Please verify your number is correct and try again.",
+          });
         }
       });
     },
-  }
+  },
 };
 </script>
 <style src="vue-tel-input/dist/vue-tel-input.css"></style>

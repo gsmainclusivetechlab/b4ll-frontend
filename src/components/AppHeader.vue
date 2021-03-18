@@ -65,7 +65,8 @@ export default {
   background: transparent;
 }
 .inner-header .inner-header-wrap,
-.inner-header .inner-head-try {
+.inner-header .inner-head-try,
+.inner-header .inner-head-about {
   width: 100%;
   color: #fff;
   padding: 132px 0 29px;

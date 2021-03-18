@@ -130,14 +130,22 @@
 						font-family: 'Arial';
 						font-weight: 400;
 					}
+					 html,
+					 body{
+						overflow: hidden;
+					}
 					@media only screen and (min-width:1025px){
 						/* .wForm .inline div.oneField,
 						 .wForm .inline div.wfContent{
 							 width: 100%;
 						 } */
 						 .wFormContainer{
-							 max-width: 700px;
-							 width: 100%;
+							max-width: 700px;
+							/* width: 100%; */
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							width: 100%;
 						 }
 					}
 					@media only screen and (max-width:1024px){
