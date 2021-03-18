@@ -74,13 +74,14 @@
                 </div>
                 <div class="form-group">
                   <label for="inputAddress2">Mobile number</label>
-                  <!-- <input
+                  <input
                     type="text"
                     class="form-control"
                     id="inputAddress2"
                     placeholder="Enter mobile number"
                     v-model="phone"
-                  /> -->
+                  />
+                  -->
                   <vue-tel-input
                     v-model="inputNumber"
                     mode="international"
