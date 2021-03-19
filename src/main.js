@@ -11,7 +11,7 @@ Vue.config.productionTip = false;
 Vue.use(Notifications)
 
 Vue.use(VueGtag, {
-  config: { id: "UA-1234567-1" }
+  config: { id: "G-SYN09MW98X" }
 });
 
 new Vue({
