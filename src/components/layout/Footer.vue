@@ -38,7 +38,6 @@
                   /></a>
                 </li>
               </ul> -->
-              <h4 class="text-white">Mobile app coming soon</h4>
             </b-col>
           </b-row>
         </b-container>
