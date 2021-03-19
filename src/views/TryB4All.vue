@@ -109,7 +109,7 @@
                   <input class="btn" type="submit" value="Submit Now" />
                 </a>
               </form>
-              <div v-if="showForm==false">
+              <div class="text-center" v-if="showForm==false">
                 {{response.data.msg}}
 
               </div>
