@@ -5,9 +5,14 @@ import './plugins/bootstrap-vue'
 import App from "./App.vue";
 import router from './router'
 import Notifications from 'vue-notification';
+import VueGtag from "vue-gtag";
 
 Vue.config.productionTip = false;
 Vue.use(Notifications)
+
+Vue.use(VueGtag, {
+  config: { id: "UA-1234567-1" }
+});
 
 new Vue({
   router,
