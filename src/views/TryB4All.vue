@@ -289,12 +289,12 @@ export default {
             }
           )
           .then((res) => {
-            console.log(res);
+           
             this.showForm=false;
             this.response= res;
           })
           .catch((err) => {
-            console.log(err);
+           
             this.showForm=false;
             this.response=res;
           });
