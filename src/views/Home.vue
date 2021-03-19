@@ -178,7 +178,7 @@
               <h4>
                 Empower your customers with inclusive biometric solutions
               </h4>
-              <em> App comming soon </em>
+              <em> App coming soon </em>
             </div>
             <div class="mobile-group-banner"></div>
           </b-col>
