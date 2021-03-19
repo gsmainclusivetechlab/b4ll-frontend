@@ -55,7 +55,7 @@
           <div class="col-12 col-lg-6">
             <div class="sign-up-frame">
               <h2>Sign up</h2>
-              <form @submit.prevent=" processForm" method="post">
+              <form v-if="showForm==true" @submit.prevent=" processForm" method="post">
                  <p v-if="errors.length">
                    <strong>Please correct the following error(s):</strong>
                     <ul>
@@ -79,9 +79,10 @@
                     class="form-control"
                     id="inputAddress2"
                     placeholder="Enter mobile number"
-                    v-model="phone"
+                    v-model="value"
+                    @input="acceptNumber"
                   /> -->
-                   <vue-tel-input v-model="value" mode="international"></vue-tel-input>
+                   <vue-tel-input v-model="phone" mode="international"  validCharactersOnly></vue-tel-input>
                    
                 </div>
 
@@ -108,6 +109,10 @@
                   <input class="btn" type="submit" value="Submit Now" />
                 </a>
               </form>
+              <div v-if="showForm==false">
+                {{response.data.msg}}
+
+              </div>
             </div>
           </div>
         </div>
@@ -218,10 +223,10 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import axios from 'axios'
-import VueAxios from 'vue-axios'
-Vue.use(VueAxios, axios)
+import Vue from "vue";
+import axios from "axios";
+import VueAxios from "vue-axios";
+Vue.use(VueAxios, axios);
 import AppHeader from "../components/AppHeader";
 import Footer from "../components/layout/Footer";
 import { VueTelInput } from "vue-tel-input";
@@ -239,8 +244,12 @@ export default {
     value: "",
     phone: "",
     nickName: "",
-    termsConditions:'',
-    errors : [],
+    termsConditions: "no",
+    errors: [],
+    showForm: true,
+    loading:false,
+    response:{},
+
   }),
   methods: {
     scrollBottom() {
@@ -250,32 +259,56 @@ export default {
         behavior: "smooth",
       });
     },
+    // acceptNumber() {
+    //   let x = this.phone
+    //     .replace(/\D/g, "")
+    //     .match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+    //   this.phone = !x[2]
+    //     ? x[1]
+    //     : "(" + x[1] + ") " + x[2] + (x[3] ? "-" + x[3] : "");
+    // },
     processForm(e) {
-      
-      if (this.value && this.nickName && this.termsConditions ==='yes') {
-        let postData={
-          Nickname:this.nickName,
-          id:this.value
+      this.errors = [];
+      if (this.phone && this.nickName && this.termsConditions === "yes") {
+        this.loading = true;
+        const number = this.phone.split(" ").join("");
+        let postData = {
+          Nickname: this.nickName,
+          id: number,
         };
-        this.axios.post("https://epsnd32ep4.execute-api.eu-west-2.amazonaws.com/Stage/en-GB/webSignUp",postData,
-        {headers: {"Content-Type": "application/json","Access-Control-Allow-Origin": "*",}})
-        .then((res)=>{
-          console.log(res);
 
-        })
-        .catch((err)=>{
-          console.log(err);
-        });
+        this.axios
+          .post(
+            "https://epsnd32ep4.execute-api.eu-west-2.amazonaws.com/Stage/en-GB/webSignUp",
+            postData,
+            {
+              headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+              },
+            }
+          )
+          .then((res) => {
+            console.log(res);
+            this.showForm=false;
+            this.response= res;
+          })
+          .catch((err) => {
+            console.log(err);
+            this.showForm=false;
+            this.response=res;
+          });
         return true;
       }
-      this.errors=[];
       if (!this.nickName) {
         this.errors.push("Nick Name required.");
       }
-      if (!this.value) {
+
+      if (!this.phone) {
         this.errors.push("Phone required.");
       }
-      if (this.termsConditions === 'no') {
+
+      if (this.termsConditions === "no") {
         this.errors.push("Accept terms and conditions.");
       }
 
@@ -286,7 +319,6 @@ export default {
 </script>
 <style src="vue-tel-input/dist/vue-tel-input.css"></style>
 <style>
-
 .coming-soon-frame h4 {
   margin-bottom: 0;
   color: #fff;
@@ -337,7 +369,7 @@ export default {
 .mr-10 {
   margin-right: 10px;
 }
-.phone-call-frame img{
+.phone-call-frame img {
   margin-top: -7px;
 }
 .login-form-frame .content-login h4 {
