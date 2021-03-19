@@ -73,14 +73,16 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label for="inputAddress2">Mobile number</label>
-                  <!-- <input
+                  <!-- <label for="inputAddress2">Mobile number</label>
+                  <input
                     type="text"
                     class="form-control"
                     id="inputAddress2"
                     placeholder="Enter mobile number"
                     v-model="phone"
-                  /> -->
+                  />
+                  -->
+                  <label for="inputAddress2">Mobile number</label>
                   <vue-tel-input
                     v-model="inputNumber"
                     mode="international"
@@ -94,6 +96,7 @@
                         class="form-check-input"
                         type="checkbox"
                         id="gridCheck"
+                        @change="checkboxHandler"
                       />
                       <span class="checkmark"></span>
                       <a href="./terms-and-condition.pdf" target="_blank"
@@ -102,22 +105,16 @@
                     </label>
                   </div>
                 </div>
-                <a href="#">
-                  <button
-                    @click="registerNumber(inputNumber)"
-                    type="button"
-                    class="btn"
-                  >
-                    Submit Now
-                  </button></a
-                >
+                <a>
+                  <b-button :disabled="!termsAccepted" v-if="!loading" @click="registerNumber(inputNumber)" type="button" class="btn" >Submit Now</b-button>
+                  <b-spinner style="margin-left: 45%" v-if="loading" label="Spinning"></b-spinner>
+                </a>
               </form>
-              <notifications
-                group="register"
-                animation-type="css"
-                animation-name="slide"
-                width="30%"
-              />
+              <div v-if="jobFinished">
+                <a v-if="success" > Your number has been successfully approved! You may now call and use the call centre. </a>
+                <a v-if="!success"> There was a problem adding your number. It may already be approved or the format is incorrect. Please verify your number is correct and try again. </a>
+              </div>
+              <notifications group="register" animation-type="css" animation-name="slide" width="30%" />
             </div>
           </div>
         </div>
@@ -248,6 +245,10 @@ export default {
     nickName: "",
     // errors : [],
     inputNumber: "",
+    loading: false,
+    termsAccepted: false,
+    jobFinished: false,
+    success: false,
   }),
   methods: {
     scrollBottom() {
@@ -257,53 +258,21 @@ export default {
         behavior: "smooth",
       });
     },
-    //   processForm(e) {
-    //     console.log({ name: this.nickName, phone: this.value });
-    //     if (this.value && this.nickName) {
-    //       let postData={
-    //         nickName:this.nickName,
-    //         phone:this.value
-    //       };
-    //       this.axios.post("https://wsze0741d6.execute-api.eu-west-2.amazonaws.com/Stage/{lang}",postData);
-    //       return true;
-    //     }
-    //     this.errors=[];
-    //     if (!this.nickName) {
-    //       this.errors.push("Nick Name required.");
-    //     }
-    //     if (!this.value) {
-    //       this.errors.push("Phone required.");
-    //     }
-
-    //     e.preventDefault();
-    //   },
-    // },
+    checkboxHandler() {
+      this.termsAccepted = !this.termsAccepted;
+    },
     registerNumber(inputNumber) {
-      const number = encodeURIComponent(inputNumber.split(" ").join(""));
-      // const handlerURL =
-      //   process.env.VUE_APP_API_HOST + "/en-GB/register?Caller=" + number;
-      const handlerURL =
-        "https://epsnd32ep4.execute-api.eu-west-2.amazonaws.com/Stage/en-GBregister?Caller=" +
-        number;
-      axios.get(handlerURL).then((response) => {
-        if (response.data.status == "OK") {
-          console.log({ state: "SUCCESS" });
-          this.$notify({
-            group: "register",
-            type: "success",
-            title: "Success!",
-            text:
-              "Your number has been successfully approved! You may now call and use the call centre.",
-          });
+      const number = encodeURIComponent(inputNumber.split(' ').join(''));
+      const handlerURL = process.env.VUE_APP_API_HOST+'/en-GB/register?Caller='+number;
+      this.loading = true
+      axios.get(handlerURL).then( response => {
+        this.jobFinished = true;
+        if (response.data.status == 'OK') {
+            this.loading = false;
+            this.success = true;
         } else {
-          console.log({ state: "ERROR" });
-          this.$notify({
-            group: "register",
-            type: "error",
-            title: "ERROR!",
-            text:
-              "There was a problem adding your number. It may already be approved or the format is incorrect. Please verify your number is correct and try again.",
-          });
+            this.loading = false;
+            this.success = false;
         }
       });
     },
@@ -374,10 +343,7 @@ export default {
 .biometric-content p a {
   color: #fff;
 }
-.biometric-content p a:hover,
-.biometric-content p a {
-  color: #ae52c4;
-}
+
 .link-color:hover {
   color: #ae52c4;
   cursor: pointer;

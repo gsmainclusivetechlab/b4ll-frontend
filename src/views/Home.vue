@@ -13,11 +13,10 @@
         >
           <b-carousel-slide>
             <!-- <b-container> -->
-            <h1>BIOMETRICS FOR ALL</h1>
+            <h1>BIOMETRICS FOR ALL (B4LL)</h1>
             <div class="biometric-content-carousal">
               <h4>
-                An opportunity to lift the barriers of digital inclusion in
-                emerging markets
+                Removing barriers to digital inclusion in emerging markets
               </h4>
               <div class="os-system-wrap">
                 <ul>
@@ -155,6 +154,7 @@
           </b-col>
           <b-col cols="12" md="7">
             <div class="content-digital">
+              </br>
               <p>
                 Biometrics For All offers an Interactive Voice Response (IVR)
                 call centre and mobile application with multiple use cases
@@ -162,8 +162,7 @@
                 inclusion in emerging markets.
               </p>
               <p>
-                It currently offers enrolment and authentication using voice,
-                fingerprint and face with scope to adopt additional solutions.
+                It currently offers enrolment and authentication using voice, with fingerprint and face recognition features to come soon and the scope to adopt additional modalities as well.
               </p>
               <a href="#" class="btn btn-mob">Learn More</a>
             </div>
@@ -382,7 +381,7 @@
                 >
                   <b-card-body>
                     <b-card-text
-                      >Sure! This is another potential of using call centres and voice verification. You can have the call centre working in any language or dialect, or even multiple of them.</b-card-text
+                      >Sure! You can have the call centre working in any language or dialect, or even multiple languages.</b-card-text
                     >
                   </b-card-body>
                 </b-collapse>
@@ -543,7 +542,7 @@ export default {
   padding-bottom: 30px;
 }
 .mobile-group-banner {
-  background-image: url("../assets/images/group10.svg");
+  background-image: url("../assets/images/group10.png");
   min-height: 621px;
   background-size: contain;
   background-repeat: no-repeat;
