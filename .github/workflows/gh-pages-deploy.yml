@@ -26,4 +26,4 @@
           - name: Create 404
             run: cp index.html 404.html
           - name: Push new files
-            run: git add CNAME 404.html && git commit -m "Update CNAME"
+            run: git add CNAME 404.html && git commit -m "Update CNAME" && git push
