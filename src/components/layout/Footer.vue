@@ -1,31 +1,5 @@
 <template>
   <div>
-    <!-- <div v-if="showModal && !iframe.loaded" class="loader"></div> -->
-    <div
-      v-if="showModal"
-      class="gsma-form"
-      v-show="iframe.loaded"
-      @click.stop="modalClose"
-    >
-      <transition name="modal">
-        <div class="modal-mask">
-          <div class="modal-wrapper">
-            <div class="modal-container" @click.stop="">
-              <iframe
-                ref="iframeContent"
-                id="the-iframe"
-                title="form"
-                :src="iframe.source"
-                @load="iframeLoad"
-              ></iframe>
-              <button @click="modalClose">
-                X
-              </button>
-            </div>
-          </div>
-        </div>
-      </transition>
-    </div>
     <section class="app-downloading-wrapper">
       <div
         class="downloading-frame d-flex justify-content-center align-items-center"
@@ -34,8 +8,7 @@
           <b-row>
             <b-col cols="12">
               <h2>
-                Ready? Test our IVR Calln
-                 Centre Now.
+                Ready? Test our IVR Calln Centre Now.
               </h2>
               <h4 class="text-white">
                 And keep your eyes peeled for the mobile app we are launching
@@ -65,7 +38,6 @@
                   /></a>
                 </li>
               </ul> -->
-              <h4 class="text-white">Mobile app coming soon </h4>
             </b-col>
           </b-row>
         </b-container>
@@ -87,10 +59,7 @@
                   </p>
                 </div>
                 <div class="newscase-btn">
-                  <a
-                    id="show-modal"
-                    @click="showModal = true"
-                    class="btn-newscase"
+                  <a id="show-modal" href="/requestform" class="btn-newscase"
                     >Request Now</a
                   >
                 </div>
@@ -124,9 +93,13 @@
                       src="../../assets/images/mail.svg"
                       class="img-fluid"
                       alt="mail"
-                    /><a href="mailto:inclusivetechlab@gsma.com?subject=I’m interested in Biometrics For All" target="_blank">inclusivetechlab@gsma.com</a>
+                    /><a
+                      href="mailto:inclusivetechlab@gsma.com?subject=I’m interested in Biometrics For All"
+                      target="_blank"
+                      >inclusivetechlab@gsma.com</a
+                    >
                   </li>
-                  <li>
+                  <!--<li>
                     <img
                       src="../../assets/images/globe-icon.svg"
                       class="img-fluid"
@@ -138,7 +111,7 @@
                       class="img-fluid"
                     />
                   </li>
-                  <!--<li>
+                  <li>
                     <img
                       src="../../assets/images/help-circle.svg"
                       class="img-fluid"
@@ -165,8 +138,8 @@
                     <li>
                       <a
                         href=" https://docs.biometrics.gsmainclusivetechlab.io/ "
-                        >Documentation</a>
-                      
+                        >Documentation</a
+                      >
                     </li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/faq">FAQs</a></li>
@@ -223,13 +196,6 @@ export default {
     scrollTop() {
       window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
     },
-    modalClose() {
-      this.showModal = false;
-      this.iframe.loaded = false;
-    },
-    iframeLoad() {
-      this.iframe.loaded = true;
-    },
   },
 
   watch: {
@@ -241,94 +207,11 @@ export default {
 </script>
 
 <style>
-
-.loader {
-  border: 0.2em solid transparent;
-  border-top-color: currentcolor;
-  border-radius: 50%;
-  animation: 1s loader linear infinite;
-  position: relative;
-}
-.loader ::before {
-  content: "";
-  display: block;
-  width: inherit;
-  height: inherit;
-  position: absolute;
-  top: -0.2em;
-  left: -0.2em;
-  border: 0.2em solid currentcolor;
-  border-radius: 50%;
-  opacity: 0.5;
-}
-
-@keyframes loader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.gsma-form iframe {
-  height: 75vh;
-  width: 75vw;
-  border: none;
-  box-sizing: border-box;
-}
-.gsma-form body {
-  margin: 0;
-}
-.gsma-form button {
-  background: #95236c;
-  position: absolute;
-  top: 15px;
-  right: 40px;
-  width: auto;
-  height: auto;
-  color: #fff;
-  line-height: 21px;
-  border: none;
-  text-align: center;
-  margin: auto;
-}
-.gsma-form button img {
-  width: 30px;
-  height: 17px;
-}
-.modal-mask {
-  position: fixed;
-  z-index: 9998;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: table;
-  transition: opacity 0.3s ease;
-}
-
-.modal-wrapper {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.modal-container {
-  width: 1300px;
-  height: 800px;
-  margin: 0px auto;
-  padding: 20px 30px;
-  background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
-  transition: all 0.3s ease;
-}
-
 ul {
   list-style: none;
 }
 .app-downloading-wrapper .downloading-frame {
-  background-image: url("../../assets/images/woman-3083376_1920.svg");
+  background-image: url("../../assets/images/woman-3083376_1920.png");
   min-height: 386px;
   text-align: center;
   background-position: center;
@@ -544,12 +427,12 @@ hr {
     height: 100%;
   }
   .gsma-form iframe {
-  height: 75vh;
-  width: 100%;
-  border: none;
-  box-sizing: border-box;
-  margin-top: 21px;
-}
+    height: 75vh;
+    width: 100%;
+    border: none;
+    box-sizing: border-box;
+    margin-top: 21px;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .footer-wrapper .container {

@@ -43,13 +43,13 @@
         </b-navbar>
         <ul class="lang-menu">
           <li class="init">
-            <!-- <a href="#"> -->
+            <!-- <a href="#">
             <img
               src="../../assets/images/globe-icon.svg"
               class="img-fluid"
               alt="globe-icon"
             />
-            <!-- </a> -->
+            </a> -->
           </li>
         </ul>
       </b-container>

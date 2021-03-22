@@ -51,12 +51,7 @@
           <div class="col-12 col-lg-6">
             <div class="bio-all-content-wrap">
               <h6>
-                Biometrics for All seeks to show operators the advantages and
-                possibilities of using biometric solutions in low-tech
-                environments, including the possibility of integration with a
-                MMAPI. The main advantage of using biometrics in low tech
-                environments comes from the need to reach a larger audience of
-                users.
+                Biometrics for All seeks to show digital service providers the advantages and possibilities of using biometric solutions in low-tech environments. The main advantage of using biometrics in low tech environments comes from the ability to reach a larger audience of users.
               </h6>
               <h6>
                 This benefit is even more evident in places where the number of
@@ -67,19 +62,18 @@
                 biometrics allows the use of non-transferable information,
                 leading to greater adherence by users. This makes biometrics the
                 ideal and more accurate solution for validating personal data.
-                more.
               </h6>
-              <h6>
-                If well implemented, biometrics authentication can unlock access
-                to a large number of previously difficult to reach customers,
-                such as: people with disabilities, less literate populations,
-                people with lack of national ID, featured phones users and much
-                more.
-              </h6>
+              
             </div>
           </div>
           <div class="col-12 col-lg-6">
             <div class="img-bio-content">
+              <h6>
+                If well implemented, biometrics authentication can unlock access
+                to a large number of previously difficult to reach customers,
+                such as: people with disabilities, less literate populations,
+                people with lack of national ID, featured phones users and much more.
+              </h6>
               <h6>
                 The use of biometrics can increase the security to execute
                 mobile money transactions, such as international remittance.
