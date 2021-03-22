@@ -19,3 +19,11 @@
             run: git config user.name "eudisley" && git config user.email "eudisley@gmail.com"
           - name: Deploy
             run: npm run gh-pages-deploy
+          - name: Change branch
+            run: git checkout gh-pages
+          - name: Create CNAME
+            run: echo "docs.biometrics.gsmainclusivetechlab.io" > CNAME
+          - name: Create 404
+            run: cp index.html 404.html
+          - name: Push new files
+            run: git add CNAME 404.html && git commit -m "Update CNAME" && git push
