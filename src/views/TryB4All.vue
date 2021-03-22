@@ -55,7 +55,7 @@
           <div class="col-12 col-lg-6">
             <div class="sign-up-frame">
               <h2>Sign up</h2>
-              <form v-if="showForm==true" @submit.prevent=" processForm" method="post">
+              <form @submit.prevent=" processForm" method="post">
                  <p v-if="errors.length">
                    <strong>Please correct the following error(s):</strong>
                     <ul>
@@ -74,16 +74,7 @@
                 </div>
                 <div class="form-group">
                   <label for="inputAddress2">Mobile number</label>
-                  <!-- <input
-                    type="text"
-                    class="form-control"
-                    id="inputAddress2"
-                    placeholder="Enter mobile number"
-                    v-model="value"
-                    @input="acceptNumber"
-                  /> -->
-                   <vue-tel-input v-model="phone" mode="international"  validCharactersOnly></vue-tel-input>
-                   
+                   <vue-tel-input v-model="phone" mode="international"  validCharactersOnly ></vue-tel-input>
                 </div>
 
                 <div class="form-group">
@@ -104,15 +95,16 @@
                     </label>
                   </div>
                 </div>
-                <!-- <a href="#" class="btn">Submit Now</a> -->
-                <a href="#" class="btn1">
+           
+                <a  v-if="showForm==true" href="#" class="btn1">
                   <input class="btn" type="submit" value="Submit Now" />
                 </a>
-              </form>
+                <b-spinner style="margin-left: 45%" v-if="loading" label="Spinning"></b-spinner>
               <div class="text-center" v-if="showForm==false">
                 {{response.data.msg}}
 
               </div>
+              </form>
             </div>
           </div>
         </div>
@@ -247,9 +239,8 @@ export default {
     termsConditions: "no",
     errors: [],
     showForm: true,
-    loading:false,
-    response:{},
-
+    loading: false,
+    response: {},
   }),
   methods: {
     scrollBottom() {
@@ -259,19 +250,19 @@ export default {
         behavior: "smooth",
       });
     },
-    // acceptNumber() {
-    //   let x = this.phone
-    //     .replace(/\D/g, "")
-    //     .match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
-    //   this.phone = !x[2]
-    //     ? x[1]
-    //     : "(" + x[1] + ") " + x[2] + (x[3] ? "-" + x[3] : "");
-    // },
+   
     processForm(e) {
       this.errors = [];
-      if (this.phone && this.nickName && this.termsConditions === "yes") {
+      let noformat=true;
+      const number = this.phone.split(" ").join("");
+      if(number.length>17 || number.length<12){
+        noformat=false;
+         this.errors.push("Enter phone number in correct format");
+
+      }
+
+      if (this.phone && this.nickName && this.termsConditions === "yes" && noformat) {
         this.loading = true;
-        const number = this.phone.split(" ").join("");
         let postData = {
           Nickname: this.nickName,
           id: number,
@@ -289,14 +280,14 @@ export default {
             }
           )
           .then((res) => {
-           
-            this.showForm=false;
-            this.response= res;
+            this.showForm = false;
+            this.loading = false;
+            this.response = res;
           })
           .catch((err) => {
-           
-            this.showForm=false;
-            this.response=res;
+            this.showForm = false;
+            this.loading = false;
+            this.response = res;
           });
         return true;
       }
@@ -384,10 +375,10 @@ export default {
 .biometric-content p a {
   color: #fff;
 }
-.biometric-content p a:hover,
+/* .biometric-content p a:hover,
 .biometric-content p a {
   color: #ae52c4;
-}
+} */
 .link-color:hover {
   color: #ae52c4;
   cursor: pointer;
