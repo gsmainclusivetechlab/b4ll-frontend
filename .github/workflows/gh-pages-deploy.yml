@@ -20,6 +20,7 @@
           - name: Deploy
             run: npm run gh-pages-deploy
           - name: Change branch to create new files
+            run: git checkout gh-pages
           - name: Create CNAME
             run: echo "docs.biometrics.gsmainclusivetechlab.io" > CNAME
           - name: Create 404
