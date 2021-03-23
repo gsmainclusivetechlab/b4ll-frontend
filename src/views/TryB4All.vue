@@ -55,13 +55,7 @@
           <div class="col-12 col-lg-6">
             <div class="sign-up-frame">
               <h2>Sign up</h2>
-              <form @submit.prevent=" processForm" method="post">
-                 <p v-if="errors.length">
-                   <strong>Please correct the following error(s):</strong>
-                    <ul>
-                      <li v-for="error in errors" >{{ error }}</li>
-                    </ul>
-                 </p>
+              <form @submit.prevent="processForm" method="post">
                 <div class="form-group">
                   <label for="inputAddress">Nickname</label>
                   <input
@@ -71,10 +65,23 @@
                     placeholder="Enter nickname"
                     v-model="nickName"
                   />
+                  <span class="error-msg" v-if="errors.nickName.length != 0">
+                    {{ errors.nickName }}</span
+                  >
                 </div>
                 <div class="form-group">
                   <label for="inputAddress2">Mobile number</label>
-                   <vue-tel-input v-model="phone" mode="international"  validCharactersOnly ></vue-tel-input>
+                  <vue-tel-input
+                    v-model="phone"
+                    mode="international"
+                    validCharactersOnly
+                  ></vue-tel-input>
+                  <span
+                    class="error-msg"
+                    v-if="errors.phone.length != 0 || errors.format.length != 0"
+                  >
+                    {{ errors.phone }} {{ errors.format }}
+                  </span>
                 </div>
 
                 <div class="form-group">
@@ -93,17 +100,36 @@
                         >Accept the terms and conditions</a
                       >
                     </label>
+                    <span class="error-msg" v-if="errors.tc.length != 0">
+                      {{ errors.tc }}</span
+                    >
                   </div>
                 </div>
-           
-                <a  v-if="showForm==true" href="#" class="btn1">
+
+                <a v-if="showSubmit && !loading" href="#" class="btn1">
                   <input class="btn" type="submit" value="Submit Now" />
                 </a>
-                <b-spinner style="margin-left: 45%" v-if="loading" label="Spinning"></b-spinner>
-              <div class="text-center" v-if="showForm==false">
-                {{response.data.msg}}
-
-              </div>
+                <b-spinner
+                  style="margin-left: 45%"
+                  v-if="loading"
+                  label="Spinning"
+                ></b-spinner>
+                <div class="form-response" v-if="gotResponse">
+                  <b-alert
+                    variant="success"
+                    show
+                    v-if="response.data.ResponseCode == 200"
+                  >
+                    {{ response.data.msg }}</b-alert
+                  >
+                  <b-alert
+                    variant="danger"
+                    show
+                    v-if="response.data.ResponseCode == 623"
+                  >
+                    {{ response.data.msg }}</b-alert
+                  >
+                </div>
               </form>
             </div>
           </div>
@@ -112,7 +138,7 @@
     </div>
     <section class="two-col-biometric-wrap text-white">
       <b-container>
-        <b-row class="justify-content-start align-items-center ">
+        <b-row class="justify-content-start align-items-center">
           <b-col cols="12" xl="6">
             <div class="biometric-content">
               <h2>
@@ -159,7 +185,7 @@
                 </b-col>
                 <b-col cols="12" md="5">
                   <div class="biometric-right-col">
-                    <div class="bg-biometric2 bg-white ">
+                    <div class="bg-biometric2 bg-white">
                       <img
                         src="../assets/images/biometric-provide-icon-2.svg"
                         class="img-fluid"
@@ -237,9 +263,15 @@ export default {
     phone: "",
     nickName: "",
     termsConditions: "no",
-    errors: [],
-    showForm: true,
+    errors: {
+      format: "",
+      nickName: "",
+      phone: "",
+      tc: "",
+    },
+    showSubmit: true,
     loading: false,
+    gotResponse: false,
     response: {},
   }),
   methods: {
@@ -250,18 +282,28 @@ export default {
         behavior: "smooth",
       });
     },
-   
-    processForm(e) {
-      this.errors = [];
-      let noformat=true;
-      const number = this.phone.split(" ").join("");
-      if(number.length>17 || number.length<12){
-        noformat=false;
-         this.errors.push("Enter phone number in correct format");
 
+    processForm(e) {
+      this.errors = {
+        format: "",
+        nickName: "",
+        phone: "",
+        tc: "",
+      };
+      this.response = {};
+      let noformat = true;
+      const number = this.phone.split(" ").join("");
+      if (number.length > 17 || number.length < 12) {
+        noformat = false;
+        this.errors.format = "Enter phone number in correct format.";
       }
 
-      if (this.phone && this.nickName && this.termsConditions === "yes" && noformat) {
+      if (
+        this.phone &&
+        this.nickName &&
+        this.termsConditions === "yes" &&
+        noformat
+      ) {
         this.loading = true;
         let postData = {
           Nickname: this.nickName,
@@ -280,27 +322,29 @@ export default {
             }
           )
           .then((res) => {
-            this.showForm = false;
             this.loading = false;
+            this.gotResponse = true;
             this.response = res;
+            if (res.ResponseCode == 200) {
+              this.showSubmit = false;
+            }
           })
           .catch((err) => {
-            this.showForm = false;
             this.loading = false;
             this.response = res;
           });
         return true;
       }
       if (!this.nickName) {
-        this.errors.push("Nick Name required.");
+        this.errors.nickName = "Nick Name required.";
       }
 
       if (!this.phone) {
-        this.errors.push("Phone required.");
+        this.errors.phone = "Phone required.";
       }
 
       if (this.termsConditions === "no") {
-        this.errors.push("Accept terms and conditions.");
+        this.errors.tc = "Accept terms and conditions.";
       }
 
       e.preventDefault();
@@ -348,6 +392,10 @@ export default {
   width: 391px;
   height: 550px;
   z-index: -1;
+}
+.error-msg {
+  font-size: 12px;
+  color: red;
 }
 .form-control:focus {
   outline: none;
@@ -476,6 +524,10 @@ export default {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+.form-response {
+  text-align: center;
+  margin-top: 20px;
 }
 @media only screen and (max-width: 1024px) {
   .login-form-frame .sign-up-frame {
