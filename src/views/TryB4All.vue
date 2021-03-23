@@ -116,7 +116,7 @@
                 ></b-spinner>
                 <div class="form-response" v-if="gotResponse">
                   <b-alert
-                    variant="success"
+                    variant="primary"
                     show
                     v-if="response.data.ResponseCode == 200"
                   >
