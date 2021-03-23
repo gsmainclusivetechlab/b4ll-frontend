@@ -148,10 +148,10 @@
               </p>
             </div>
           </b-col>
-          <b-col cols="1" xl="6">
+          <b-col cols="12" xl="6">
             <div class="biometric-img-block">
               <b-row
-                class="justify-content-center align-items-center gutter-20 flex-column"
+                class="justify-content-center align-items-center gutter-20 flex-md-column"
               >
                 <b-col cols="12" md="7">
                   <div class="bg-biometric bg-black">
@@ -345,7 +345,7 @@ export default {
 }
 .biometric-content p a:hover,
 .biometric-content p a {
-  color: #ae52c4;
+  color: #d782eb;
 }
 .link-color:hover {
   color: #ae52c4;
