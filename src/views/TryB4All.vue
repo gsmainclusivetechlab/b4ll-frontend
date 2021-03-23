@@ -343,7 +343,10 @@ export default {
 .biometric-content p a {
   color: #fff;
 }
-
+.biometric-content p a:hover,
+.biometric-content p a {
+  color: #d782eb;
+}
 .link-color:hover {
   color: #ae52c4;
   cursor: pointer;
