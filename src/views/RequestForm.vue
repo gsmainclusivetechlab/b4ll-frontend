@@ -25,7 +25,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .home-form iframe {
   height: 130vh;
 
