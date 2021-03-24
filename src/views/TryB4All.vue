@@ -116,7 +116,7 @@
                 ></b-spinner>
                 <div class="form-response" v-if="gotResponse">
                   <b-alert
-                    variant="success"
+                    variant="primary"
                     show
                     v-if="response.data.ResponseCode == 200"
                   >
@@ -291,6 +291,7 @@ export default {
         tc: "",
       };
       this.response = {};
+      this.gotResponse = false;
       let noformat = true;
       const number = this.phone.split(" ").join("");
       if (number.length > 17 || number.length < 12) {
