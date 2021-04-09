@@ -30,7 +30,7 @@
           </div>
           <div class="col-12  col-md-9">
             <div class="search-content">
-              <form class="form-element-frame">
+              <form class="form-element-frame" v-on:submit.prevent>
                 <input
                   type="text"
                   v-model="searchQuery"
