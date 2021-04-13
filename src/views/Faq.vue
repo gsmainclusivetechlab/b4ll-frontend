@@ -36,8 +36,9 @@
                   v-model="searchQuery"
                   placeholder="Use key words such as Documents, Login…"
                   name="search"
+                  id="search"
+                  value="search"
                 />
-                <div class="search-tag">Search</div>
               </form>
             </div>
             <div class="right-text-article">
@@ -181,7 +182,7 @@ export default {
   },
 
   computed: {
-    filteredArticles() {
+    filteredArticles(e) {
       const search = this.searchQuery.toLowerCase().trim();
       if (!search) return this.articles;
 
@@ -288,22 +289,35 @@ export default {
 }
 .search-content form.form-element-frame input[type="text"] {
   padding: 10px;
+  padding-left: 45px;
   font-size: 17px;
-
   float: left;
-  width: 80%;
+  width: 100%;
   background-color: #ffffff;
-  border-radius: 6px;
+  border-radius: 21px;
+  margin-top: -20px;
   border: 1px solid #c4c4c4;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  position: relative;
   min-height: 45px;
 }
+.search-content form.form-element-frame::before {
+  position: absolute;
+  content: "";
+  background-image: url(../assets/images/magnifying-glass.png);
+  background-size: contain;
+  left: 23px;
+  width: 25px;
+  height: 25px;
+  z-index: 9;
+  top: -8px;
+  bottom: 0;
+  line-height: 25px;
+}
+
 .search-tag {
   float: left;
   width: 20%;
   padding: 10px;
-  background: #95236c;
   color: white;
   font-size: 16px;
   cursor: pointer;
@@ -313,6 +327,10 @@ export default {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   border: none;
+}
+.search-tag .mag-glass {
+  height: 30px;
+  width: 30px;
 }
 .search-content form.form-element-frame button {
   float: left;
