@@ -302,13 +302,13 @@ export default {
 }
 .article-wrapper .left-article-content .img-article {
   margin-right: 12px;
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
 }
 .article-wrapper .left-article-content .img-article img {
   height: 20px;
   line-height: 20px;
-  width: 20px;
+  max-width: 20px;
   display: block;
   position: relative;
 }
@@ -316,6 +316,9 @@ export default {
   font-weight: bold;
   font-size: 15px;
   margin-bottom: 15px;
+}
+.article-wrapper .left-article-content .content-article {
+  margin-left: 10px;
 }
 .article-wrapper .left-article-content .content-article p {
   font-size: 16px;
