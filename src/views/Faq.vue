@@ -297,8 +297,15 @@ export default {
 .article-wrapper {
   padding: 73px 0;
 }
+
 .article-wrapper .left-article-content .article-frame-title {
   margin-bottom: 20px;
+}
+.article-wrapper .left-article-content .article-frame-title p:hover {
+  background-color: #e3edf5;
+  border-radius: 8px;
+  width: fit-content;
+  padding: 5px;
 }
 .article-wrapper .left-article-content .img-article {
   margin-right: 12px;
