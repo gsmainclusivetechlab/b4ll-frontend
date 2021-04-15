@@ -20,12 +20,81 @@
                   />
                 </div>
 
-                <div class="content-article">
+                <div
+                  class="content-article"
+                  @click="searchQuery = article.tittle"
+                >
                   <p>
                     {{ article.tittle }}
                   </p>
                 </div>
               </div>
+              <!-- <div
+                class="article-frame-title d-flex justify-content-start align-items-start"
+              >
+                <div class="img-article">
+                  <img
+                    src="../assets/images/book.svg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="content-article">
+                  <p>
+                    What happens if I delete the <br />
+                    Fingerprint?
+                  </p>
+                </div>
+              </div>
+              <div
+                class="article-frame-title d-flex justify-content-start align-items-start"
+              >
+                <div class="img-article">
+                  <img
+                    src="../assets/images/book.svg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="content-article">
+                  <p>
+                    What is the difference between <br />
+                    fingerprint and face recog?
+                  </p>
+                </div>
+              </div>
+              <div
+                class="article-frame-title d-flex justify-content-start align-items-start"
+              >
+                <div class="img-article">
+                  <img
+                    src="../assets/images/book.svg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="content-article">
+                  <p>
+                    How are Leads, Accounts, Contac- ts, <br />
+                    and Deals associated in a sales process?
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="article-frame-title d-flex justify-content-start align-items-start"
+              >
+                <div class="img-article">
+                  <img
+                    src="../assets/images/book.svg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="content-article">
+                  <p>How many emails can I send per day from Biometric?</p>
+                </div>
+              </div> -->
             </div>
           </div>
           <div class="col-12  col-md-9">
@@ -48,7 +117,7 @@
                 v-if="index < limitBy"
               >
                 <div class="article-blockframe">
-                  <h4>{{ article.tittle }}</h4>
+                  <h4>{{ article.id }}.{{ article.tittle }}</h4>
                   <p>
                     {{ article.content }}
                   </p>
@@ -102,52 +171,95 @@ export default {
     articles: [
       {
         id: 1,
-        tittle: "How do I login to the app?",
+        tittle: "What is B4LL?",
         content:
-          "This document outlines the allocation principles applicable to\n the International Mobile Equipment Identity (IMEI) numbers.",
+          "B4LL is an acronym for Biometrics for All – a project supported by the GSMA Inclusive Tech Lab (ITL). The project aims to showcase multimodal biometric verification solutions (voice, face, fingerprint etc.) to enable digital service providers to test them in a safe environment.",
       },
       {
         id: 2,
-        tittle: "How can I increase my authentication security?",
+        tittle: "What are the biometric modalities available under B4LL?",
         content:
-          "This document provides recommendations on a framework for\n manufacturers and MNO's (mobile network operators) so they can\n technically configure Open Market.",
+          "Currently B4LL provides a voice enabled identification solution. In the near future, we also aim to provide fingerprint and face recognition solutions.",
       },
       {
         id: 3,
-        tittle: "Can I delete my account and biometric data?",
+        tittle:
+          "Is the GSMA ITL providing biometric verification solutions through B4LL commercially?",
         content:
-          " The NFC Test Book stream is part of GSMA NFC activities. The\n participating GSMA TSG members have developed a set of test\n cases to be used for testing primarily the UICC based NFC\n functionality within a Mobile Device.",
+          "No, B4LL is a completely free facility. The solutions housed within B4LL are not commercial offerings from the GSMA ITL. If service providers like the general experience of the solutions housed within B4LL, they are free to adopt them commercially in their markets. The GSMA ITL would not be privy to any such commercial adoption of biometric solutions by service providers. ",
       },
       {
         id: 4,
-        tittle: "How do I suggest new use cases?",
+        tittle:
+          "Are the biometric solutions showcased within B4LL owned or endorsed by the GSMA?",
         content:
-          "Network slicing is a key feature of 5G networks as defined by\n 3GPP and enables to build dedicated logical networks on\n shared infrastructure.",
+          "B4LL provides simulations of the types of biometric solutions service providers are likely to find in the market. We do not own these solutions and do not endorse specific vendors offering similar solutions in the market. Our aim is to provide a safe environment within which to test these solutions so that service providers can make informed decisions on whether / how to adopt them. ",
       },
       {
         id: 5,
         tittle:
-          " IR.67 DNS and ENUM Guidelines for Service Providers and GRX\n and IPX Providers v17.0",
+          "Will B4LL or the vendors associated with it be able to see the personal data of individuals using it?",
         content:
-          "IR.67 provides guidelines and technical information for those\n who need to set up and/or maintain DNS servers for inter\n Service Provider services.",
+          "No, B4LL is not able to see the personal details of individuals testing solutions housed in its showcase.",
       },
       {
         id: 6,
-        tittle: "TS.30 IMEI Database Application Forms",
+        tittle:
+          "I want to showcase my biometric solution on B4LL. How can I do that?",
         content:
-          "TS.30 provides information which will help manufacturers with\n the completion and submission of the different application\n forms used within the GSMA IMEI database is defined and\n described in detail.",
+          "We are always happy to engage with new partners. If you think you have a biometric solution that may be suitable to be showcased through B4LL, please get in touch with us.",
       },
       {
         id: 7,
-        tittle: "TS.11 Device Field and Lab Test Guidelines",
+        tittle:
+          "I want to test one of the biometric solutions showcased on B4LL. How can I do that?",
         content:
-          "TS.11 contains a set of guidelines for the tests that should\n be performed in the course of Field Test and Lab Tests carried\n out on Terminal Devices..",
+          "We would be delighted to help you test any of the biometric solutions showcased on B4LL. Furthermore, the GSMA ITL Lab has in depth expertise in the area of biometrics and can also help to customise the solutions showcased on B4LL to address specific use case relevant for your market. If you would like to get more information about B4LL and the use of biometric verification in your market, please get in touch with us.",
       },
       {
         id: 8,
-        tittle: "SG.20 Voicemail Security Guidelines",
+        tittle:
+          "I would like to commercially adopt one of the biometric solutions showcased on B4LL. How can I do that?",
         content:
-          " This PRD describes the security risks posed by voicemail\n services, how they can be mitigated with robust technical\n configurations and appropriate policies.",
+          "As mentioned earlier, B4LL is not a commercial facility and does not provide biometric verification solutions for sale. If you like the experience provided by a particular biometric solution showcased on B4LL, feel free to contact us and ask for more information about it. We can connect you with the biometric suppliers presented in B4LL",
+      },
+      {
+        id: 9,
+        tittle:
+          "If I decide to adopt B4LL solution in my market, do I need to use the same biometric suppliers?",
+        content:
+          "No, the biometric suppliers here are helping the ITL to provide the showcase. You are free to reach any supplier you wish for your project.",
+      },
+      {
+        id: 10,
+        tittle: "What the purpose of the call centre?",
+        content:
+          "The call centre shows how the voice can be successfully used to enrolment and identity verification to unlock access to any digital service.",
+      },
+      {
+        id: 11,
+        tittle: "Is it possible to change the content in the call centre? ",
+        content:
+          "Yes, new use cases can be created to approach different scenarios for voice authentication. Also, the entire call centre can be restructured to attend your business needs. If you are interested in a different showcase, please contact us to support you with new voice authentication experiences for call centres.",
+      },
+      {
+        id: 12,
+        tittle: "Can I add new verification passphrases?",
+        content:
+          "Yes, we already have some verification passphrases available, but for another project you can create new passphrases to be more convenient for your company or local needs. ",
+      },
+      {
+        id: 13,
+        tittle:
+          "Is it possible to see the call centre working in a different languages or dialects?",
+        content:
+          "o	Sure! You can have the call centre working in any language or dialect, or even multiple languages.",
+      },
+      {
+        id: 14,
+        tittle: "How do I test/use the call centre?",
+        content:
+          "First, you need to access the page Try B4LL and enrol the call centre with a nick name and a phone number you will use to call. Then you can reach one of the call centres numbers available. To understand how to navigate among the use cases and the different flows to follow, you can check the session call centre/use cases in our documentation. If you still have any doubt, please contact us. We will be happy to hear from you.",
       },
     ],
     filteredArticlesL: [],
@@ -256,6 +368,8 @@ export default {
 }
 .article-wrapper .left-article-content .img-article {
   margin-right: 12px;
+  width: 50px;
+  height: 50px;
 }
 .article-wrapper .left-article-content .img-article img {
   height: 20px;
