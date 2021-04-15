@@ -96,7 +96,7 @@ export default {
     limitBy: 4,
     props: {
       tittle: "FREQUENTLY ASKED QUESTIONS",
-      content: `Protect yourself from unauthorized activity by using your\n biometric as your authentication`,
+      // content: `Protect yourself from unauthorized activity by using your\n biometric as your authentication`,
       breadCrumb: {
         tittle: "FAQs",
         link: "/faq",
