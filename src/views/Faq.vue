@@ -306,6 +306,7 @@ export default {
   border-radius: 8px;
   width: fit-content;
   padding: 5px;
+  cursor: pointer;
 }
 .article-wrapper .left-article-content .img-article {
   margin-right: 12px;
