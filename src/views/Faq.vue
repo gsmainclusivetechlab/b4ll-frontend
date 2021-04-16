@@ -254,14 +254,15 @@ export default {
       )
       .then((res) => {
         let popularIds = [];
-
         res.data.forEach((item) => {
-          popularIds.push(item.faqSerialNumber);
+          this.articles.forEach((article) => {
+            if (article.id == item.faqSerialNumber) {
+              let obj = { ...article, faqRank: item.faqRank };
+              popularIds.push(obj);
+            }
+          });
         });
-
-        this.popularArticles = this.articles.filter(({ id }) =>
-          popularIds.includes(id)
-        );
+        this.popularArticles = popularIds;
       })
       .catch((err) => {
         console.log(err);
