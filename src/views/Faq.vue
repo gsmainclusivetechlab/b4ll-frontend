@@ -187,7 +187,7 @@ export default {
         tittle:
           "Is it possible to see the call centre working in a different languages or dialects?",
         content:
-          "o	Sure! You can have the call centre working in any language or dialect, or even multiple languages.",
+          "Sure! You can have the call centre working in any language or dialect, or even multiple languages.",
       },
       {
         id: 14,
