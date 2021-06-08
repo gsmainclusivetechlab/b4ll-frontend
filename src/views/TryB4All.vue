@@ -29,7 +29,7 @@
                       class="img-fluid"
                       alt="phone-call-blue"
                     /> </span
-                  ><b>French (FR): </b> <a href="tel:+17372450200">+44 7723 432543</a>
+                  ><b>French (FR): </b> <a href="tel:+447723432543">+44 7723 432543</a>
                 </p>
                 <p>
                   <span class="phone-call-frame mr-10"
@@ -38,7 +38,7 @@
                       class="img-fluid"
                       alt="phone-call-blue"
                     /> </span
-                  ><b>Urdu (PK): </b> <a href="tel:+17372450200">+44 1485 500402</a>
+                  ><b>Urdu (PK): </b> <a href="tel:+441485500402">+44 1485 500402</a>
                 </p>
               </h4>
               <p>
