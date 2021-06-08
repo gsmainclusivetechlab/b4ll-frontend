@@ -20,7 +20,7 @@
                       alt="phone-call-blue"
                     />
                   </span>
-                  <b> UK </b><a href="tel:+441904803378">+44 1904 803378</a>
+                  <b>English (UK): </b><a href="tel:+441904803378">+44 1904 803378</a>
                 </p>
                 <p>
                   <span class="phone-call-frame mr-10"
@@ -29,7 +29,25 @@
                       class="img-fluid"
                       alt="phone-call-blue"
                     /> </span
-                  ><b>US </b> <a href="tel:+17372450200">+1 737 245 0200</a>
+                  ><b>English (US): </b> <a href="tel:+17372450200">+1 737 245 0200</a>
+                </p>
+                <p>
+                  <span class="phone-call-frame mr-10"
+                    ><img
+                      src="../assets/images/phone-call-blue.png"
+                      class="img-fluid"
+                      alt="phone-call-blue"
+                    /> </span
+                  ><b>French (FR): </b> <a href="tel:+17372450200">+44 7723 432543</a>
+                </p>
+                <p>
+                  <span class="phone-call-frame mr-10"
+                    ><img
+                      src="../assets/images/phone-call-blue.png"
+                      class="img-fluid"
+                      alt="phone-call-blue"
+                    /> </span
+                  ><b>Urdu (PK): </b> <a href="tel:+17372450200">+44 1485 500402</a>
                 </p>
               </h4>
               <p>
@@ -170,36 +188,24 @@
                 class="justify-content-center align-items-center gutter-20 flex-md-column"
               >
                 <b-col cols="12" md="7">
-                  <div class="bg-biometric bg-black">
+                  <a href="https://voiceit.io/" target="_blank">
+                  <div class="bg-biometric2 bg-black">
                     <img
                       src="../assets/images/biometric-provide-icon-1.svg"
                       class="img-fluid"
                       alt="biometric-provide-icon-1"
                     />
                   </div>
-                </b-col>
-                <b-col cols="12">
-                  <div class="coming-soon-frame text-white text-center">
-                    <h4>Coming Soon</h4>
+                  </a>
+                  <a href="https://diamondfortress.com/" target="_blank">
+                  <div class="bg-biometric2 bg-blue">
+                    <img
+                      src="../assets/images/biometric-provide-icon-3.svg"
+                      class="img-fluid"
+                      alt="biometric-provide-icon-3"
+                    />
                   </div>
-                </b-col>
-                <b-col cols="12" md="5">
-                  <div class="biometric-right-col">
-                    <div class="bg-biometric2 bg-white">
-                      <img
-                        src="../assets/images/biometric-provide-icon-2.svg"
-                        class="img-fluid"
-                        alt="biometric-provide-icon-2"
-                      />
-                    </div>
-                    <div class="bg-biometric3 bg-blue">
-                      <img
-                        src="../assets/images/biometric-provide-icon-3.svg"
-                        class="img-fluid"
-                        alt="biometric-provide-icon-3"
-                      />
-                    </div>
-                  </div>
+                  </a>                  
                 </b-col>
               </b-row>
             </div>

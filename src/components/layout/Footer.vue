@@ -8,11 +8,10 @@
           <b-row>
             <b-col cols="12">
               <h2>
-                Ready? Test our IVR Calln Centre Now.
+                Ready? Test our IVR Call Centre and App Now!
               </h2>
               <h4 class="text-white">
-                And keep your eyes peeled for the mobile app we are launching
-                soon.
+                And keep your eyes peeled for new functionalities coming soon
               </h4>
               <p>
                 <em>
