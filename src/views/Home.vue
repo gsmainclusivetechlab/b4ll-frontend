@@ -16,28 +16,30 @@
             <h1>BIOMETRICS FOR ALL (B4LL)</h1>
             <div class="biometric-content-carousal">
               <h4>
-                Removing barriers to digital inclusion in emerging markets
+                An opportunity to lift the barriers of digital inclusion in
+                emerging markets
               </h4>
               <div class="os-system-wrap">
                 <ul>
                   <li>
-                    <!-- <a href="#"></a> -->
+                    <a href="https://apps.apple.com/gb/app/gsma-b4ll/id1566270261" target="_blank">
                     <img
                       src="../assets/images/ios.svg"
                       class="img-fluid"
                       alt=""
                     />
+                    </a>
                   </li>
                   <li>
-                    <!-- <a href="#"></a> -->
+                    <a href="https://play.google.com/store/apps/details?id=com.gsmab4all" target="_blank">
                     <img
                       src="../assets/images/google.svg"
                       class="img-fluid"
                       alt=""
                     />
+                    </a>
                   </li>
                 </ul>
-                <h4 class="text-white">Mobile app coming soon</h4>
               </div>
             </div>
             <!-- </b-container> -->
@@ -53,7 +55,7 @@
           </b-carousel-slide>
           <b-carousel-slide>
             <!-- <b-container> -->
-            <h1>BIOMETRICS FOR ALL</h1>
+            <h1>BIOMETRICS FOR ALL (B4LL)</h1>
             <div class="biometric-content-carousal">
               <h4>
                 An opportunity to lift the barriers of digital inclusion in
@@ -78,8 +80,6 @@
                     />
                   </li>
                 </ul>
-
-                <h4 class="text-white">Mobile app coming soon</h4>
               </div>
             </div>
             <!-- </b-container> -->
@@ -95,7 +95,7 @@
           </b-carousel-slide>
           <b-carousel-slide>
             <!-- <b-container> -->
-            <h1>BIOMETRICS FOR ALL</h1>
+            <h1>BIOMETRICS FOR ALL (B4LL)</h1>
             <div class="biometric-content-carousal">
               <h4>
                 An opportunity to lift the barriers of digital inclusion in
@@ -120,7 +120,6 @@
                     />
                   </li>
                 </ul>
-                <h4 class="text-white"><em>Mobile app coming soon </em></h4>
               </div>
             </div>
             <!-- </b-container> -->
@@ -178,7 +177,6 @@
               <h4>
                 Empower your customers with inclusive biometric solutions
               </h4>
-              <em> App coming soon </em>
             </div>
             <div class="mobile-group-banner"></div>
           </b-col>
