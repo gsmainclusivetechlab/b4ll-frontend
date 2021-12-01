@@ -49,8 +49,85 @@
             Sign up on the right side and follow the instructions on the call centre to enrol using your voice print, enabling you to navigate through the use cases and test all the different flows of this guide.
             </br>
             </br>
-            The inut form goes here...
-            <div>
+            <div class="sign-up-frame">
+              <h2>Sign up</h2>
+              <form @submit.prevent="processForm" method="post">
+                <div class="form-group">
+                  <label for="inputAddress">Nickname</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputAddress"
+                    placeholder="Enter nickname"
+                    v-model="nickName"
+                  />
+                  <span class="error-msg" v-if="errors.nickName.length != 0">
+                    {{ errors.nickName }}</span
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress2">Mobile number</label>
+                  <vue-tel-input
+                    v-model="phone"
+                    mode="international"
+                    validCharactersOnly
+                  ></vue-tel-input>
+                  <span
+                    class="error-msg"
+                    v-if="errors.phone.length != 0 || errors.format.length != 0"
+                  >
+                    {{ errors.phone }} {{ errors.format }}
+                  </span>
+                </div>
+
+                <div class="form-group">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="gridCheck"
+                        v-model="termsConditions"
+                        true-value="yes"
+                        false-value="no"
+                      />
+                      <span class="checkmark"></span>
+                      <a href="./terms-and-condition.pdf" target="_blank"
+                        >Accept the terms and conditions</a
+                      >
+                    </label>
+                    <span class="error-msg" v-if="errors.tc.length != 0">
+                      {{ errors.tc }}</span
+                    >
+                  </div>
+                </div>
+
+                <a v-if="showSubmit && !loading" href="#" class="btn1">
+                  <input class="btn" type="submit" value="Submit Now" />
+                </a>
+                <b-spinner
+                  style="margin-left: 45%"
+                  v-if="loading"
+                  label="Spinning"
+                ></b-spinner>
+                <div class="form-response" v-if="gotResponse">
+                  <b-alert
+                    variant="primary"
+                    show
+                    v-if="response.data.ResponseCode == 200"
+                  >
+                    {{ response.data.msg }}</b-alert
+                  >
+                  <b-alert
+                    variant="danger"
+                    show
+                    v-if="response.data.ResponseCode == 623"
+                  >
+                    {{ response.data.msg }}</b-alert
+                  >
+                </div>
+              </form>
+            </div>            <div>
                     </br> <i> If you want to read more information about the Use Case flows please visit our 
                        <a href="https://docs.biometrics.gsmainclusivetechlab.io/" target="_blank">
                       documentation page.</a> </i>
@@ -218,14 +295,18 @@ export default {
     },
     value: "",
     phone: "",
-    amount: "",
+    nickName: "",
     termsConditions: "no",
     errors: {
       format: "",
-      amount: "",
+      nickName: "",
       phone: "",
       tc: "",
-    }
+    },
+    showSubmit: true,
+    loading: false,
+    gotResponse: false,
+    response: {},
   }),
   methods: {
     scrollBottom() {
@@ -239,7 +320,7 @@ export default {
     processForm(e) {
       this.errors = {
         format: "",
-        amount: "",
+        nickName: "",
         phone: "",
         tc: "",
       };
@@ -254,19 +335,19 @@ export default {
 
       if (
         this.phone &&
-        this.amount &&
+        this.nickName &&
         this.termsConditions === "yes" &&
         noformat
       ) {
         this.loading = true;
         let postData = {
-          Amount: this.amount,
+          nickName: this.nickName,
           id: number,
         };
 
         this.axios
           .post(
-            "https://6f0vqrhy90.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webSignUp",
+            "https://emsvmxc4y2.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webSignUpOrange",
             postData,
             {
               headers: {
@@ -289,8 +370,8 @@ export default {
           });
         return true;
       }
-      if (!this.amount) {
-        this.errors.amount = "Nick Name required.";
+      if (!this.nickName) {
+        this.errors.nickName = "Nick Name required.";
       }
 
       if (!this.phone) {
