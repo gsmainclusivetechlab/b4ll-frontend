@@ -13,6 +13,7 @@
     "bootstrap-vue": "^2.17.3",
     "core-js": "^3.6.5",
     "lodash": "^4.17.21",
+    "qrcode.vue": "^1.7.0",
     "vue": "^2.6.11",
     "vue-axios": "^3.2.4",
     "vue-gtag": "^1.9.1",
