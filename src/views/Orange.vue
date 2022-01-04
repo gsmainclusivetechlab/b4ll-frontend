@@ -259,7 +259,7 @@
                 </div>
                 </div>
           </div>
-        </div>
+         </div>
         </div>
     </div>
     <section class="two-col-biometric-wrap text-white">
@@ -497,7 +497,7 @@ export default {
 
       e.preventDefault();
     },
-
+    
     processFormInvoice() {
       this.errors = {
         format: "",

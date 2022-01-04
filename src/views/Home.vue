@@ -64,20 +64,22 @@
               <div class="os-system-wrap">
                 <ul>
                   <li>
-                    <!-- <a href="#"></a> -->
+                    <a href="https://apps.apple.com/gb/app/gsma-b4ll/id1566270261" target="_blank">
                     <img
                       src="../assets/images/ios.svg"
                       class="img-fluid"
                       alt=""
                     />
+                    </a>
                   </li>
                   <li>
-                    <!-- <a href="#"></a> -->
+                    <a href="https://play.google.com/store/apps/details?id=com.gsmab4all" target="_blank">
                     <img
                       src="../assets/images/google.svg"
                       class="img-fluid"
                       alt=""
                     />
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -104,20 +106,22 @@
               <div class="os-system-wrap">
                 <ul>
                   <li>
-                    <!-- <a href="#"></a> -->
+                    <a href="https://apps.apple.com/gb/app/gsma-b4ll/id1566270261" target="_blank">
                     <img
                       src="../assets/images/ios.svg"
                       class="img-fluid"
                       alt=""
                     />
+                    </a>  
                   </li>
                   <li>
-                    <!-- <a href="#"></a> -->
+                    <a href="https://play.google.com/store/apps/details?id=com.gsmab4all" target="_blank">
                     <img
                       src="../assets/images/google.svg"
                       class="img-fluid"
                       alt=""
                     />
+                    </a>  
                   </li>
                 </ul>
               </div>
