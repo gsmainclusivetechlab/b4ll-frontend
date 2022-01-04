@@ -205,7 +205,6 @@
           <div class="col-12 col-md-6">
             <div class="sign-up-frame">
                 <h2>New Customer Payment</h2>
-                <form @submit.prevent="processFormInvoice" method="post">
                 <div class="form-group">
                     <label for="inputAddress">Amount ($)</label>
                     <input
@@ -234,8 +233,8 @@
                     </span>
                 </div>
 
-                <a v-if=" !loading" href="#" class="btn1">
-                    <input class="btn" type="submit" value="Submit Invoice Request" />
+                <a v-if=" !loading" v-on:click="processFormInvoice" class="btn1">
+                    <input class="btn" value="Submit Invoice Request" />
                 </a>
                 <b-spinner
                     style="margin-left: 45%"
@@ -258,7 +257,6 @@
                     {{ response.data.msg }}</b-alert
                     >
                 </div>
-                </form>
                 </div>
           </div>
         </div>
@@ -295,20 +293,6 @@
                         {{ errors.amount }}</span
                         >
                     </div>
-                    <div class="form-group">
-                        <label for="inputAddress2">Customer Mobile Number</label>
-                        <vue-tel-input
-                        v-model="phoneQr"
-                        mode="international"
-                        validCharactersOnly
-                        ></vue-tel-input>
-                        <span
-                        class="error-msg"
-                        v-if="errors.phoneInvoice.length != 0 || errors.format.length != 0"
-                        >
-                        {{ errors.phoneInvoice }} {{ errors.format }}
-                        </span>
-                    </div>
 
                     <a v-if=" !loading" href="#" class="btn1">
                         <input class="btn" type="submit" value="Generate QR Code" />
@@ -339,7 +323,7 @@
             <div class="biometric-img-block">
               <b-row class="justify-content-center align-items-center gutter-20 flex-md-column">
                 <b-col cols="12" md="12">
-                  <a v-if="generateQR" href="#" v-on:click="resetQr" class="btn1">
+                  <a v-if="generateQR" v-on:click="resetQr" class="btn1">
                     <input class="btn" value="Back" />
                   </a>
                   <div v-if="generateQR">
@@ -406,7 +390,6 @@ export default {
     size: 300,
     phone: "",
     phoneInvoice: "",
-    phoneQr: "",
     nickName: "",
     amount: "",
     amountQr: "",
@@ -436,12 +419,7 @@ export default {
 
     generateQrCode(e) {
       const amount = this.amountQr;
-      const number = this.phoneQr.split(" ").join("");
-      if (number.length > 17 || number.length < 12) {
-        noformat = false;
-        this.errors.format = "Enter phone number in correct format.";
-      }
-      this.url = `https://emsvmxc4y2.execute-api.eu-west-2.amazonaws.com/dev/en-GB/agent/transfer?Caller=${encodeURIComponent(number)}&amount=${amount}`
+      this.url = `https://emsvmxc4y2.execute-api.eu-west-2.amazonaws.com/dev/en-GB/agent/transfer`
       console.log(this.url);
       this.generateQR = true;
 
@@ -519,11 +497,14 @@ export default {
 
       e.preventDefault();
     },
-    processFormInvoice(e) {
+
+    processFormInvoice() {
       this.errors = {
         format: "",
         phoneInvoice: "",
         amount: "",
+        nickName: "",
+        phone: "",
         tc: "",
       };
       this.response = {};
@@ -537,22 +518,22 @@ export default {
 
       if (
         this.phoneInvoice &&
-        this.nickName && noformat
+        this.amount && noformat
       ) {
         this.loading = true;
         let postData = {
-          nickName: this.nickName,
           id: number,
+          amount: this.amount,
         };
 
         this.axios
           .post(
-            `https://emsvmxc4y2.execute-api.eu-west-2.amazonaws.com/dev/en-GB/agent/invoice?Caller=${encodeURIComponent(number)}`,
+            "https://emsvmxc4y2.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webPaymentOrange",
             postData,
             {
               headers: {
-                "Content-Type": "application/json",
                 "Access-Control-Allow-Origin": "*",
+                "Content-Type": "application/json",
               },
             }
           )
@@ -570,8 +551,8 @@ export default {
           });
         return true;
       }
-      if (!this.nickName) {
-        this.errors.nickName = "Nick Name required.";
+      if (!this.amount) {
+        this.errors.amount = "Amount required.";
       }
 
       if (!this.phoneInvoice) {
