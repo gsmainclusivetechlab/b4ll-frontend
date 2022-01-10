@@ -1,18 +1,19 @@
 <template>
   <div class="home">
     <AppHeader v-bind="props" />
-
+    
+    <!-- FRAME 01: ENROL  -->
     <div class="login-form-frame">
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-6">
             <div class="content-login">
               <h2>
-                User Cases Testing Guide <br />
+                Enrol to test <br />
               </h2>
               <p>This project aims to address the use of voice recognition to access mobile money services through a showcase created by the Inclusive Tech Lab - GSMA and Orange.
-                 The in different use cases approached in the show case are: Reset PIN, Merchant Payments, Cash-IN, Cash-Out and Cash-to-Cash.
-                 This page was created to be used and a guide to those who are testing the show case. The information shared here brings the different possibilities to test including: different user case flows, different communication channels (e.g. SMS, USSD, QRCode, and IVR Call centre), and specific information necessary to proceed with the tests. </p>
+                 
+                 This page was created to be used as a guide to those who are testing the show case. The information shared here brings the different possibilities and information to test: different user case flows, different communication channels (e.g. SMS, USSD, QRCode, and IVR Call centre), and specific information necessary to proceed with the tests. </p>
               <h4>
                 <p>
                   <span class="phone-call-frame mr-10"
@@ -43,11 +44,10 @@
                   Inclusive Tech Lab</a
                 >
               </p>
+              Sign up on the right side and follow the instructions on the call centre to enrol using your voice print, enabling you to navigate through the use cases and test all the different flows of this guide.
             </div>
           </div>
           <div class="col-12 col-lg-6">
-            Sign up on the right side and follow the instructions on the call centre to enrol using your voice print, enabling you to navigate through the use cases and test all the different flows of this guide.
-            </br>
             </br>
             <div class="sign-up-frame">
               <h2>Sign up</h2>
@@ -128,7 +128,7 @@
                 </div>
               </form>
             </div>            <div>
-                    </br> <i> If you want to read more information about the Use Case flows please visit our 
+                    </br> <i> If you want to read more information about the Use Case flows please visit our B4LL Project 
                        <a href="https://docs.biometrics.gsmainclusivetechlab.io/" target="_blank">
                       documentation page.</a> </i>
           </div>
@@ -136,49 +136,111 @@
         </div>
       </div>
     </div>
-    <section class="two-col-biometric-wrap text-white">
+
+    <!-- FRAME 02: USE CASES  -->
+    <div class="digital-wrapper feature-wrap bg-greys">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="feature-content text-center">
+              <h2>Use Cases</h2>
+              <h6>
+                There are 3 main use cases in this showcase created bespoke to attend the requirements proposed by Orange. 
+                </br>
+                This page was created to be used and a guide to those who are testing the show case.
+              </h6>
+            </div>
+            <div class="three-col-feature-frame">
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card-wrap">
+                    <img
+                      src="../assets/images/resetpin.png"
+                      class="img-fluid"
+                      alt="development"
+                    />
+                    <h5>Reset Pin</h5>
+                    <h6>
+                      This use case approaches the need of the user to change 
+                      their PIN number. There are two possibilities to test this use case:
+                      calling the call centre, and using SMS/USSD.
+                    </h6>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card-wrap">
+                    <img
+                      src="../assets/images/merchant.png"
+                      class="img-fluid"
+                      alt="trusted"
+                    />
+                    <h5>Merchant Payments</h5>
+                    <h6>
+                      This use case simulates a merchant payment initiated 
+                      by the customer or by the merchant (agent) and can be done 
+                      by call centre, QR Code, and SMS/USSD.
+                    </h6>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card-wrap">
+                    <img
+                      src="../assets/images/cashtocash.png"
+                      class="img-fluid"
+                      alt="smartphones"
+                    />
+                    <h5>Cash-in / Cash-out / Cash-to-Cash</h5>
+                    <h6>
+                      The simulations of cash-in/out and cash2cash can be initiate by
+                      the customer or the agent and can be done by call centre (cash2cash), 
+                      SMS/USSD and QR Code.
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- FRAME 03: RESET PIN  -->
+    <section class="two-col-biometric-wrap text-white bg-greys">
       <b-container>
         <b-row class="justify-content-start align-items-center">
           <b-col cols="12" xl="6">
             <div class="biometric-content">
               <h2>
-                Use Case 01 <br />
                 Reset PIN Number
               </h2>
-              <p>
-                This use case approaches the need of the user to change their PIN number. 
-                There are two possibilities where it could occur:
+              <p><u><b>Calling the Call Centre (flow 1)</b></u></p>
+              <p> <b> Flow 1. The user knows the pin number and want to change: </b>
+              </br> <i> Calling the IVR Call Centre and selecting the option change PIN. The system will validate the user using the previous PIN and allows the user to change the PIN number introducing the new 4 digits PIN. </i>
               </p>
-              <p> <b> 1. The user lost the PIN number and want to reset it: </b>
-                </br> <i> Calling the IVR Call Centre and selecting the option reset PIN. The system will validate the user through voice verification and allows the user to change the PIN number introducing the new 4 digits PIN. </i>
-              </p>
-              <p> <b> 2. The user knows the pin number and want to change: </b> 
-                </br> <i> Calling the IVR Call Centre and selecting the option change PIN. The system will validate the user using the previous PIN and allows the user to change the PIN number introducing the new 4 digits PIN. </i>
-                </p> 
-              
+                    </br>1. Use one of the call centre numbers available for this project.
+                    </br>2. Select the option 4 in the main menu
+                    </br>3. Insert your previous PIN (1234 for demo purposes)
+                    </br>4. Insert your new PIN Number
             </div>
           </b-col>
           <b-col cols="12" xl="6">
             <div class="biometric-img-block">
               <b-row class="justify-content-center align-items-center gutter-20 flex-md-column">
                 <b-col cols="12" md="10">
-                  <div>
-                    <u><b>Using SMS/USSD</b></u>
-                    </br>1. Send an SMS message to the call centre number using one of the two options: 
-                      </br><b>RESETPIN</b> (SMS message style)
-                      </br><b>**42*033</b> (USSD code style)
-                    </br>2. Receive an inbound call    
-                    </br>3. Authenticate with voice and reset your PIN 
-                  </div>
-                  </br>
-                  <div>
-                    <u><b>Calling the Call Centre</b></u>
-                    </br>1. Use one of the call centre numbers available for this project.
-                    </br>2. Select the option 4 in the main menu
-                    </br>3. Insert your previous PIN (1234 for demo purposes)
-                    </br>4. Insert your new PIN Number
-                  </div>
-                  </a>                  
+                </br>
+                </br>
+                <p><u><b>Using SMS/USSD </b></u></p>
+                <p> <b> Flow 2. The user lost the PIN number and want to reset it: </b> 
+                </br> <i> This simulation uses SMS/USSD to trigger a inbound call. Using verification the user can change the PIN number introducing the new 4 digits PIN. </i>
+                </p> 
+                <div>
+                  </br>1. Send an SMS message to the call centre number using one of the two options: 
+                  </br><b>RESETPIN</b> (SMS message style)
+                  </br><b>**42*033</b> (USSD code style)
+                  </br>2. Receive an inbound call    
+                  </br>3. Authenticate with voice and reset your PIN 
+                </div>
+                
                 </b-col>
               </b-row>
             </div>
@@ -186,6 +248,7 @@
         </b-row>
       </b-container>
     </section>
+
     <div class="about-content-wrapper try-frame">
       <div class="container">
         <div class="row">
@@ -194,12 +257,12 @@
                 Use Case 02 <br />
                 Merchant Payments
             </h2>
-            <i>(Use Case under development)</i>
             <p>
               </br>  This use case approaches the merchant payment in different scenarios:
-              </br>  1. The user makes the payment calling the call centre, typing the merchant number, amount and proceeding with the payment with voice verification. 
-              </br>  2. The user generates a QRCode below, reads with the mobile camera and receives a call to verify the user using voice.
-              </br>  3. The User sends an SMS/USSD message containing the merchant number and the payment amount, and requests to proceed with the payment. The user receives a call to verify the user using voice.
+              </br>
+              </br>  <b>1. Call Centre:</b> The user makes the payment calling the call centre, typing the merchant number, amount and proceeding with the payment with voice verification. 
+              </br>  <b>2. QR Code:</b> The user generates a QRCode below, reads with the mobile camera and receives a call to verify the user using voice.
+              </br>  <b>3. SMS/USSD:</b> The User sends an SMS/USSD message containing the merchant number and the payment amount, and requests to proceed with the payment. The user receives a call to verify the user using voice.
             </p>
           </div>
           <div class="col-12 col-md-6">
@@ -234,7 +297,7 @@
                 </div>
 
                 <a v-if=" !loading" v-on:click="processFormInvoice" class="btn1">
-                    <input class="btn" value="Submit Invoice Request" />
+                    <input class="btn" value="Request Invoice " />
                 </a>
                 <b-spinner
                     style="margin-left: 45%"
@@ -262,19 +325,68 @@
          </div>
         </div>
     </div>
+
     <section class="two-col-biometric-wrap text-white">
       <b-container>
         <b-row class="justify-content-start align-items-center">
           <b-col cols="12" xl="6">
-            <div class="biometric-content">
-              <h2>
-                QR Code <br />
-                Generating Merchant Code
-              </h2>
-              <p>
-                The algorithm to generate QR Code automatically in under development. It will be added to the project soon.
-              </p>
-            </div>
+            <div class="col-12 col-md-10">
+            <div class="sign-up-frame">
+                <h2>Merchant Initiated</h2>
+                <div class="form-group">
+                    <label for="inputAddress">Amount ($)</label>
+                    <input
+                    type="number"
+                    class="form-control"
+                    id="inputAddress"
+                    placeholder="Enter amount..."
+                    v-model="amount"
+                    />
+                    <span class="error-msg" v-if="errors.amount.length != 0">
+                    {{ errors.amount }}</span
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress2">Customer Mobile Number</label>
+                    <vue-tel-input
+                    v-model="phoneInvoice"
+                    mode="international"
+                    validCharactersOnly
+                    ></vue-tel-input>
+                    <span
+                    class="error-msg"
+                    v-if="errors.phoneInvoice.length != 0 || errors.format.length != 0"
+                    >
+                    {{ errors.phoneInvoice }} {{ errors.format }}
+                    </span>
+                </div>
+
+                <a v-if=" !loading" v-on:click="processFormInvoice" class="btn1">
+                    <input class="btn" value="Request Invoice " />
+                </a>
+                <b-spinner
+                    style="margin-left: 45%"
+                    v-if="loading"
+                    label="Spinning"
+                ></b-spinner>
+                <div class="form-response" v-if="gotResponse">
+                    <b-alert
+                    variant="primary"
+                    show
+                    v-if="response.data.ResponseCode == 200"
+                    >
+                    {{ response.data.msg }}</b-alert
+                    >
+                    <b-alert
+                    variant="danger"
+                    show
+                    v-if="response.data.ResponseCode == 623"
+                    >
+                    {{ response.data.msg }}</b-alert
+                    >
+                </div>
+                </div>
+          </div>
           </b-col>
           <b-col cols="12" xl="6">
                   <div class="sign-up-frame" v-if="!generateQR">
@@ -337,6 +449,7 @@
         </b-row>
       </b-container>
     </section>
+
     <div class="about-content-wrapper try-frame">
       <div class="container">
         <div class="row">
@@ -361,6 +474,7 @@
         </div>
       </div>
     </div>
+
     <Footer />
   </div>
 </template>
@@ -379,7 +493,7 @@ export default {
   components: { AppHeader, Footer, VueTelInput, QrcodeVue },
   data: () => ({
     props: {
-      tittle: "IVR Call Centre - Orange/GSMA Project",
+      tittle: "Orange Project",
       breadCrumb: {
         tittle: "Orange",
         link: "orange",
