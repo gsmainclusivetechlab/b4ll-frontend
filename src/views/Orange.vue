@@ -213,11 +213,11 @@
               <h2>
                 Reset PIN Number
               </h2>
-              <p><u><b>Calling the Call Centre (flow 1)</b></u></p>
-              <p> <b> Flow 1. The user knows the pin number and want to change: </b>
+              <p><u><b>1. Calling the Call Centre</b></u></p>
+              <p> <b> The user knows the pin number and want to change: </b>
               </br> <i> Calling the IVR Call Centre and selecting the option change PIN. The system will validate the user using the previous PIN and allows the user to change the PIN number introducing the new 4 digits PIN. </i>
               </p>
-                    </br>1. Use one of the call centre numbers available for this project.
+                    1. Use one of the call centre numbers available for this project.
                     </br>2. Select the option 4 in the main menu
                     </br>3. Insert your previous PIN (1234 for demo purposes)
                     </br>4. Insert your new PIN Number
@@ -229,14 +229,14 @@
                 <b-col cols="12" md="10">
                 </br>
                 </br>
-                <p><u><b>Using SMS/USSD </b></u></p>
-                <p> <b> Flow 2. The user lost the PIN number and want to reset it: </b> 
+                <p><u><b>2. Using SMS/USSD </b></u></p>
+                <p> <b>The user lost the PIN number and want to reset it: </b> 
                 </br> <i> This simulation uses SMS/USSD to trigger a inbound call. Using verification the user can change the PIN number introducing the new 4 digits PIN. </i>
                 </p> 
                 <div>
-                  </br>1. Send an SMS message to the call centre number using one of the two options: 
-                  </br><b>RESETPIN</b> (SMS message style)
-                  </br><b>**42*033</b> (USSD code style)
+                  1. Send an SMS message to the call centre number using one of the two options: 
+                  </br><b> RESETPIN</b> (SMS message style)
+                  </br><b> **42*033</b> (USSD code style)
                   </br>2. Receive an inbound call    
                   </br>3. Authenticate with voice and reset your PIN 
                 </div>
@@ -249,6 +249,7 @@
       </b-container>
     </section>
 
+    <!-- FRAME 04: MERCHANT PAYMENT  -->
     <div class="about-content-wrapper try-frame">
       <div class="container">
         <div class="row">
@@ -267,60 +268,8 @@
           </div>
           <div class="col-12 col-md-6">
             <div class="sign-up-frame">
-                <h2>New Customer Payment</h2>
-                <div class="form-group">
-                    <label for="inputAddress">Amount ($)</label>
-                    <input
-                    type="number"
-                    class="form-control"
-                    id="inputAddress"
-                    placeholder="Enter amount..."
-                    v-model="amount"
-                    />
-                    <span class="error-msg" v-if="errors.amount.length != 0">
-                    {{ errors.amount }}</span
-                    >
-                </div>
-                <div class="form-group">
-                    <label for="inputAddress2">Customer Mobile Number</label>
-                    <vue-tel-input
-                    v-model="phoneInvoice"
-                    mode="international"
-                    validCharactersOnly
-                    ></vue-tel-input>
-                    <span
-                    class="error-msg"
-                    v-if="errors.phoneInvoice.length != 0 || errors.format.length != 0"
-                    >
-                    {{ errors.phoneInvoice }} {{ errors.format }}
-                    </span>
-                </div>
-
-                <a v-if=" !loading" v-on:click="processFormInvoice" class="btn1">
-                    <input class="btn" value="Request Invoice " />
-                </a>
-                <b-spinner
-                    style="margin-left: 45%"
-                    v-if="loading"
-                    label="Spinning"
-                ></b-spinner>
-                <div class="form-response" v-if="gotResponse">
-                    <b-alert
-                    variant="primary"
-                    show
-                    v-if="response.data.ResponseCode == 200"
-                    >
-                    {{ response.data.msg }}</b-alert
-                    >
-                    <b-alert
-                    variant="danger"
-                    show
-                    v-if="response.data.ResponseCode == 623"
-                    >
-                    {{ response.data.msg }}</b-alert
-                    >
-                </div>
-                </div>
+                <h2>New Customer Payment</h2>    
+            </div>
           </div>
          </div>
         </div>
@@ -474,6 +423,130 @@
         </div>
       </div>
     </div>
+    
+    <section class="two-col-biometric-wrap text-white">
+      <b-container>
+        <b-row class="justify-content-start align-items-center">
+          <b-col cols="12" xl="6">
+            <div class="col-12 col-md-10">
+            <div class="sign-up-frame">
+                <h2>CASH IN / OUT</h2>
+                <div class="form-group">
+                    <label for="inputAddress">Amount ($)</label>
+                    <input
+                    type="number"
+                    class="form-control"
+                    id="inputAddress"
+                    placeholder="Enter amount..."
+                    v-model="amount"
+                    />
+                    <span class="error-msg" v-if="errors.amount.length != 0">
+                    {{ errors.amount }}</span
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress2">Customer Mobile Number</label>
+                    <vue-tel-input
+                    v-model="phoneInvoice"
+                    mode="international"
+                    validCharactersOnly
+                    ></vue-tel-input>
+                    <span
+                    class="error-msg"
+                    v-if="errors.phoneInvoice.length != 0 || errors.format.length != 0"
+                    >
+                    {{ errors.phoneInvoice }} {{ errors.format }}
+                    </span>
+                </div>
+
+                <a v-if=" !loading" v-on:click="processFormInvoice" class="btn1">
+                    <input class="btn" value="Request Invoice " />
+                </a>
+                <b-spinner
+                    style="margin-left: 45%"
+                    v-if="loading"
+                    label="Spinning"
+                ></b-spinner>
+                <div class="form-response" v-if="gotResponse">
+                    <b-alert
+                    variant="primary"
+                    show
+                    v-if="response.data.ResponseCode == 200"
+                    >
+                    {{ response.data.msg }}</b-alert
+                    >
+                    <b-alert
+                    variant="danger"
+                    show
+                    v-if="response.data.ResponseCode == 623"
+                    >
+                    {{ response.data.msg }}</b-alert
+                    >
+                </div>
+                </div>
+          </div>
+          </b-col>
+          <b-col cols="12" xl="6">
+                  <div class="sign-up-frame" v-if="!generateQR">
+                    <h2>Generate Payment QR Code</h2>
+                    <form @submit.prevent="generateQrCode" method="post">
+                    <div class="form-group">
+                        <label for="inputAddress">Amount ($)</label>
+                        <input
+                        type="number"
+                        class="form-control"
+                        id="inputAddress"
+                        placeholder="Enter amount..."
+                        v-model="amountQr"
+                        />
+                        <span class="error-msg" v-if="errors.amount.length != 0">
+                        {{ errors.amount }}</span
+                        >
+                    </div>
+
+                    <a v-if=" !loading" href="#" class="btn1">
+                        <input class="btn" type="submit" value="Generate QR Code" />
+                    </a>
+                    <b-spinner
+                        style="margin-left: 45%"
+                        v-if="loading"
+                        label="Spinning"
+                    ></b-spinner>
+                    <div class="form-response" v-if="gotResponse">
+                        <b-alert
+                        variant="primary"
+                        show
+                        v-if="response.data.ResponseCode == 200"
+                        >
+                        {{ response.data.msg }}</b-alert
+                        >
+                        <b-alert
+                        variant="danger"
+                        show
+                        v-if="response.data.ResponseCode == 623"
+                        >
+                        {{ response.data.msg }}</b-alert
+                        >
+                    </div>
+                    </form>
+                    </div>
+            <div class="biometric-img-block">
+              <b-row class="justify-content-center align-items-center gutter-20 flex-md-column">
+                <b-col cols="12" md="12">
+                  <a v-if="generateQR" v-on:click="resetQr" class="btn1">
+                    <input class="btn" value="Back" />
+                  </a>
+                  <div v-if="generateQR">
+                    <qrcode-vue :value="url" :size="size" level="H" />                  
+                  </div>
+                  </a>                  
+                </b-col>
+              </b-row>
+            </div>
+          </b-col>
+        </b-row>
+      </b-container>
+    </section>
 
     <Footer />
   </div>
