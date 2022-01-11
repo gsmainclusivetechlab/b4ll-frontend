@@ -44,7 +44,7 @@
                   Inclusive Tech Lab</a
                 >
               </p>
-              Sign up on the right side and follow the instructions on the call centre to enrol using your voice print, enabling you to navigate through the use cases and test all the different flows of this guide.
+              Before begin the tests, please sign up on the right side, call the call centre, and follow the instructions to enrol using your voice print, enabling you to navigate through the use cases and test all the different flows of this guide.
             </div>
           </div>
           <div class="col-12 col-lg-6">
@@ -145,7 +145,7 @@
             <div class="feature-content text-center">
               <h2>Use Cases</h2>
               <h6>
-                There are 3 main use cases in this showcase created bespoke to attend the requirements proposed by Orange. 
+                There are 3 new use cases in this showcase created bespoke to attend the requirements proposed by Orange. 
                 </br>
                 This page was created to be used and a guide to those who are testing the show case.
               </h6>
@@ -208,39 +208,65 @@
     <section class="two-col-biometric-wrap text-white bg-greys">
       <b-container>
         <b-row class="justify-content-start align-items-center">
-          <b-col cols="12" xl="6">
+          <b-col cols="12" xl="5">
             <div class="biometric-content">
               <h2>
+                Use Case 01 <br />
                 Reset PIN Number
-              </h2>
-              <p><u><b>1. Calling the Call Centre</b></u></p>
-              <p> <b> The user knows the pin number and want to change: </b>
-              </br> <i> Calling the IVR Call Centre and selecting the option change PIN. The system will validate the user using the previous PIN and allows the user to change the PIN number introducing the new 4 digits PIN. </i>
-              </p>
-                    1. Use one of the call centre numbers available for this project.
-                    </br>2. Select the option 4 in the main menu
-                    </br>3. Insert your previous PIN (1234 for demo purposes)
-                    </br>4. Insert your new PIN Number
+            </h2>
+            <p>
+              We are approaching here two different situations that can happen: change a current
+              PIN Number and renew a PIN number, following the intructions on the right.
+            </p>
+            <p>
+              To chenge the PIN number using the call centre the user can enter ther previous PIN 
+              (1234 is our default value) and then update the PIN number.
+            </p>
+            <p>
+              If the user forgot the PIN number the reset can be done using a SMS/USSD to request 
+              and the voice recognition to validate the user and create a new PIN. 
+            </p>  
             </div>
           </b-col>
-          <b-col cols="12" xl="6">
+          <b-col cols="14" xl="6">
             <div class="biometric-img-block">
               <b-row class="justify-content-center align-items-center gutter-20 flex-md-column">
-                <b-col cols="12" md="10">
-                </br>
-                </br>
-                <p><u><b>2. Using SMS/USSD </b></u></p>
-                <p> <b>The user lost the PIN number and want to reset it: </b> 
-                </br> <i> This simulation uses SMS/USSD to trigger a inbound call. Using verification the user can change the PIN number introducing the new 4 digits PIN. </i>
-                </p> 
-                <div>
-                  1. Send an SMS message to the call centre number using one of the two options: 
-                  </br><b> RESETPIN</b> (SMS message style)
-                  </br><b> **42*033</b> (USSD code style)
-                  </br>2. Receive an inbound call    
-                  </br>3. Authenticate with voice and reset your PIN 
-                </div>
+                <b-col cols="12" md="12">
                 
+                    <div class="img-manage">
+                      <img
+                        src="../assets/images/feature-icon-1.png"
+                        class="img-fluid"
+                        alt="feature-icon-1"
+                      />
+                    </div>
+                    <div class="content-manage-frame">
+                      <h5>Call Centre</h5>
+                      <p>
+                        1. Use one of the call centre numbers available for this project.
+                        </br>2. Select the option 4 in the main menu
+                        </br>3. Insert your previous PIN (1234 for demo purposes)
+                        </br>4. Insert your new PIN Number
+                      </p>
+                    </div>
+                
+                    <div class="img-manage">
+                      <img
+                        src="../assets/images/feature-icon-1.png"
+                        class="img-fluid"
+                        alt="feature-icon-1"
+                      />
+                    </div>
+                    <div class="content-manage-frame">
+                      <h5>SMS/USSD</h5>
+                      <p>
+                        1. Send an SMS to one of numbers available for this project.
+                        </br> - SMS message style: <b>RESETPIN</b>
+                        </br> - USSD code style: <b>**42*033</b>
+                        </br>2. Receive an inbound call    
+                        </br>3. Authenticate with voice and reset your PIN 
+                      </p>
+                    </div>                
                 </b-col>
               </b-row>
             </div>
@@ -254,29 +280,72 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-6">
-            <h2>
-                Use Case 02 <br />
-                Merchant Payments
-            </h2>
-            <p>
-              </br>  This use case approaches the merchant payment in different scenarios:
-              </br>
-              </br>  <b>1. Call Centre:</b> The user makes the payment calling the call centre, typing the merchant number, amount and proceeding with the payment with voice verification. 
-              </br>  <b>2. QR Code:</b> The user generates a QRCode below, reads with the mobile camera and receives a call to verify the user using voice.
-              </br>  <b>3. SMS/USSD:</b> The User sends an SMS/USSD message containing the merchant number and the payment amount, and requests to proceed with the payment. The user receives a call to verify the user using voice.
-            </p>
+            <div>
+              <h2>
+                  Use Case 02 <br />
+                  Merchant Payments
+              </h2>
+              <p>
+                The merchant payment can be initiated by the customer or by the merchant.
+              </p>
+              <p>
+                The user can initiate the payment using the call centre and selecting 
+                the option pay a bill, starting the transaction throught a QR Code, or sending a 
+                SMS/USSD code message. The merchant simultation can be done using the form to request payment.
+              </p>
+              <p>
+                In most of these cases, the procedure will trigger the system to call back the user
+                and ask the user to validade the identity using voice authenticatio.
+              </p>
+            </div>
+
           </div>
           <div class="col-12 col-md-6">
             <div class="sign-up-frame">
-                <h2>New Customer Payment</h2>    
+                    
+                    <div class="img-manage">
+                      <img
+                        src="../assets/images/feature-icon-1.png"
+                        class="img-fluid"
+                        alt="feature-icon-1"
+                      />
+                    </div>
+                    <div class="content-manage-frame">
+                      <h5>Customer Innitiated Merchant Payment</h5>
+                      <p>
+                        1. Call Centre: Call the call centre and use the option <b>Pay a Bill</b>
+                        </br>2. SMS: Use the code <b>PAY CODE AMMOUNT</b> (Ex PAY 5768 20)
+                        </br>3. USSD: Use the code <b>**12*MarchantCode*Amount*</b> (Ex **12*5678*20*)
+                        </br>4. QR Code: Use the filds belowe and fill the information to create a QR code. 
+                        The merchant number is default (5678). Read the QR code and receive an inbound call 
+                        to proceed with voice authentication.
+                      </p>
+                    </div>
+
+                    <div class="img-manage">
+                      <img
+                        src="../assets/images/feature-icon-1.png"
+                        class="img-fluid"
+                        alt="feature-icon-1"
+                      />
+                    </div>
+                    <div class="content-manage-frame">
+                      <h5>Merchant Initiated Merchant Payment</h5>
+                      <p>
+                        1. Use the filds below and enter the customer's information 
+                        </br>2. The customer will receives a call to authorize the payment using voice
+                      </p>
+                    </div>
             </div>
           </div>
          </div>
         </div>
     </div>
-
+    
+    <!-- FRAME 05: MERCHANT PAYMENT - FORM -->
     <section class="two-col-biometric-wrap text-white">
       <b-container>
+        <h2 align=center>Merchant Paymnet - Forms</h2>
         <b-row class="justify-content-start align-items-center">
           <b-col cols="12" xl="6">
             <div class="col-12 col-md-10">
@@ -399,31 +468,72 @@
       </b-container>
     </section>
 
+    <!-- FRAME 06: CASH IN / OUT / CASH2CASH  -->
     <div class="about-content-wrapper try-frame">
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-6">
-            <div class="img-about-content">
-              <img
-                src="../assets/images/Tech-lab.png"
-                class="img-fluid"
-                alt="Tech-lab"
-              />
+            <div>
+              <h2>
+                  Use Case 03 <br />
+                  Cash-In | Cash-Out | Cash2Cash
+              </h2>
+              <p>
+                USE CASE DEVELOPMENT
+              </p>
+              <p>
+                The user can initiate the payment using the call centre and selecting 
+                the option pay a bill, starting the transaction throught a QR Code, or sending a 
+                SMS/USSD code message. The merchant simultation can be done using the form to request payment.
+              </p>
+              <p>
+                In most of these cases, the procedure will trigger the system to call back the user
+                and ask the user to validade the identity using voice authenticatio.
+              </p>
             </div>
+
           </div>
           <div class="col-12 col-md-6">
-            <h2>
-                Use Case 03 <br />
-                Cash In, Cash Out, Cash-to-Cash
-              </h2>
-            <h6>
-              This use case is stil under development by the Inclusive Tech Lab team.
-            </h6>
+            <div class="sign-up-frame">
+                    
+                    <div class="img-manage">
+                      <img
+                        src="../assets/images/feature-icon-1.png"
+                        class="img-fluid"
+                        alt="feature-icon-1"
+                      />
+                    </div>
+                    <div class="content-manage-frame">
+                      <h5>Customer Innitiated</h5>
+                      <p>
+                        1. Call Centre: Call the call centre and use the option <b>Pay a Bill</b>
+                        </br>2. SMS: Use the code PAY CODE CODE AMMOUNT (Ex PAY 1234 20)
+                        </br>3. USSD: Use the code **12*MarchantCode*Amount* (Ex **12*1234*20*)
+                        </br>4. QR Code: Fill the information for amount and phone number and request invoice 
+                      </p>
+                    </div>
+
+                    <div class="img-manage">
+                      <img
+                        src="../assets/images/feature-icon-1.png"
+                        class="img-fluid"
+                        alt="feature-icon-1"
+                      />
+                    </div>
+                    <div class="content-manage-frame">
+                      <h5>Agent Initiated</h5>
+                      <p>
+                        1. Use the filds below and enter the customer's information 
+                        </br>2. The customer will receives a call to authorize the payment using voice
+                      </p>
+                    </div>
+            </div>
           </div>
+         </div>
         </div>
-      </div>
     </div>
     
+    <!-- FRAME 06: CASH IN / OUT / CASH2CASH  - FORM -->
     <section class="two-col-biometric-wrap text-white">
       <b-container>
         <b-row class="justify-content-start align-items-center">
