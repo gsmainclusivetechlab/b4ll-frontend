@@ -61,8 +61,8 @@
                     placeholder="Enter nickname"
                     v-model="nickName"
                   />
-                  <span class="error-msg" v-if="errors.nickName.length != 0">
-                    {{ errors.nickName }}</span
+                  <span class="error-msg" v-if="signUpErrors.nickName.length != 0">
+                    {{ signUpErrors.nickName }}</span
                   >
                 </div>
                 <div class="form-group">
@@ -74,9 +74,9 @@
                   ></vue-tel-input>
                   <span
                     class="error-msg"
-                    v-if="errors.phone.length != 0 || errors.format.length != 0"
+                    v-if="signUpErrors.phone.length != 0 || signUpErrors.format.length != 0"
                   >
-                    {{ errors.phone }} {{ errors.format }}
+                    {{ signUpErrors.phone }} {{ signUpErrors.format }}
                   </span>
                 </div>
 
@@ -96,21 +96,21 @@
                         >Accept the terms and conditions</a
                       >
                     </label>
-                    <span class="error-msg" v-if="errors.tc.length != 0">
-                      {{ errors.tc }}</span
+                    <span class="error-msg" v-if="signUpErrors.tc.length != 0">
+                      {{ signUpErrors.tc }}</span
                     >
                   </div>
                 </div>
 
-                <a v-if="showSubmit && !loading" href="#" class="btn1">
+                <a v-if="showSubmit && !signUpLoading" href="#" class="btn1">
                   <input class="btn" type="submit" value="Submit Now" />
                 </a>
                 <b-spinner
                   style="margin-left: 45%"
-                  v-if="loading"
+                  v-if="signUpLoading"
                   label="Spinning"
                 ></b-spinner>
-                <div class="form-response" v-if="gotResponse">
+                <div class="form-response" v-if="gotSignUpResponse">
                   <b-alert
                     variant="primary"
                     show
@@ -301,42 +301,39 @@
 
           </div>
           <div class="col-12 col-md-6">
-            <div class="sign-up-frame">
-                    
-                    <div class="img-manage">
-                      <img
-                        src="../assets/images/feature-icon-1.png"
-                        class="img-fluid"
-                        alt="feature-icon-1"
-                      />
-                    </div>
-                    <div class="content-manage-frame">
-                      <h5>Customer Innitiated Merchant Payment</h5>
-                      <p>
-                        1. Call Centre: Call the call centre and use the option <b>Pay a Bill</b>
-                        </br>2. SMS: Use the code <b>PAY CODE AMMOUNT</b> (Ex PAY 5768 20)
-                        </br>3. USSD: Use the code <b>**12*MarchantCode*Amount*</b> (Ex **12*5678*20*)
-                        </br>4. QR Code: Use the filds belowe and fill the information to create a QR code. 
-                        The merchant number is default (5678). Read the QR code and receive an inbound call 
-                        to proceed with voice authentication.
-                      </p>
-                    </div>
+              <div class="img-manage">
+                <img
+                  src="../assets/images/feature-icon-1.png"
+                  class="img-fluid"
+                  alt="feature-icon-1"
+                />
+              </div>
+              <div class="content-manage-frame">
+                <h5>Customer Innitiated Merchant Payment</h5>
+                <p>
+                  1. Call Centre: Call the call centre and use the option <b>Pay a Bill</b> under <b>Mobile Money Services</b>
+                  </br>2. SMS: Use the code <b>PAY CODE AMMOUNT</b> (Ex PAY 5768 20)
+                  </br>3. USSD: Use the code <b>**12*MarchantCode*Amount*</b> (Ex **12*5678*20*)
+                  </br>4. QR Code: Use the filds belowe and fill the information to create a QR code. 
+                  The merchant number is default (5678). Read the QR code and receive an inbound call 
+                  to proceed with voice authentication.
+                </p>
+              </div>
 
-                    <div class="img-manage">
-                      <img
-                        src="../assets/images/feature-icon-1.png"
-                        class="img-fluid"
-                        alt="feature-icon-1"
-                      />
-                    </div>
-                    <div class="content-manage-frame">
-                      <h5>Merchant Initiated Merchant Payment</h5>
-                      <p>
-                        1. Use the filds below and enter the customer's information 
-                        </br>2. The customer will receives a call to authorize the payment using voice
-                      </p>
-                    </div>
-            </div>
+              <div class="img-manage">
+                <img
+                  src="../assets/images/feature-icon-1.png"
+                  class="img-fluid"
+                  alt="feature-icon-1"
+                />
+              </div>
+              <div class="content-manage-frame">
+                <h5>Merchant Initiated Merchant Payment</h5>
+                <p>
+                  1. Use the filds below and enter the customer's information 
+                  </br>2. The customer will receives a call to authorize the payment using voice
+                </p>
+              </div>
           </div>
          </div>
         </div>
@@ -345,7 +342,7 @@
     <!-- FRAME 05: MERCHANT PAYMENT - FORM -->
     <section class="two-col-biometric-wrap text-white">
       <b-container>
-        <h2 align=center>Merchant Paymnet - Forms</h2>
+        <h2 align=center>Merchant Payment - Forms</h2>
         <b-row class="justify-content-start align-items-center">
           <b-col cols="12" xl="6">
             <div class="col-12 col-md-10">
@@ -360,8 +357,8 @@
                     placeholder="Enter amount..."
                     v-model="amount"
                     />
-                    <span class="error-msg" v-if="errors.amount.length != 0">
-                    {{ errors.amount }}</span
+                    <span class="error-msg" v-if="invoiceErrors.amount.length != 0">
+                    {{ invoiceErrors.amount }}</span
                     >
                 </div>
                 <div class="form-group">
@@ -373,21 +370,21 @@
                     ></vue-tel-input>
                     <span
                     class="error-msg"
-                    v-if="errors.phoneInvoice.length != 0 || errors.format.length != 0"
+                    v-if="invoiceErrors.phone.length != 0 || invoiceErrors.format.length != 0"
                     >
-                    {{ errors.phoneInvoice }} {{ errors.format }}
+                    {{ invoiceErrors.phone }} {{ invoiceErrors.format }}
                     </span>
                 </div>
 
-                <a v-if=" !loading" v-on:click="processFormInvoice" class="btn1">
+                <a v-if=" !invoiceLoading" v-on:click="processFormInvoice" class="btn1">
                     <input class="btn" value="Request Invoice " />
                 </a>
                 <b-spinner
                     style="margin-left: 45%"
-                    v-if="loading"
+                    v-if="invoiceLoading"
                     label="Spinning"
                 ></b-spinner>
-                <div class="form-response" v-if="gotResponse">
+                <div class="form-response" v-if="gotInvoiceResponse">
                     <b-alert
                     variant="primary"
                     show
@@ -403,7 +400,7 @@
                     {{ response.data.msg }}</b-alert
                     >
                 </div>
-                </div>
+            </div>
           </div>
           </b-col>
           <b-col cols="12" xl="6">
@@ -419,20 +416,32 @@
                         placeholder="Enter amount..."
                         v-model="amountQr"
                         />
-                        <span class="error-msg" v-if="errors.amount.length != 0">
-                        {{ errors.amount }}</span
+                        <span class="error-msg" v-if="qrErrors.amount.length != 0">
+                        {{ qrErrors.amount }}</span
                         >
                     </div>
-
-                    <a v-if=" !loading" href="#" class="btn1">
+                    <label for="inputAddress2">Customer Mobile Number</label>
+                    <vue-tel-input
+                    v-model="phoneQR"
+                    mode="international"
+                    validCharactersOnly
+                    ></vue-tel-input>
+                    <span
+                    class="error-msg"
+                    v-if="qrErrors.phone.length != 0 || qrErrors.format.length != 0"
+                    >
+                    {{ qrErrors.phone }} {{ qrErrors.format }}
+                    </span>
+                    </br>
+                    <a v-if=" !qrLoading" href="#" class="btn1">
                         <input class="btn" type="submit" value="Generate QR Code" />
                     </a>
                     <b-spinner
                         style="margin-left: 45%"
-                        v-if="loading"
+                        v-if="qrLoading"
                         label="Spinning"
                     ></b-spinner>
-                    <div class="form-response" v-if="gotResponse">
+                    <div class="form-response" v-if="gotQrResponse">
                         <b-alert
                         variant="primary"
                         show
@@ -494,40 +503,6 @@
 
           </div>
           <div class="col-12 col-md-6">
-            <div class="sign-up-frame">
-                    
-                    <div class="img-manage">
-                      <img
-                        src="../assets/images/feature-icon-1.png"
-                        class="img-fluid"
-                        alt="feature-icon-1"
-                      />
-                    </div>
-                    <div class="content-manage-frame">
-                      <h5>Customer Innitiated</h5>
-                      <p>
-                        1. Call Centre: Call the call centre and use the option <b>Pay a Bill</b>
-                        </br>2. SMS: Use the code PAY CODE CODE AMMOUNT (Ex PAY 1234 20)
-                        </br>3. USSD: Use the code **12*MarchantCode*Amount* (Ex **12*1234*20*)
-                        </br>4. QR Code: Fill the information for amount and phone number and request invoice 
-                      </p>
-                    </div>
-
-                    <div class="img-manage">
-                      <img
-                        src="../assets/images/feature-icon-1.png"
-                        class="img-fluid"
-                        alt="feature-icon-1"
-                      />
-                    </div>
-                    <div class="content-manage-frame">
-                      <h5>Agent Initiated</h5>
-                      <p>
-                        1. Use the filds below and enter the customer's information 
-                        </br>2. The customer will receives a call to authorize the payment using voice
-                      </p>
-                    </div>
-            </div>
           </div>
          </div>
         </div>
@@ -539,117 +514,12 @@
         <b-row class="justify-content-start align-items-center">
           <b-col cols="12" xl="6">
             <div class="col-12 col-md-10">
-            <div class="sign-up-frame">
-                <h2>CASH IN / OUT</h2>
-                <div class="form-group">
-                    <label for="inputAddress">Amount ($)</label>
-                    <input
-                    type="number"
-                    class="form-control"
-                    id="inputAddress"
-                    placeholder="Enter amount..."
-                    v-model="amount"
-                    />
-                    <span class="error-msg" v-if="errors.amount.length != 0">
-                    {{ errors.amount }}</span
-                    >
-                </div>
-                <div class="form-group">
-                    <label for="inputAddress2">Customer Mobile Number</label>
-                    <vue-tel-input
-                    v-model="phoneInvoice"
-                    mode="international"
-                    validCharactersOnly
-                    ></vue-tel-input>
-                    <span
-                    class="error-msg"
-                    v-if="errors.phoneInvoice.length != 0 || errors.format.length != 0"
-                    >
-                    {{ errors.phoneInvoice }} {{ errors.format }}
-                    </span>
-                </div>
-
-                <a v-if=" !loading" v-on:click="processFormInvoice" class="btn1">
-                    <input class="btn" value="Request Invoice " />
-                </a>
-                <b-spinner
-                    style="margin-left: 45%"
-                    v-if="loading"
-                    label="Spinning"
-                ></b-spinner>
-                <div class="form-response" v-if="gotResponse">
-                    <b-alert
-                    variant="primary"
-                    show
-                    v-if="response.data.ResponseCode == 200"
-                    >
-                    {{ response.data.msg }}</b-alert
-                    >
-                    <b-alert
-                    variant="danger"
-                    show
-                    v-if="response.data.ResponseCode == 623"
-                    >
-                    {{ response.data.msg }}</b-alert
-                    >
-                </div>
-                </div>
           </div>
           </b-col>
           <b-col cols="12" xl="6">
-                  <div class="sign-up-frame" v-if="!generateQR">
-                    <h2>Generate Payment QR Code</h2>
-                    <form @submit.prevent="generateQrCode" method="post">
-                    <div class="form-group">
-                        <label for="inputAddress">Amount ($)</label>
-                        <input
-                        type="number"
-                        class="form-control"
-                        id="inputAddress"
-                        placeholder="Enter amount..."
-                        v-model="amountQr"
-                        />
-                        <span class="error-msg" v-if="errors.amount.length != 0">
-                        {{ errors.amount }}</span
-                        >
-                    </div>
-
-                    <a v-if=" !loading" href="#" class="btn1">
-                        <input class="btn" type="submit" value="Generate QR Code" />
-                    </a>
-                    <b-spinner
-                        style="margin-left: 45%"
-                        v-if="loading"
-                        label="Spinning"
-                    ></b-spinner>
-                    <div class="form-response" v-if="gotResponse">
-                        <b-alert
-                        variant="primary"
-                        show
-                        v-if="response.data.ResponseCode == 200"
-                        >
-                        {{ response.data.msg }}</b-alert
-                        >
-                        <b-alert
-                        variant="danger"
-                        show
-                        v-if="response.data.ResponseCode == 623"
-                        >
-                        {{ response.data.msg }}</b-alert
-                        >
-                    </div>
-                    </form>
-                    </div>
             <div class="biometric-img-block">
               <b-row class="justify-content-center align-items-center gutter-20 flex-md-column">
                 <b-col cols="12" md="12">
-                  <a v-if="generateQR" v-on:click="resetQr" class="btn1">
-                    <input class="btn" value="Back" />
-                  </a>
-                  <div v-if="generateQR">
-                    <qrcode-vue :value="url" :size="size" level="H" />                  
-                  </div>
-                  </a>                  
                 </b-col>
               </b-row>
             </div>
@@ -676,7 +546,7 @@ export default {
   components: { AppHeader, Footer, VueTelInput, QrcodeVue },
   data: () => ({
     props: {
-      tittle: "Orange Project",
+      tittle: "IVR Call Centre - Orange/GSMA Project",
       breadCrumb: {
         tittle: "Orange",
         link: "orange",
@@ -687,23 +557,38 @@ export default {
     size: 300,
     phone: "",
     phoneInvoice: "",
+    phoneQR: "",
     nickName: "",
     amount: "",
     amountQr: "",
     termsConditions: "no",
-    errors: {
+    signUpErrors: {
       format: "",
       nickName: "",
+      phone: "",
+      tc: "",
+    },
+    invoiceErrors: {
+      format: "",
       amount: "",
       phone: "",
-      phoneInvoice: "",
-      tc: "",
+    },
+    qrErrors: {
+      format: "",
+      amount: "",
+      phone: "",
     },
     showSubmit: true,
     generateQR: false,
-    loading: false,
-    gotResponse: false,
+    signUpLoading: false,
+    invoiceLoading: false,
+    qrLoading: false,
+    gotSignUpResponse: false,
+    gotInvoiceResponse: false,
+    gotQrResponse: false,
     response: {},
+    invoiceResponse: {},
+    qrResponse: {},
   }),
   methods: {
     scrollBottom() {
@@ -714,13 +599,28 @@ export default {
       });
     },
 
-    generateQrCode(e) {
+    generateQrCode() {
+      this.qrErrors = {
+        format: "",
+        phone: "",
+      };
       const amount = this.amountQr;
-      this.url = `https://emsvmxc4y2.execute-api.eu-west-2.amazonaws.com/dev/en-GB/agent/transfer`
+      const number = this.phoneQR.split(" ").join("");
+      if (number.length > 17 || number.length < 12) {
+        noformat = false;
+        this.qrErrors.format = "Enter phone number in correct format.";
+      }
+      this.url = `http://7c1a4782d6ef.ngrok.io/en-GB/webPaymentOrange?Caller=${encodeURIComponent(number)}&amount=${amount}`
       console.log(this.url);
       this.generateQR = true;
 
-      e.preventDefault();
+      if (!this.phone) {
+        this.signUpErrors.phone = "Phone required.";
+      }
+
+      if (!this.amount) {
+        this.invoiceErrors.amount = "Amount required.";
+      }
     },
 
     resetQr() {
@@ -728,19 +628,19 @@ export default {
     },
 
     processForm(e) {
-      this.errors = {
+      this.signUpErrors = {
         format: "",
         nickName: "",
         phone: "",
         tc: "",
       };
       this.response = {};
-      this.gotResponse = false;
+      this.gotSignUpResponse = false;
       let noformat = true;
       const number = this.phone.split(" ").join("");
       if (number.length > 17 || number.length < 12) {
         noformat = false;
-        this.errors.format = "Enter phone number in correct format.";
+        this.signUpErrors.format = "Enter phone number in correct format.";
       }
 
       if (
@@ -749,7 +649,7 @@ export default {
         this.termsConditions === "yes" &&
         noformat
       ) {
-        this.loading = true;
+        this.signUpLoading = true;
         let postData = {
           nickName: this.nickName,
           id: number,
@@ -767,106 +667,111 @@ export default {
             }
           )
           .then((res) => {
-            this.loading = false;
-            this.gotResponse = true;
+            this.signUpLoading = false;
+            this.gotSignUpResponse = true;
             this.response = res;
             if (res.ResponseCode == 200) {
               this.showSubmit = false;
             }
           })
           .catch((err) => {
-            this.loading = false;
+            this.signUpLoading = false;
             this.response = res;
           });
         return true;
       }
       if (!this.nickName) {
-        this.errors.nickName = "Nick Name required.";
+        this.signUpErrors.nickName = "Nick Name required.";
       }
 
       if (!this.phone) {
-        this.errors.phone = "Phone required.";
+        this.signUpErrors.phone = "Phone required.";
       }
 
       if (this.termsConditions === "no") {
-        this.errors.tc = "Accept terms and conditions.";
+        this.signUpErrors.tc = "Accept terms and conditions.";
       }
 
       e.preventDefault();
     },
     
     processFormInvoice() {
-      this.errors = {
+      this.invoiceErrors = {
         format: "",
-        phoneInvoice: "",
-        amount: "",
-        nickName: "",
         phone: "",
-        tc: "",
+        amount: "",
       };
-      this.response = {};
-      this.gotResponse = false;
+      this.invoiceResponse = {};
+      this.gotInvoiceResponse = false;
       let noformat = true;
       const number = this.phoneInvoice.split(" ").join("");
       if (number.length > 17 || number.length < 12) {
         noformat = false;
-        this.errors.format = "Enter phone number in correct format.";
+        this.invoiceErrors.format = "Enter phone number in correct format.";
       }
 
       if (
         this.phoneInvoice &&
         this.amount && noformat
       ) {
-        this.loading = true;
+        this.invoiceLoading = true;
         let postData = {
+          amount: "20",
           id: number,
-          amount: this.amount,
         };
 
         this.axios
           .post(
-            "https://emsvmxc4y2.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webPaymentOrange",
+            "https://3ww6p5izma.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webPaymentOrange",
             postData,
             {
               headers: {
-                "Access-Control-Allow-Origin": "*",
                 "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
               },
             }
           )
           .then((res) => {
-            this.loading = false;
-            this.gotResponse = true;
-            this.response = res;
+            this.invoiceLoading = false;
+            this.gotInvoiceResponse = true;
+            this.invoiceResponse = res;
             if (res.ResponseCode == 200) {
               this.showSubmit = false;
             }
           })
           .catch((err) => {
-            this.loading = false;
-            this.response = res;
+            this.invoiceLoading = false;
+            this.invoiceResponse = res;
           });
         return true;
       }
       if (!this.amount) {
-        this.errors.amount = "Amount required.";
+        this.invoiceErrors.amount = "Amount required.";
       }
 
       if (!this.phoneInvoice) {
-        this.errors.phoneInvoice = "Phone required.";
+        this.invoiceErrors.phone = "Phone required.";
       }
 
-      if (this.termsConditions === "no") {
-        this.errors.tc = "Accept terms and conditions.";
-      }
-
-      e.preventDefault();
     },
   },
 };
 </script>
 <style src="vue-tel-input/dist/vue-tel-input.css"></style>
 <style>
+
+/* vue-tel-input dropdown  */
+.vti__dropdown {
+  background-color: #f3f3f3;
+}
+.vti__dropdown-item strong{
+  color: black;
+}
+
+.vti__dropdown-item span{
+  color: black;
+}
+
 .coming-soon-frame h4 {
   margin-bottom: 0;
   color: #fff;
