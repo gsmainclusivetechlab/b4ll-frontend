@@ -565,7 +565,9 @@ export default {
     signUpErrors: {
       format: "",
       nickName: "",
+      amount: "",
       phone: "",
+      phoneInvoice: "",
       tc: "",
     },
     invoiceErrors: {
@@ -752,7 +754,6 @@ export default {
       if (!this.phoneInvoice) {
         this.invoiceErrors.phone = "Phone required.";
       }
-
     },
   },
 };
