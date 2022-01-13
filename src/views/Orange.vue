@@ -32,7 +32,7 @@
                       class="img-fluid"
                       alt="phone-call-blue"
                     /> </span
-                  ><b>French (FR): </b> <a href="tel:++47401232937">+44 7401232937</a>
+                  ><b>French (FR): </b> <a href="tel:+447723432543">+44 7723432543</a>
                 </p>
               </h4>
               <p>
@@ -612,7 +612,7 @@ export default {
         noformat = false;
         this.qrErrors.format = "Enter phone number in correct format.";
       }
-      this.url = `http://7c1a4782d6ef.ngrok.io/en-GB/webPaymentOrange?Caller=${encodeURIComponent(number)}&amount=${amount}`
+      this.url = `https://3ww6p5izma.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webPaymentOrange?Caller=${encodeURIComponent(number)}&amount=${amount}`
       console.log(this.url);
       this.generateQR = true;
 
