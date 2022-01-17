@@ -312,10 +312,10 @@
                 <h5>Customer Innitiated Merchant Payment</h5>
                 <p>
                   1. Call Centre: Call the call centre and use the option <b>Pay a Bill</b> under <b>Mobile Money Services</b>
-                  </br>2. SMS: Use the code <b>PAY CODE AMMOUNT</b> (Ex PAY 5768 20)
-                  </br>3. USSD: Use the code <b>**12*MarchantCode*Amount*</b> (Ex **12*5678*20*)
-                  </br>4. QR Code: Use the filds belowe and fill the information to create a QR code. 
-                  The merchant number is default (5678). Read the QR code and receive an inbound call 
+                  </br>2. SMS: Use the code <b>MERCHANTPAY CODE AMOUNT</b> </br> <i>(e.g. MERCHANTPAY 123456 20)</i>
+                  </br>3. USSD: Use the code <b>**12*MERCHANTCODE*AMOUNT*</b> </br> <i>(e.g. **12*12345*20*)</i>
+                  </br>4. QR Code: Use the field below and fill out the information required to create a QR code. 
+                  The merchant number is default (12345). Read the QR code and receive an inbound call 
                   to proceed with voice authentication.
                 </p>
               </div>
