@@ -312,7 +312,7 @@
                 <h5>Customer Innitiated Merchant Payment</h5>
                 <p>
                   1. Call Centre: Call the call centre and use the option <b>Pay a Bill</b> under <b>Mobile Money Services</b>
-                  </br>2. SMS: Use the code <b>MERCHANTPAY CODE AMOUNT</b> </br> <i>(e.g. MERCHANTPAY 123456 20)</i>
+                  </br>2. SMS: Use the code <b>MERCHANTPAY CODE AMOUNT</b> </br> <i>(e.g. MERCHANTPAY 12345 20)</i>
                   </br>3. USSD: Use the code <b>**12*MERCHANTCODE*AMOUNT*</b> </br> <i>(e.g. **12*12345*20*)</i>
                   </br>4. QR Code: Use the field below and fill out the information required to create a QR code. 
                   The merchant number is default (12345). Read the QR code and receive an inbound call 
