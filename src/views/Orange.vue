@@ -612,7 +612,8 @@ export default {
         noformat = false;
         this.qrErrors.format = "Enter phone number in correct format.";
       }
-      this.url = `https://3ww6p5izma.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webPaymentOrange?Caller=${encodeURIComponent(number)}&amount=${amount}`
+      // this.url = `https://3ww6p5izma.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webPaymentOrange?Caller=${encodeURIComponent(number)}&amount=${amount}`
+      this.url = `https://e0pfv0uv98.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webPaymentOrange?Caller=${encodeURIComponent(number)}&amount=${amount}`
       console.log(this.url);
       this.generateQR = true;
 
@@ -724,7 +725,7 @@ export default {
 
         this.axios
           .post(
-            "https://3ww6p5izma.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webPaymentOrange",
+            "https://e0pfv0uv98.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webPaymentOrange",
             postData,
             {
               headers: {
