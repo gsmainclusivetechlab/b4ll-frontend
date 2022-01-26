@@ -719,7 +719,7 @@ export default {
       ) {
         this.invoiceLoading = true;
         let postData = {
-          amount: "20",
+          amount: this.amount,
           id: number,
         };
 
