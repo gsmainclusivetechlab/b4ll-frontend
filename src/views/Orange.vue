@@ -341,11 +341,66 @@
     
     <!-- FRAME 05: MERCHANT PAYMENT - FORM -->
     <section class="two-col-biometric-wrap text-white">
-      <b-container>
+      <!-- <b-container>
         <h2 align=center>Merchant Payment - Forms</h2>
         <b-row class="justify-content-start align-items-center">
           <b-col cols="12" xl="6">
-            <div class="col-12 col-md-10">
+          </b-col>
+          <b-col cols="12" xl="6">
+            <div class="biometric-img-block">
+              <b-row class="justify-content-center align-items-center gutter-20 flex-md-column">
+                <b-col cols="12" md="12">
+                  <a v-if="generateQR" v-on:click="resetQr" class="btn1">
+                    <input class="btn" value="Back" />
+                  </a>
+                  <div v-if="generateQR">
+                    <qrcode-vue :value="url" :size="size" level="H" />                  
+                  </div>
+                  </a>                  
+                </b-col>
+              </b-row>
+            </div>
+          </b-col>
+        </b-row>
+      </b-container> -->
+    </section>
+
+    <!-- FRAME 06: CASH IN / OUT / CASH2CASH  -->
+    <div class="about-content-wrapper try-frame">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div>
+              <h2>
+                  Use Case 03 <br />
+                  Cash-In | Cash-Out | Cash2Cash
+              </h2>
+              <p>
+                USE CASE DEVELOPMENT
+              </p>
+              <p>
+                The user can initiate the payment using the call centre and selecting 
+                the option pay a bill, starting the transaction throught a QR Code, or sending a 
+                SMS/USSD code message. The merchant simultation can be done using the form to request payment.
+              </p>
+              <p>
+                In most of these cases, the procedure will trigger the system to call back the user
+                and ask the user to validade the identity using voice authenticatio.
+              </p>
+            </div>
+
+          </div>
+          <div class="col-12 col-md-6">
+          </div>
+         </div>
+        </div>
+    </div>
+    
+    <!-- FRAME 06: CASH IN / OUT / CASH2CASH  - FORM -->
+    <section class="two-col-biometric-wrap text-white">
+      <b-container>
+        <b-row class="justify-content-start align-items-center">
+          <!-- <b-col cols="12" xl="6">
             <div class="sign-up-frame">
                 <h2>Merchant Initiated</h2>
                 <div class="form-group">
@@ -401,128 +456,64 @@
                     >
                 </div>
             </div>
-          </div>
-          </b-col>
-          <b-col cols="12" xl="6">
-                  <div class="sign-up-frame" v-if="!generateQR">
-                    <h2>Generate Payment QR Code</h2>
-                    <form @submit.prevent="generateQrCode" method="post">
-                    <div class="form-group">
-                        <label for="inputAddress">Amount ($)</label>
-                        <input
-                        type="number"
-                        class="form-control"
-                        id="inputAddress"
-                        placeholder="Enter amount..."
-                        v-model="amountQr"
-                        />
-                        <span class="error-msg" v-if="qrErrors.amount.length != 0">
-                        {{ qrErrors.amount }}</span
-                        >
-                    </div>
-                    <label for="inputAddress2">Customer Mobile Number</label>
-                    <vue-tel-input
-                    v-model="phoneQR"
-                    mode="international"
-                    validCharactersOnly
-                    ></vue-tel-input>
-                    <span
-                    class="error-msg"
-                    v-if="qrErrors.phone.length != 0 || qrErrors.format.length != 0"
-                    >
-                    {{ qrErrors.phone }} {{ qrErrors.format }}
-                    </span>
-                    </br>
-                    <a v-if=" !qrLoading" href="#" class="btn1">
-                        <input class="btn" type="submit" value="Generate QR Code" />
-                    </a>
-                    <b-spinner
-                        style="margin-left: 45%"
-                        v-if="qrLoading"
-                        label="Spinning"
-                    ></b-spinner>
-                    <div class="form-response" v-if="gotQrResponse">
-                        <b-alert
-                        variant="primary"
-                        show
-                        v-if="response.data.ResponseCode == 200"
-                        >
-                        {{ response.data.msg }}</b-alert
-                        >
-                        <b-alert
-                        variant="danger"
-                        show
-                        v-if="response.data.ResponseCode == 623"
-                        >
-                        {{ response.data.msg }}</b-alert
-                        >
-                    </div>
-                    </form>
-                    </div>
-            <div class="biometric-img-block">
-              <b-row class="justify-content-center align-items-center gutter-20 flex-md-column">
-                <b-col cols="12" md="12">
-                  <a v-if="generateQR" v-on:click="resetQr" class="btn1">
-                    <input class="btn" value="Back" />
-                  </a>
-                  <div v-if="generateQR">
-                    <qrcode-vue :value="url" :size="size" level="H" />                  
-                  </div>
-                  </a>                  
-                </b-col>
-              </b-row>
+            <div class="sign-up-frame" v-if="!generateQR">
+              <h2>Generate Payment QR Code</h2>
+              <form @submit.prevent="generateQrCode" method="post">
+              <div class="form-group">
+                  <label for="inputAddress">Amount ($)</label>
+                  <input
+                  type="number"
+                  class="form-control"
+                  id="inputAddress"
+                  placeholder="Enter amount..."
+                  v-model="amountQr"
+                  />
+                  <span class="error-msg" v-if="qrErrors.amount.length != 0">
+                  {{ qrErrors.amount }}</span
+                  >
+              </div>
+              <label for="inputAddress2">Customer Mobile Number</label>
+              <vue-tel-input
+              v-model="phoneQR"
+              mode="international"
+              validCharactersOnly
+              ></vue-tel-input>
+              <span
+              class="error-msg"
+              v-if="qrErrors.phone.length != 0 || qrErrors.format.length != 0"
+              >
+              {{ qrErrors.phone }} {{ qrErrors.format }}
+              </span>
+              </br>
+              <a v-if=" !qrLoading" href="#" class="btn1">
+                  <input class="btn" type="submit" value="Generate QR Code" />
+              </a>
+              <b-spinner
+                  style="margin-left: 45%"
+                  v-if="qrLoading"
+                  label="Spinning"
+              ></b-spinner>
+              <div class="form-response" v-if="gotQrResponse">
+                  <b-alert
+                  variant="primary"
+                  show
+                  v-if="response.data.ResponseCode == 200"
+                  >
+                  {{ response.data.msg }}</b-alert
+                  >
+                  <b-alert
+                  variant="danger"
+                  show
+                  v-if="response.data.ResponseCode == 623"
+                  >
+                  {{ response.data.msg }}</b-alert
+                  >
+              </div>
+              </form>
             </div>
-          </b-col>
-        </b-row>
-      </b-container>
-    </section>
-
-    <!-- FRAME 06: CASH IN / OUT / CASH2CASH  -->
-    <div class="about-content-wrapper try-frame">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <div>
-              <h2>
-                  Use Case 03 <br />
-                  Cash-In | Cash-Out | Cash2Cash
-              </h2>
-              <p>
-                USE CASE DEVELOPMENT
-              </p>
-              <p>
-                The user can initiate the payment using the call centre and selecting 
-                the option pay a bill, starting the transaction throught a QR Code, or sending a 
-                SMS/USSD code message. The merchant simultation can be done using the form to request payment.
-              </p>
-              <p>
-                In most of these cases, the procedure will trigger the system to call back the user
-                and ask the user to validade the identity using voice authenticatio.
-              </p>
-            </div>
-
-          </div>
-          <div class="col-12 col-md-6">
-          </div>
-         </div>
-        </div>
-    </div>
-    
-    <!-- FRAME 06: CASH IN / OUT / CASH2CASH  - FORM -->
-    <section class="two-col-biometric-wrap text-white">
-      <b-container>
-        <b-row class="justify-content-start align-items-center">
+          </b-col> -->
           <b-col cols="12" xl="6">
-            <div class="col-12 col-md-10">
-          </div>
-          </b-col>
-          <b-col cols="12" xl="6">
-            <div class="biometric-img-block">
-              <b-row class="justify-content-center align-items-center gutter-20 flex-md-column">
-                <b-col cols="12" md="12">
-                </b-col>
-              </b-row>
-            </div>
+            <AgentConfig :selectedSystem="selectedSystem" />
           </b-col>
         </b-row>
       </b-container>
@@ -539,11 +530,12 @@ import VueAxios from "vue-axios";
 Vue.use(VueAxios, axios);
 import AppHeader from "../components/AppHeader";
 import Footer from "../components/layout/Footer";
+import AgentConfig from '../components/AgentConfig.vue';
 import QrcodeVue from 'qrcode.vue'
 import { VueTelInput } from "vue-tel-input";
 export default {
   name: "Orange",
-  components: { AppHeader, Footer, VueTelInput, QrcodeVue },
+  components: { AppHeader, Footer, VueTelInput, AgentConfig, QrcodeVue },
   data: () => ({
     props: {
       tittle: "IVR Call Centre - Orange/GSMA Project",
@@ -552,6 +544,7 @@ export default {
         link: "orange",
       },
     },
+    selectedSystem: 'mock',
     value: "",
     url: "",
     size: 300,
