@@ -339,35 +339,9 @@
         </div>
     </div>
     
-    <!-- FRAME 05: MERCHANT PAYMENT - FORM -->
+    <!-- FRAME 05: CASH IN / OUT / CASH2CASH -->
     <section class="two-col-biometric-wrap text-white">
-      <!-- <b-container>
-        <h2 align=center>Merchant Payment - Forms</h2>
-        <b-row class="justify-content-start align-items-center">
-          <b-col cols="12" xl="6">
-          </b-col>
-          <b-col cols="12" xl="6">
-            <div class="biometric-img-block">
-              <b-row class="justify-content-center align-items-center gutter-20 flex-md-column">
-                <b-col cols="12" md="12">
-                  <a v-if="generateQR" v-on:click="resetQr" class="btn1">
-                    <input class="btn" value="Back" />
-                  </a>
-                  <div v-if="generateQR">
-                    <qrcode-vue :value="url" :size="size" level="H" />                  
-                  </div>
-                  </a>                  
-                </b-col>
-              </b-row>
-            </div>
-          </b-col>
-        </b-row>
-      </b-container> -->
-    </section>
-
-    <!-- FRAME 06: CASH IN / OUT / CASH2CASH  -->
-    <div class="about-content-wrapper try-frame">
-      <div class="container">
+      <b-container>
         <div class="row">
           <div class="col-12 col-md-6">
             <div>
@@ -393,14 +367,25 @@
           <div class="col-12 col-md-6">
           </div>
          </div>
+      </b-container>
+    </section>
+
+    <!-- FRAME 06: CASH IN / OUT / CASH2CASH  -->
+    <div class="about-content-wrapper try-frame">
+      <div class="container">
+        <div class="row">
+          <b-col cols="12" xl="6">
+            <AgentConfig :selectedSystem="selectedSystem" />
+          </b-col>
+         </div>
         </div>
     </div>
     
     <!-- FRAME 06: CASH IN / OUT / CASH2CASH  - FORM -->
-    <section class="two-col-biometric-wrap text-white">
+    <!-- <section class="two-col-biometric-wrap text-white">
       <b-container>
         <b-row class="justify-content-start align-items-center">
-          <!-- <b-col cols="12" xl="6">
+          <b-col cols="12" xl="6">
             <div class="sign-up-frame">
                 <h2>Merchant Initiated</h2>
                 <div class="form-group">
@@ -511,13 +496,13 @@
               </div>
               </form>
             </div>
-          </b-col> -->
+          </b-col>
           <b-col cols="12" xl="6">
             <AgentConfig :selectedSystem="selectedSystem" />
           </b-col>
         </b-row>
       </b-container>
-    </section>
+    </section> -->
 
     <Footer />
   </div>
