@@ -309,7 +309,7 @@
                 />
               </div>
               <div class="content-manage-frame">
-                <h5>Customer Innitiated Merchant Payment</h5>
+                <h5>Customer Initiated Merchant Payment</h5>
                 <p>
                   1. Call Centre: Call the call centre and use the option <b>Pay a Bill</b> under <b>Mobile Money Services</b>
                   </br>2. SMS: Use the code <b>MERCHANTPAY CODE AMOUNT</b> </br> <i>(e.g. MERCHANTPAY 12345 20)</i>
@@ -339,147 +339,9 @@
         </div>
     </div>
     
-    <!-- FRAME 05: MERCHANT PAYMENT - FORM -->
+    <!-- FRAME 05: CASH IN / OUT / CASH2CASH -->
     <section class="two-col-biometric-wrap text-white">
       <b-container>
-        <h2 align=center>Merchant Payment - Forms</h2>
-        <b-row class="justify-content-start align-items-center">
-          <b-col cols="12" xl="6">
-            <div class="col-12 col-md-10">
-            <div class="sign-up-frame">
-                <h2>Merchant Initiated</h2>
-                <div class="form-group">
-                    <label for="inputAddress">Amount ($)</label>
-                    <input
-                    type="number"
-                    class="form-control"
-                    id="inputAddress"
-                    placeholder="Enter amount..."
-                    v-model="amount"
-                    />
-                    <span class="error-msg" v-if="invoiceErrors.amount.length != 0">
-                    {{ invoiceErrors.amount }}</span
-                    >
-                </div>
-                <div class="form-group">
-                    <label for="inputAddress2">Customer Mobile Number</label>
-                    <vue-tel-input
-                    v-model="phoneInvoice"
-                    mode="international"
-                    validCharactersOnly
-                    ></vue-tel-input>
-                    <span
-                    class="error-msg"
-                    v-if="invoiceErrors.phone.length != 0 || invoiceErrors.format.length != 0"
-                    >
-                    {{ invoiceErrors.phone }} {{ invoiceErrors.format }}
-                    </span>
-                </div>
-
-                <a v-if=" !invoiceLoading" v-on:click="processFormInvoice" class="btn1">
-                    <input class="btn" value="Request Invoice " />
-                </a>
-                <b-spinner
-                    style="margin-left: 45%"
-                    v-if="invoiceLoading"
-                    label="Spinning"
-                ></b-spinner>
-                <div class="form-response" v-if="gotInvoiceResponse">
-                    <b-alert
-                    variant="primary"
-                    show
-                    v-if="response.data.ResponseCode == 200"
-                    >
-                    {{ response.data.msg }}</b-alert
-                    >
-                    <b-alert
-                    variant="danger"
-                    show
-                    v-if="response.data.ResponseCode == 623"
-                    >
-                    {{ response.data.msg }}</b-alert
-                    >
-                </div>
-            </div>
-          </div>
-          </b-col>
-          <b-col cols="12" xl="6">
-                  <div class="sign-up-frame" v-if="!generateQR">
-                    <h2>Generate Payment QR Code</h2>
-                    <form @submit.prevent="generateQrCode" method="post">
-                    <div class="form-group">
-                        <label for="inputAddress">Amount ($)</label>
-                        <input
-                        type="number"
-                        class="form-control"
-                        id="inputAddress"
-                        placeholder="Enter amount..."
-                        v-model="amountQr"
-                        />
-                        <span class="error-msg" v-if="qrErrors.amount.length != 0">
-                        {{ qrErrors.amount }}</span
-                        >
-                    </div>
-                    <label for="inputAddress2">Customer Mobile Number</label>
-                    <vue-tel-input
-                    v-model="phoneQR"
-                    mode="international"
-                    validCharactersOnly
-                    ></vue-tel-input>
-                    <span
-                    class="error-msg"
-                    v-if="qrErrors.phone.length != 0 || qrErrors.format.length != 0"
-                    >
-                    {{ qrErrors.phone }} {{ qrErrors.format }}
-                    </span>
-                    </br>
-                    <a v-if=" !qrLoading" href="#" class="btn1">
-                        <input class="btn" type="submit" value="Generate QR Code" />
-                    </a>
-                    <b-spinner
-                        style="margin-left: 45%"
-                        v-if="qrLoading"
-                        label="Spinning"
-                    ></b-spinner>
-                    <div class="form-response" v-if="gotQrResponse">
-                        <b-alert
-                        variant="primary"
-                        show
-                        v-if="response.data.ResponseCode == 200"
-                        >
-                        {{ response.data.msg }}</b-alert
-                        >
-                        <b-alert
-                        variant="danger"
-                        show
-                        v-if="response.data.ResponseCode == 623"
-                        >
-                        {{ response.data.msg }}</b-alert
-                        >
-                    </div>
-                    </form>
-                    </div>
-            <div class="biometric-img-block">
-              <b-row class="justify-content-center align-items-center gutter-20 flex-md-column">
-                <b-col cols="12" md="12">
-                  <a v-if="generateQR" v-on:click="resetQr" class="btn1">
-                    <input class="btn" value="Back" />
-                  </a>
-                  <div v-if="generateQR">
-                    <qrcode-vue :value="url" :size="size" level="H" />                  
-                  </div>
-                  </a>                  
-                </b-col>
-              </b-row>
-            </div>
-          </b-col>
-        </b-row>
-      </b-container>
-    </section>
-
-    <!-- FRAME 06: CASH IN / OUT / CASH2CASH  -->
-    <div class="about-content-wrapper try-frame">
-      <div class="container">
         <div class="row">
           <div class="col-12 col-md-6">
             <div>
@@ -505,28 +367,27 @@
           <div class="col-12 col-md-6">
           </div>
          </div>
-        </div>
-    </div>
-    
-    <!-- FRAME 06: CASH IN / OUT / CASH2CASH  - FORM -->
-    <section class="two-col-biometric-wrap text-white">
-      <b-container>
-        <b-row class="justify-content-start align-items-center">
-          <b-col cols="12" xl="6">
-            <div class="col-12 col-md-10">
-          </div>
-          </b-col>
-          <b-col cols="12" xl="6">
-            <div class="biometric-img-block">
-              <b-row class="justify-content-center align-items-center gutter-20 flex-md-column">
-                <b-col cols="12" md="12">
-                </b-col>
-              </b-row>
-            </div>
-          </b-col>
-        </b-row>
       </b-container>
     </section>
+
+    <!-- FRAME 06: CASH IN / OUT / CASH2CASH (ALL USE CASE FORMS) -->
+    <div class="about-content-wrapper try-frame">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="feature-content text-center">
+              <h2>Use Case Simulator </h2>
+              <h6>
+                There are 3 new use cases in this showcase created bespoke to attend the requirements proposed by Orange. 
+                </br>
+                This page was created to be used and a guide to those who are testing the show case.
+              </h6>
+              <AgentConfig :selectedSystem="selectedSystem" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <Footer />
   </div>
@@ -539,11 +400,12 @@ import VueAxios from "vue-axios";
 Vue.use(VueAxios, axios);
 import AppHeader from "../components/AppHeader";
 import Footer from "../components/layout/Footer";
+import AgentConfig from '../components/AgentConfig.vue';
 import QrcodeVue from 'qrcode.vue'
 import { VueTelInput } from "vue-tel-input";
 export default {
   name: "Orange",
-  components: { AppHeader, Footer, VueTelInput, QrcodeVue },
+  components: { AppHeader, Footer, VueTelInput, AgentConfig, QrcodeVue },
   data: () => ({
     props: {
       tittle: "IVR Call Centre - Orange/GSMA Project",
@@ -552,6 +414,7 @@ export default {
         link: "orange",
       },
     },
+    selectedSystem: 'mock',
     value: "",
     url: "",
     size: 300,
@@ -599,35 +462,6 @@ export default {
         left: 0,
         behavior: "smooth",
       });
-    },
-
-    generateQrCode() {
-      this.qrErrors = {
-        format: "",
-        phone: "",
-      };
-      const amount = this.amountQr;
-      const number = this.phoneQR.split(" ").join("");
-      if (number.length > 17 || number.length < 12) {
-        noformat = false;
-        this.qrErrors.format = "Enter phone number in correct format.";
-      }
-      // this.url = `https://3ww6p5izma.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webPaymentOrange?Caller=${encodeURIComponent(number)}&amount=${amount}`
-      this.url = `https://e0pfv0uv98.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webPaymentOrange?Caller=${encodeURIComponent(number)}&amount=${amount}`
-      console.log(this.url);
-      this.generateQR = true;
-
-      if (!this.phone) {
-        this.signUpErrors.phone = "Phone required.";
-      }
-
-      if (!this.amount) {
-        this.invoiceErrors.amount = "Amount required.";
-      }
-    },
-
-    resetQr() {
-      this.generateQR = false;
     },
 
     processForm(e) {
@@ -696,65 +530,6 @@ export default {
       }
 
       e.preventDefault();
-    },
-    
-    processFormInvoice() {
-      this.invoiceErrors = {
-        format: "",
-        phone: "",
-        amount: "",
-      };
-      this.invoiceResponse = {};
-      this.gotInvoiceResponse = false;
-      let noformat = true;
-      const number = this.phoneInvoice.split(" ").join("");
-      if (number.length > 17 || number.length < 12) {
-        noformat = false;
-        this.invoiceErrors.format = "Enter phone number in correct format.";
-      }
-
-      if (
-        this.phoneInvoice &&
-        this.amount && noformat
-      ) {
-        this.invoiceLoading = true;
-        let postData = {
-          amount: this.amount,
-          id: number,
-        };
-
-        this.axios
-          .post(
-            "https://e0pfv0uv98.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webPaymentOrange",
-            postData,
-            {
-              headers: {
-                "Content-Type": "application/json",
-                "Access-Control-Allow-Origin": "*",
-              },
-            }
-          )
-          .then((res) => {
-            this.invoiceLoading = false;
-            this.gotInvoiceResponse = true;
-            this.invoiceResponse = res;
-            if (res.ResponseCode == 200) {
-              this.showSubmit = false;
-            }
-          })
-          .catch((err) => {
-            this.invoiceLoading = false;
-            this.invoiceResponse = res;
-          });
-        return true;
-      }
-      if (!this.amount) {
-        this.invoiceErrors.amount = "Amount required.";
-      }
-
-      if (!this.phoneInvoice) {
-        this.invoiceErrors.phone = "Phone required.";
-      }
     },
   },
 };
@@ -886,6 +661,19 @@ export default {
 ::placeholder {
   font-size: 14px;
 }
+
+.sign-up-frame {
+  background-color: #f9f9f9;
+  border-radius: 18px;
+  border: 1px solid #f2f2f2;
+  width: 485px;
+  /* height: 501px; */
+  padding-left: 26px;
+  padding-top: 34px;
+  padding-right: 28px;
+  padding-bottom: 51px;
+}
+
 .login-form-frame .sign-up-frame .checkmark {
   position: absolute;
   top: 5px;
