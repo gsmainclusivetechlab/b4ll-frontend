@@ -350,7 +350,7 @@
                   Cash-In | Cash-Out | Cash2Cash
               </h2>
               <p>
-                USE CASE DEVELOPMENT
+                USE CASE UNDER DEVELOPMENT
               </p>
               <p>
                 The user can initiate the payment using the call centre and selecting 
@@ -375,14 +375,11 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <div class="feature-content text-center">
+            <div align="center">
               <h2>Use Case Simulator </h2>
-              <h6>
-                There are 3 new use cases in this showcase created bespoke to attend the requirements proposed by Orange. 
-                </br>
-                This page was created to be used and a guide to those who are testing the show case.
-              </h6>
-              <AgentConfig :selectedSystem="selectedSystem" />
+            </div>
+            <div align="center" class="col-12">
+            <AgentConfig :selectedSystem="selectedSystem" />
             </div>
           </div>
         </div>
@@ -494,7 +491,7 @@ export default {
 
         this.axios
           .post(
-            "https://emsvmxc4y2.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webSignUpOrange",
+            "https://e0pfv0uv98.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webSignUpOrange",
             postData,
             {
               headers: {
