@@ -182,6 +182,8 @@ export default {
             },
           });
 
+          this.errors.inputPhone = '';
+          this.errors.inputAmount = '';
           this.loading = false;
           this.modalTitle = 'Success';
           this.modalMessage = 'Operation was created successfully.';
@@ -206,11 +208,12 @@ export default {
     },
 
     generateQrCode() {
-      const amount = this.amount;
-      const number = this.customerIdentifier.split(" ").join("");
-      this.url = `https://e0pfv0uv98.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webPaymentOrange?Caller=${encodeURIComponent(number)}&amount=${amount}`
-      console.log(this.url);
-      this.generateQR = true;
+
+      if (!this.customerIdentifier && !this.amount) {
+        this.errors.inputPhone = "Phone required.";
+        this.errors.inputAmount = "Amount required.";
+        errorFlag = true;
+      }
 
       if (!this.customerIdentifier) {
         this.errors.inputPhone = "Phone required.";
@@ -221,10 +224,21 @@ export default {
         this.errors.inputAmount = "Amount required.";
         errorFlag = true;
       }
+
+      if (this.amount && this.customerIdentifier) {
+        const amount = this.amount;
+        const number = this.customerIdentifier.split(" ").join("");
+        this.url = `https://e0pfv0uv98.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webPaymentOrange?Caller=${encodeURIComponent(number)}&amount=${amount}`
+        console.log(this.url);
+        this.generateQR = true;
+      }
     },
 
     resetQr() {
+      this.errors.inputPhone = '';
+      this.errors.inputAmount = '';
       this.generateQR = false;
+      errorFlag = false;
     },
   },
 };
