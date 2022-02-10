@@ -216,7 +216,6 @@ export default {
     },
 
     generateQrCode() {
-
       if (!this.customerIdentifier && !this.amount) {
         this.errors.inputPhone = "Phone required.";
         this.errors.inputAmount = "Amount required.";
