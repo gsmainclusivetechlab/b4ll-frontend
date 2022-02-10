@@ -21,7 +21,7 @@
 
       <div class="form-group" v-if="this.selectedOperation==='cash-to-cash'">
         <label for="inputRecipientPhone">Payment Recipient</label>
-        <b-form-select class="form-group" v-model="selectedRecipient" :options="recipientOptions" id="inputRecipient"></b-form-select>
+        <b-form-select class="form-group" v-model="selectedRecipient" :options="recipientOptions"></b-form-select>
         <span class="error-msg" v-if="errors.inputRecipientPhone.length != 0"> {{ errors.inputRecipientPhone }}</span>
       </div>
 
@@ -81,8 +81,8 @@ export default {
     ],
     selectedRecipient: null,
     recipientOptions: [
-      'Carlos (+447123456789)',
-      'Person (+336123456789)',
+      'John Doe (+447123456789)',
+      'Jane Doe (+336123456789)',
     ],
     customerIdentifier: '',
     recipientIdentifier: null,
@@ -128,7 +128,7 @@ export default {
           errorFlag = true;
         }
 
-        if (this.selectedOperation == 'cash-to-cash' && !this.recipientIdentifier) {
+        if (this.selectedOperation == 'cash-to-cash' && !this.selectedRecipient) {
           this.errors.inputRecipientPhone = 'Recipient Number required.';
           errorFlag = true;
         }
@@ -148,9 +148,16 @@ export default {
             inputPhone: '',
             inputAmount: '',
             inputMerchant: '',
+            inputRecipientPhone: '',
           };
 
         const number = this.customerIdentifier.split(" ").join("");
+        if (this.selectedRecipient) {
+          var regExp = /\(([^)]+)\)/;
+          var matches = regExp.exec(this.selectedRecipient);
+          this.recipientIdentifier = matches[1];
+          console.log(this.recipientIdentifier);
+        }
 
           let postData = {
             id: number,
@@ -184,6 +191,7 @@ export default {
 
           this.errors.inputPhone = '';
           this.errors.inputAmount = '';
+          this.errors.inputRecipientPhone = '';
           this.loading = false;
           this.modalTitle = 'Success';
           this.modalMessage = 'Operation was created successfully.';
