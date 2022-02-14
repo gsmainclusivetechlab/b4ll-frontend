@@ -32,7 +32,7 @@
                       class="img-fluid"
                       alt="phone-call-blue"
                     /> </span
-                  ><b>French (FR): </b> <a href="tel:+447723432543">+44 7723432543</a>
+                  ><b>French (FR): </b> <a href="tel:+447723432543">+44 7723432543 (under translation)</a>
                 </p>
               </h4>
               <p>
@@ -44,7 +44,8 @@
                   Inclusive Tech Lab</a
                 >
               </p>
-              Before begin the tests, please sign up on the right side, call the call centre, and follow the instructions to enrol using your voice print, enabling you to navigate through the use cases and test all the different flows of this guide.
+
+              <p style="color:red;"><b>ATTENTION:</b> Before begin the tests, please sign up on the right side, call the call centre, and follow the instructions to enrol using your voice print, enabling you to navigate through the different use cases.</p>
             </div>
           </div>
           <div class="col-12 col-lg-6">
@@ -208,68 +209,44 @@
     <section class="two-col-biometric-wrap text-white bg-greys">
       <b-container>
         <b-row class="justify-content-start align-items-center">
-          <b-col cols="12" xl="5">
-            <div class="biometric-content">
+          <b-col cols="6">
+            <div>
               <h2>
                 Use Case 01 <br />
                 Reset PIN Number
-            </h2>
-            <p>
-              We are approaching here two different situations that can happen: change a current
-              PIN Number and renew a PIN number, following the intructions on the right.
-            </p>
-            <p>
-              To chenge the PIN number using the call centre the user can enter ther previous PIN 
-              (1234 is our default value) and then update the PIN number.
-            </p>
-            <p>
-              If the user forgot the PIN number the reset can be done using a SMS/USSD to request 
-              and the voice recognition to validate the user and create a new PIN. 
-            </p>  
+              </h2>
+              <p>
+                We are approaching here two different situations that can happen: change a current
+                PIN Number and renew a PIN number, following the intructions on the right.
+              </p>
+              <p>
+                To chenge the PIN number using the call centre the user can enter ther previous PIN 
+                (1234 is our default value) and then update the PIN number.
+              </p>
+              <p>
+                If the user forgot the PIN number the reset can be done using a SMS/USSD to request 
+                and the voice recognition to validate the user and create a new PIN. 
+              </p>  
             </div>
           </b-col>
-          <b-col cols="14" xl="6">
-            <div class="biometric-img-block">
-              <b-row class="justify-content-center align-items-center gutter-20 flex-md-column">
-                <b-col cols="12" md="12">
-                
-                    <div class="img-manage">
-                      <img
-                        src="../assets/images/feature-icon-1.png"
-                        class="img-fluid"
-                        alt="feature-icon-1"
-                      />
-                    </div>
-                    <div class="content-manage-frame">
-                      <h5>Call Centre</h5>
-                      <p>
-                        1. Use one of the call centre numbers available for this project.
-                        </br>2. Select the option 4 in the main menu
-                        </br>3. Insert your previous PIN (1234 for demo purposes)
-                        </br>4. Insert your new PIN Number
-                      </p>
-                    </div>
-                
-                    <div class="img-manage">
-                      <img
-                        src="../assets/images/feature-icon-1.png"
-                        class="img-fluid"
-                        alt="feature-icon-1"
-                      />
-                    </div>
-                    <div class="content-manage-frame">
-                      <h5>SMS/USSD</h5>
-                      <p>
-                        1. Send an SMS to one of numbers available for this project.
-                        </br> - SMS message style: <b>RESETPIN</b>
-                        </br> - USSD code style: <b>**42*033</b>
-                        </br>2. Receive an inbound call    
-                        </br>3. Authenticate with voice and reset your PIN 
-                      </p>
-                    </div>                
-                </b-col>
-              </b-row>
-            </div>
+          <b-col cols="6">
+            <div>
+              <h5>Call Centre</h5>
+                <p>
+                  1. Use one of the call centre numbers available for this project.
+                  </br>2. Select the option 4 in the main menu
+                  </br>3. Insert your previous PIN (1234 for demo purposes)
+                  </br>4. Insert your new PIN Number
+                </p>
+              <h5>SMS/USSD</h5>
+                <p>
+                  1. Send an SMS to one of numbers available for this project.
+                  </br> - SMS message style: <b>RESETPIN</b>
+                  </br> - USSD code style: <b>**42*033</b>
+                  </br>2. Receive an inbound call    
+                  </br>3. Authenticate with voice and reset your PIN 
+                </p>
+            </div>                
           </b-col>
         </b-row>
       </b-container>
@@ -277,9 +254,9 @@
 
     <!-- FRAME 04: MERCHANT PAYMENT  -->
     <div class="about-content-wrapper try-frame">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-6">
+      <b-container>
+        <b-row class="justify-content-start align-items-center">
+          <b-col cols="6">
             <div>
               <h2>
                   Use Case 02 <br />
@@ -298,52 +275,37 @@
                 and ask the user to validade the identity using voice authenticatio.
               </p>
             </div>
-
-          </div>
-          <div class="col-12 col-md-6">
-              <div class="img-manage">
-                <img
-                  src="../assets/images/feature-icon-1.png"
-                  class="img-fluid"
-                  alt="feature-icon-1"
-                />
-              </div>
-              <div class="content-manage-frame">
-                <h5>Customer Initiated Merchant Payment</h5>
-                <p>
-                  1. Call Centre: Call the call centre and use the option <b>Pay a Bill</b> under <b>Mobile Money Services</b>
-                  </br>2. SMS: Use the code <b>MERCHANTPAY CODE AMOUNT</b> </br> <i>(e.g. MERCHANTPAY 12345 20)</i>
-                  </br>3. USSD: Use the code <b>**12*MERCHANTCODE*AMOUNT*</b> </br> <i>(e.g. **12*12345*20*)</i>
-                  </br>4. QR Code: Use the field below and fill out the information required to create a QR code. 
-                  The merchant number is default (12345). Read the QR code and receive an inbound call 
-                  to proceed with voice authentication.
-                </p>
-              </div>
-
-              <div class="img-manage">
-                <img
-                  src="../assets/images/feature-icon-1.png"
-                  class="img-fluid"
-                  alt="feature-icon-1"
-                />
-              </div>
-              <div class="content-manage-frame">
-                <h5>Merchant Initiated Merchant Payment</h5>
-                <p>
-                  1. Use the filds below and enter the customer's information 
-                  </br>2. The customer will receives a call to authorize the payment using voice
-                </p>
-              </div>
-          </div>
-         </div>
-        </div>
-    </div>
+          </b-col>
+          <b-col cols="6">
+            <div>
+            
+                      <h5>Customer Initiated Merchant Payment</h5>
+                      <p>
+                          1. Call Centre: Call the call centre and use the option <b>Pay a Bill</b> under <b>Mobile Money Services</b>
+                          </br>2. SMS: Use the code <b>MERCHANTPAY CODE AMOUNT</b> </br> <i>(e.g. MERCHANTPAY 12345 20)</i>
+                          </br>3. USSD: Use the code <b>**12*MERCHANTCODE*AMOUNT*</b> </br> <i>(e.g. **12*12345*20*)</i>
+                          </br>4. QR Code: Use the field below and fill out the information required to create a QR code. 
+                          The merchant number is default (12345). Read the QR code and receive an inbound call 
+                          to proceed with voice authentication.
+                      </p>
+                  
+                      <h5>Merchant Initiated Merchant Payment</h5>
+                      <p>
+                          1. Use the filds below and enter the customer's information 
+                          </br>2. The customer will receives a call to authorize the payment using voice
+                      </p>
+              
+            </div>
+          </b-col>
+        </b-row>
+      </b-container>
+    </div> 
     
     <!-- FRAME 05: CASH IN / OUT / CASH2CASH -->
     <section class="two-col-biometric-wrap text-white">
       <b-container>
         <div class="row">
-          <div class="col-12 col-md-6">
+          <div class="col-6">
             <div>
               <h2>
                   Use Case 03 <br />
@@ -364,8 +326,30 @@
             </div>
 
           </div>
-          <div class="col-12 col-md-6">
-          </div>
+
+          <b-col cols="6">
+            <div>
+            
+                <h5>CASH-IN</h5>
+                  <p>
+                    1. The agent initiates the transaction selecting the operation, the customer and the amount.
+                    </br> 2. The customer receives a call to proceed with authorisation
+                  </p>
+
+                <h5>CASH-IN</h5>
+                  <p>
+                    1. The agent initiates the transaction selecting the operation, the customer and the amount.
+                    </br> 2. The customer receives a call to proceed with authorisation
+                  </p>
+
+                <h5>Merchant Initiated Merchant Payment</h5>
+                  <p>
+                    1. The agent initiates the transaction selecting the operation, the payer, the payee and the amount.
+                    </br> 2. The user receives a call to proceed with authorisation
+                  </p>
+          
+            </div>
+          </b-col>
          </div>
       </b-container>
     </section>
