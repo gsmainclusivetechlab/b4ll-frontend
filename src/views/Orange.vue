@@ -190,10 +190,10 @@
                       class="img-fluid"
                       alt="smartphones"
                     />
-                    <h5>Cash-in / Cash-out / Cash-to-Cash</h5>
+                    <h5>Cash-in / Cash-out / P2P Transfer</h5>
                     <h6>
-                      The simulations of cash-in/out and cash2cash can be initiate by
-                      the customer or the agent and can be done by call centre (cash2cash), 
+                      The simulations of cash-in/out and p2p transfers can be initiate by
+                      the customer or the agent and can be done by call centre (p2p transfer), 
                       SMS/USSD and QR Code.
                     </h6>
                   </div>
@@ -291,7 +291,7 @@
                   
                       <h5>Merchant Initiated Merchant Payment</h5>
                       <p>
-                          1. Use the filds below and enter the customer's information 
+                          1. Use the fields below and enter the customer's information 
                           </br>2. The customer will receives a call to authorize the payment using voice
                       </p>
               
@@ -301,7 +301,7 @@
       </b-container>
     </div> 
     
-    <!-- FRAME 05: CASH IN / OUT / CASH2CASH -->
+    <!-- FRAME 05: CASH IN / OUT / P2P TRANSFER -->
     <section class="two-col-biometric-wrap text-white">
       <b-container>
         <div class="row">
@@ -309,11 +309,8 @@
             <div>
               <h2>
                   Use Case 03 <br />
-                  Cash-In | Cash-Out | Cash2Cash
+                  Cash-In | Cash-Out | P2P Transfer
               </h2>
-              <p>
-                USE CASE UNDER DEVELOPMENT
-              </p>
               <p>
                 The user can initiate the payment using the call centre and selecting 
                 the option pay a bill, starting the transaction throught a QR Code, or sending a 
@@ -336,13 +333,13 @@
                     </br> 2. The customer receives a call to proceed with authorisation
                   </p>
 
-                <h5>CASH-IN</h5>
+                <h5>CASH-OUT</h5>
                   <p>
                     1. The agent initiates the transaction selecting the operation, the customer and the amount.
                     </br> 2. The customer receives a call to proceed with authorisation
                   </p>
 
-                <h5>Merchant Initiated Merchant Payment</h5>
+                <h5>P2P Transfer</h5>
                   <p>
                     1. The agent initiates the transaction selecting the operation, the payer, the payee and the amount.
                     </br> 2. The user receives a call to proceed with authorisation
@@ -354,7 +351,7 @@
       </b-container>
     </section>
 
-    <!-- FRAME 06: CASH IN / OUT / CASH2CASH (ALL USE CASE FORMS) -->
+    <!-- FRAME 06: CASH IN / OUT / P2P TRANSFER (ALL USE CASE FORMS) -->
     <div class="about-content-wrapper try-frame">
       <div class="container">
         <div class="row">

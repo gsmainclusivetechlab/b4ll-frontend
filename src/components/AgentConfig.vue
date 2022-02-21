@@ -19,7 +19,7 @@
         <span class="error-msg" v-if="errors.inputPhone.length != 0"> {{ errors.inputPhone }}</span>
       </div>
 
-      <div class="form-group" v-if="this.selectedOperation==='cash-to-cash'">
+      <div class="form-group" v-if="this.selectedOperation==='p2p'">
         <label for="inputRecipientPhone">Payment Recipient</label>
         <b-form-select class="form-group" v-model="selectedRecipient" :options="recipientOptions"></b-form-select>
         <span class="error-msg" v-if="errors.inputRecipientPhone.length != 0"> {{ errors.inputRecipientPhone }}</span>
@@ -77,7 +77,7 @@ export default {
       { value: 'merchant-qr', text: 'Merchant Pay (QR Code)' },
       { value: 'cash-in', text: 'Cash-In' },
       { value: 'cash-out', text: 'Cash-Out' },
-      { value: 'cash-to-cash', text: 'Cash-to-Cash' },
+      { value: 'p2p', text: 'P2P Transfer' },
     ],
     selectedRecipient: null,
     recipientOptions: [
@@ -128,7 +128,7 @@ export default {
           errorFlag = true;
         }
 
-        if (this.selectedOperation == 'cash-to-cash' && !this.selectedRecipient) {
+        if (this.selectedOperation == 'p2p' && !this.selectedRecipient) {
           this.errors.inputRecipientPhone = 'Recipient Number required.';
           errorFlag = true;
         }
@@ -177,7 +177,7 @@ export default {
             case 'cash-out':
               endpoint = 'webCashInOutOrange';
               break;
-            case 'cash-to-cash':
+            case 'p2p':
               endpoint = 'webCashInOutOrange'
               break;
           }
