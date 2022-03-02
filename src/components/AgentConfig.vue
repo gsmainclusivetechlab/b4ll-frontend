@@ -187,15 +187,26 @@ export default {
               'Content-Type': 'application/json',
               'Access-Control-Allow-Origin': '*',
             },
+          }).then(async (response) => {
+              console.log(response);
+              console.log(response.data.ResponseCode)
+              if (response.data.ResponseCode===200) {
+                  this.modalTitle = 'SUCCESS';
+                  this.modalMessage = 'Operation was created successfully.';
+                  this.modalShow = true;
+              }
+              if (response.data.ResponseCode===623) {
+                  this.modalTitle = 'ERROR';
+                  this.modalMessage = 'This user is not enrolled into our IVR system. Please check the phone number and try again.';
+                  this.modalShow = true;
+              }
           });
 
           this.errors.inputPhone = '';
           this.errors.inputAmount = '';
           this.errors.inputRecipientPhone = '';
           this.loading = false;
-          this.modalTitle = 'Success';
-          this.modalMessage = 'Operation was created successfully.';
-          this.modalShow = true;
+
 
           this.customerIdentifier = null;
           this.amount = null;
