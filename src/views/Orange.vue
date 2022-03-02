@@ -135,7 +135,9 @@
           </div>
           </div>
         </div>
-        <b-alert show variant="info"><b>Please note:</b> There is also a seperate documentation page available here, for more detailed information regarding the project. </b-alert>
+        <b-alert show variant="info">
+          <b>Please note:</b> There is also a seperate documentation page available <a href="https://gsmainclusivetechlab.github.io/b4ll-orange-docs/" target="_blank">here</a>, for more detailed information regarding the project. 
+        </b-alert>
       </div>
     </div>
 
