@@ -310,7 +310,7 @@ export default {
 
         this.axios
           .post(
-            "https://6f0vqrhy90.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webSignUp",
+            "https://e0pfv0uv98.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webSignUp",
             postData,
             {
               headers: {
