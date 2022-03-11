@@ -32,7 +32,7 @@
                       class="img-fluid"
                       alt="phone-call-blue"
                     /> </span
-                  ><b>French (FR): </b> <a href="tel:+447723432543">+44 7723432543 (under translation)</a>
+                  ><b>French (FR): </b> <a href="tel:+447723432543">+44 7723432543</a>
                 </p>
               </h4>
               <p>
@@ -378,7 +378,8 @@
 import Vue from "vue";
 import axios from "axios";
 import VueAxios from "vue-axios";
-Vue.use(VueAxios, axios);
+import VueI18n from 'vue-i18n'
+Vue.use(VueAxios, axios, VueI18n);
 import AppHeader from "../components/AppHeader";
 import Footer from "../components/layout/Footer";
 import AgentConfig from '../components/AgentConfig.vue';

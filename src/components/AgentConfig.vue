@@ -1,16 +1,16 @@
 <template>
   <div class="sign-up-frame">
-    <h4>Agent Payment Forms</h4>
+    <h4>{{ $t("form.agent-payment-form") }}</h4>
     <form @submit.prevent="processForm" v-if="!generateQR">
       <!-- Operation type -->
       <div class="form-group">
-        <label for="inputOperation">Operation</label>
+        <label for="inputOperation">{{ $t("form.operation") }}</label>
         <b-form-select class="form-group" v-model="selectedOperation" :options="operationOptions" id="inputOperation"></b-form-select>
       </div>
 
       <!-- Token/Phone -->
       <div class="form-group">
-        <label for="inputPhone">Customer Mobile Number</label>
+        <label for="inputPhone">{{ $t("form.customer-number") }}</label>
             <vue-tel-input
             v-model="customerIdentifier"
             mode="international"
@@ -20,23 +20,23 @@
       </div>
 
       <div class="form-group" v-if="this.selectedOperation==='p2p'">
-        <label for="inputRecipientPhone">Payment Recipient</label>
+        <label for="inputRecipientPhone">{{ $t("form.recipient") }}</label>
         <b-form-select class="form-group" v-model="selectedRecipient" :options="recipientOptions"></b-form-select>
         <span class="error-msg" v-if="errors.inputRecipientPhone.length != 0"> {{ errors.inputRecipientPhone }}</span>
       </div>
 
       <!-- Amount -->
       <div class="form-group">
-        <label for="inputAmount">Amount</label>
+        <label for="inputAmount">{{ $t("form.amount") }}</label>
         <currency-input v-model="amount" :options="optionsCurrency" placeholder="Enter Amount" id="inputAmount" />
         <span class="error-msg" v-if="errors.inputAmount.length != 0"> {{ errors.inputAmount }}</span>
       </div>
 
       <a v-if="!loading && this.selectedOperation!='merchant-qr'" href="#" class="btn1">
-        <input class="btn" type="submit" value="Send Request" />
+        <input class="btn" type="submit" :value="$t('form.submit')" />
       </a>
       <a v-if="!qrLoading && this.selectedOperation=='merchant-qr'" href="#" class="btn1">
-        <input class="btn" @click.prevent="generateQrCode" value="Generate QR Code" />
+        <input class="btn" @click.prevent="generateQrCode" :value="$t('form.generate-qr')" />
       </a>
       <b-spinner style="" v-if="loading" label="Spinning"></b-spinner>
 

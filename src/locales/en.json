@@ -1,0 +1,12 @@
+{
+    "form": {
+        "agent-payment-form": "Agent Payment Form",
+        "operation": "Operation",
+        "customer-number": "Customer Mobile Number",
+        "recipient": "Payment Recipient",
+        "amount": "Amount",
+
+        "submit": "Send Request",
+        "generate-qr": "Generate QR Code"
+    }
+}
