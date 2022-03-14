@@ -9,7 +9,11 @@ import VueGtag from "vue-gtag";
 import VueI18n from 'vue-i18n';
 import { languages } from './locales/index.js'
 import { defaultLocale } from './locales/index.js'
+import VueFlags from "@growthbunker/vueflags";
 
+Vue.use(VueFlags, {
+  iconPath: '/images/vueflags/flags/',
+});
 Vue.use(VueI18n);
 const messages = Object.assign(languages)
 

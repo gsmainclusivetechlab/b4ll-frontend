@@ -4,7 +4,7 @@
         "agent-payment-form": "Formulaire de Paiement de l'Agent",
         "operation": "Opération",
         "customer-number": "Numéro mobile du client",
-        "recipient": "Payment Recipient",
+        "recipient": "Destinataire du Paiement",
         "amount": "Montant",
 
         "submit": "Envoyer la demande",

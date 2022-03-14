@@ -1,5 +1,19 @@
 <template>
   <div class="sign-up-frame">
+    <div class="language-flags">
+        <gb-flag
+        code="fr"
+        size="medium"
+        v-bind:class="{ selected: (this.$i18n.locale==='fr')}"
+        @click.native="changeLocale('fr')"
+        />
+        <gb-flag
+        code="gb"
+        size="medium"
+        v-bind:class="{ selected: (this.$i18n.locale==='en')}"
+        @click.native="changeLocale('en')"
+        />
+    </div>
     <h4>{{ $t("form.agent-payment-form") }}</h4>
     <form @submit.prevent="processForm" v-if="!generateQR">
       <!-- Operation type -->
@@ -159,8 +173,11 @@ export default {
           console.log(this.recipientIdentifier);
         }
 
+          const language = (this.$i18n.locale === 'en') && 'en-GB' || (this.$i18n.locale === 'fr') && 'fr-FR'
+
           let postData = {
             id: number,
+            language: language,
             recipient: this.recipientIdentifier,
             amount: this.amount,
             type: this.selectedOperation,
@@ -182,7 +199,7 @@ export default {
               break;
           }
 
-          await this.axios.post('https://e0pfv0uv98.execute-api.eu-west-2.amazonaws.com/dev/en-GB/' + endpoint, postData, {
+          await this.axios.post('https://kugxq13zgf.execute-api.eu-west-2.amazonaws.com/dev/en-GB/' + endpoint, postData, {
             headers: {
               'Content-Type': 'application/json',
               'Access-Control-Allow-Origin': '*',
@@ -246,7 +263,7 @@ export default {
       if (this.amount && this.customerIdentifier) {
         const amount = this.amount;
         const number = this.customerIdentifier.split(" ").join("");
-        this.url = `https://e0pfv0uv98.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webPaymentOrange?Caller=${encodeURIComponent(number)}&amount=${amount}`
+        this.url = `https://kugxq13zgf.execute-api.eu-west-2.amazonaws.com/dev/${language}/webPaymentOrange?Caller=${encodeURIComponent(number)}&amount=${amount}`
         console.log(this.url);
         this.generateQR = true;
       }
@@ -258,8 +275,24 @@ export default {
       this.generateQR = false;
       errorFlag = false;
     },
+
+    changeLocale(lang) {
+      this.$i18n.locale = lang;
+    }
   },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+.gb-flag {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.selected {
+  border-style: solid;
+  border-color: #95236c;
+}
+
+</style>
