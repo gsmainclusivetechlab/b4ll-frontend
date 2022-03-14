@@ -42,7 +42,7 @@
       <!-- Amount -->
       <div class="form-group">
         <label for="inputAmount">{{ $t("form.amount") }}</label>
-        <currency-input v-model="amount" :options="optionsCurrency" placeholder="Enter Amount" id="inputAmount" />
+        <currency-input v-model="amount" :options="optionsCurrency" :placeholder="$t('form.placeholder-amount')" id="inputAmount" />
         <span class="error-msg" v-if="errors.inputAmount.length != 0"> {{ errors.inputAmount }}</span>
       </div>
 
@@ -84,14 +84,14 @@ export default {
       required: true,
     },
   },
-  data: () => ({
+  data: vm => ({
     selectedOperation: 'merchant-pay',
     operationOptions: [
-      { value: 'merchant-pay', text: 'Merchant Pay' },
-      { value: 'merchant-qr', text: 'Merchant Pay (QR Code)' },
-      { value: 'cash-in', text: 'Cash-In' },
-      { value: 'cash-out', text: 'Cash-Out' },
-      { value: 'p2p', text: 'P2P Transfer' },
+      { value: 'merchant-pay', text: vm.$t('form.merchant-pay') },
+      { value: 'merchant-qr', text: vm.$t('form.merchant-qr') },
+      { value: 'cash-in', text: vm.$t('form.cash-in') },
+      { value: 'cash-out', text: vm.$t('form.cash-out') },
+      { value: 'p2p', text: vm.$t('form.p2p') },
     ],
     selectedRecipient: null,
     recipientOptions: [

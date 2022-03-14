@@ -1,11 +1,19 @@
 {
-
     "form": {
         "agent-payment-form": "Formulaire de Paiement de l'Agent",
         "operation": "Opération",
         "customer-number": "Numéro mobile du client",
         "recipient": "Destinataire du Paiement",
         "amount": "Montant",
+
+        "merchant-pay": "Paiement Marchand",
+        "merchant-qr": "Paiement Marchand (code QR)",
+        "cash-in": "Dépôt",
+        "cash-out": "Retrait",
+        "p2p": "Transfert P2P",
+
+        "placeholder-mobile": "Entrer un numéro de téléphone",
+        "placeholder-amount": "Entrer une valeur",
 
         "submit": "Envoyer la demande",
         "generate-qr": "Générer un Code QR"

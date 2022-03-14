@@ -6,6 +6,15 @@
         "recipient": "Payment Recipient",
         "amount": "Amount",
 
+        "merchant-pay": "Merchant Pay",
+        "merchant-qr": "Merchant Pay (QR code)",
+        "cash-in": "Cash-in",
+        "cash-out": "Cash-out",
+        "p2p": "P2P Transfer",
+
+        "placeholder-mobile": "Enter a phone number",
+        "placeholder-amount": "Enter amount",
+
         "submit": "Send Request",
         "generate-qr": "Generate QR Code"
     }
