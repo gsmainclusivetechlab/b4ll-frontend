@@ -19,7 +19,7 @@
       <!-- Operation type -->
       <div class="form-group">
         <label for="inputOperation">{{ $t("form.operation") }}</label>
-        <b-form-select class="form-group" v-model="selectedOperation" :options="operationOptions" id="inputOperation"></b-form-select>
+        <b-form-select class="form-group" v-model="selectedOperation" :options="this.operationOptions" id="inputOperation"></b-form-select>
       </div>
 
       <!-- Token/Phone -->
@@ -27,6 +27,7 @@
         <label for="inputPhone">{{ $t("form.customer-number") }}</label>
             <vue-tel-input
             v-model="customerIdentifier"
+            :inputOptions="telOptions"
             mode="international"
             validCharactersOnly
             ></vue-tel-input>
@@ -86,13 +87,6 @@ export default {
   },
   data: vm => ({
     selectedOperation: 'merchant-pay',
-    operationOptions: [
-      { value: 'merchant-pay', text: vm.$t('form.merchant-pay') },
-      { value: 'merchant-qr', text: vm.$t('form.merchant-qr') },
-      { value: 'cash-in', text: vm.$t('form.cash-in') },
-      { value: 'cash-out', text: vm.$t('form.cash-out') },
-      { value: 'p2p', text: vm.$t('form.p2p') },
-    ],
     selectedRecipient: null,
     recipientOptions: [
       'John Doe (+447123456789)',
@@ -133,6 +127,20 @@ export default {
       accountingSign: false,
     },
   }),
+  computed: {
+    operationOptions() {
+      return [
+      { value: 'merchant-pay', text: this.$t('form.merchant-pay') },
+      { value: 'merchant-qr', text: this.$t('form.merchant-qr') },
+      { value: 'cash-in', text: this.$t('form.cash-in') },
+      { value: 'cash-out', text: this.$t('form.cash-out') },
+      { value: 'p2p', text: this.$t('form.p2p') },
+    ]
+    },
+    telOptions() {
+      return { placeholder: this.$t('form.placeholder-mobile') }
+    },
+  },
   methods: {
     async processForm(e) {
       try {
