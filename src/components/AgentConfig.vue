@@ -259,6 +259,8 @@ export default {
         this.errors.inputAmount = "Amount required.";
         errorFlag = true;
       }
+         
+      const language = (this.$i18n.locale === 'en') && 'en-GB' || (this.$i18n.locale === 'fr') && 'fr-FR'
 
       if (this.amount && this.customerIdentifier) {
         const amount = this.amount;
