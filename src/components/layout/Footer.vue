@@ -141,6 +141,7 @@
                       >
                     </li>
                     <li><a href="/about">About</a></li>
+                    <li><a href="/cookie-policy">Cookie Policy</a></li>
                     <li><a href="/faq">FAQs</a></li>
                   </ul>
                 </div>
