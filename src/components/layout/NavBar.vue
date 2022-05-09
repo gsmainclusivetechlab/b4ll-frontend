@@ -21,9 +21,15 @@
                 <b-nav-item href="#">
                   <router-link to="/howitworks">How it works</router-link>
                 </b-nav-item>
-                <b-nav-item href="#">
-                  <router-link to="/tryb4all"> Try B4LL </router-link>
-                </b-nav-item>
+                <b-nav-item-dropdown
+                  id="my-nav-dropdown"
+                  text="Try B4ll"
+                  toggle-class="nav-link-custom"
+                  right
+                >
+                  <b-dropdown-item href="/tryb4all">Sign Up</b-dropdown-item>
+                  <b-dropdown-item href="/agent">Agent Simulator</b-dropdown-item>
+                </b-nav-item-dropdown>
                 <b-nav-item href="https://docs.biometrics.gsmainclusivetechlab.io/">
                   <!-- <router-link to="/documentation">  -->
                   <a href=" https://docs.biometrics.gsmainclusivetechlab.io/ "

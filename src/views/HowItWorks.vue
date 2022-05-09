@@ -167,6 +167,77 @@
                     </div>
                   </div>
                 </div>
+                <div class="col-12 col-md-6">
+                  <div class="twoline-managing-frame">
+                    <div class="img-manage">
+                      <img
+                        src="../assets/images/fingerprint.png"
+                        class="img-fluid"
+                        alt="feature-icon-6"
+                      />
+                    </div>
+                    <div class="content-manage-frame">
+                      <h5>Reset PIN Number <span style="color: #ed2602">(NEW!)</span></h5>
+                      <p>
+                        Simulate the change and reset of the user's PIN number. 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="twoline-managing-frame">
+                    <div class="img-manage">
+                      <img
+                        src="../assets/images/fingerprint.png"
+                        class="img-fluid"
+                        alt="feature-icon-6"
+                      />
+                    </div>
+                    <div class="content-manage-frame">
+                      <h5>Merchant Payment <span style="color: #ed2602">(NEW!)</span></h5>
+                      <p>
+                        This use case simulates a merchant payment initiated by the customer or by the merchant (agent) 
+                        and can be done by call centre, QR Code, and SMS/USSD. 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="twoline-managing-frame">
+                    <div class="img-manage">
+                      <img
+                        src="../assets/images/fingerprint.png"
+                        class="img-fluid"
+                        alt="feature-icon-6"
+                      />
+                    </div>
+                    <div class="content-manage-frame">
+                      <h5>Cash In / Cash Out <span style="color: #ed2602">(NEW!)</span></h5>
+                      <p>
+                        The simulations of cash-in/out can be initiated by
+                      the customer or the agent and can be done by 
+                      SMS/USSD and QR Code.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="twoline-managing-frame">
+                    <div class="img-manage">
+                      <img
+                        src="../assets/images/fingerprint.png"
+                        class="img-fluid"
+                        alt="feature-icon-6"
+                      />
+                    </div>
+                    <div class="content-manage-frame">
+                      <h5>P2P Transfer <span style="color: #ed2602">(NEW!)</span></h5>
+                      <p>
+                        Simulate a P2P transfer using the agent simulator
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
