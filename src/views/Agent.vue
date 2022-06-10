@@ -1,145 +1,6 @@
 <template>
   <div class="home">
     <AppHeader v-bind="props" />
-    
-    <!-- FRAME 01: ENROL  -->
-    <div class="login-form-frame">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-6">
-            <div class="content-login">
-              <h2>
-                Enrol to test <br />
-              </h2>
-              <p>This project aims to address the use of voice recognition to access mobile money services through a showcase created by the Inclusive Tech Lab - GSMA and Orange.
-                 
-                 This page was created to be used as a guide to those who are testing the show case. The information shared here brings the different possibilities and information to test: different user case flows, different communication channels (e.g. SMS, USSD, QRCode, and IVR Call centre), and specific information necessary to proceed with the tests. </p>
-              <h4>
-                <p>
-                  <span class="phone-call-frame mr-10"
-                    ><img
-                      src="../assets/images/phone-call-blue.png"
-                      class="img-fluid"
-                      alt="phone-call-blue"
-                    />
-                  </span>
-                  <b>English (UK): </b><a href="tel:+447888872097">+44 7888872097</a>
-                </p>
-                <p>
-                  <span class="phone-call-frame mr-10"
-                    ><img
-                      src="../assets/images/phone-call-blue.png"
-                      class="img-fluid"
-                      alt="phone-call-blue"
-                    /> </span
-                  ><b>French (FR): </b> <a href="tel:+447723432543">+44 7723432543</a>
-                </p>
-              </h4>
-              <p>
-                If you have doubts or you have any suggestion, please contact the
-                <a
-                  href="https://www.gsma.com/mobilefordevelopment/mobile-money/gsma-inclusive-tech-lab/"
-                  target="_blank"
-                >
-                  Inclusive Tech Lab</a
-                >
-              </p>
-
-              <p style="color:red;"><b>ATTENTION:</b> Before begin the tests, please sign up on the right side, call the call centre, and follow the instructions to enrol using your voice print, enabling you to navigate through the different use cases.</p>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6">
-            </br>
-            <div class="sign-up-frame">
-              <h2>Sign up</h2>
-              <form @submit.prevent="processForm" method="post">
-                <div class="form-group">
-                  <label for="inputAddress">Nickname</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="inputAddress"
-                    placeholder="Enter nickname"
-                    v-model="nickName"
-                  />
-                  <span class="error-msg" v-if="signUpErrors.nickName.length != 0">
-                    {{ signUpErrors.nickName }}</span
-                  >
-                </div>
-                <div class="form-group">
-                  <label for="inputAddress2">Mobile number</label>
-                  <vue-tel-input
-                    v-model="phone"
-                    mode="international"
-                    validCharactersOnly
-                  ></vue-tel-input>
-                  <span
-                    class="error-msg"
-                    v-if="signUpErrors.phone.length != 0 || signUpErrors.format.length != 0"
-                  >
-                    {{ signUpErrors.phone }} {{ signUpErrors.format }}
-                  </span>
-                </div>
-
-                <div class="form-group">
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="gridCheck"
-                        v-model="termsConditions"
-                        true-value="yes"
-                        false-value="no"
-                      />
-                      <span class="checkmark"></span>
-                      <a href="./terms-and-condition.pdf" target="_blank"
-                        >Accept the terms and conditions</a
-                      >
-                    </label>
-                    <span class="error-msg" v-if="signUpErrors.tc.length != 0">
-                      {{ signUpErrors.tc }}</span
-                    >
-                  </div>
-                </div>
-
-                <a v-if="showSubmit && !signUpLoading" href="#" class="btn1">
-                  <input class="btn" type="submit" value="Submit Now" />
-                </a>
-                <b-spinner
-                  style="margin-left: 45%"
-                  v-if="signUpLoading"
-                  label="Spinning"
-                ></b-spinner>
-                <div class="form-response" v-if="gotSignUpResponse">
-                  <b-alert
-                    variant="primary"
-                    show
-                    v-if="response.data.ResponseCode == 200"
-                  >
-                    {{ response.data.msg }}</b-alert
-                  >
-                  <b-alert
-                    variant="danger"
-                    show
-                    v-if="response.data.ResponseCode == 623"
-                  >
-                    {{ response.data.msg }}</b-alert
-                  >
-                </div>
-              </form>
-            </div>            <div>
-                    </br> <i> If you want to read more information about the Use Case flows please visit our B4LL Project 
-                       <a href="https://docs.biometrics.gsmainclusivetechlab.io/" target="_blank">
-                      documentation page.</a> </i>
-          </div>
-          </div>
-        </div>
-        <b-alert show variant="info">
-          <b>Please note:</b> There is also a seperate documentation page available <a href="https://gsmainclusivetechlab.github.io/b4ll-orange-docs/" target="_blank">here</a>, for more detailed information regarding the project. 
-        </b-alert>
-      </div>
-    </div>
 
     <!-- FRAME 02: USE CASES  -->
     <div class="digital-wrapper feature-wrap bg-greys">
@@ -149,9 +10,7 @@
             <div class="feature-content text-center">
               <h2>Use Cases</h2>
               <h6>
-                There are 3 new use cases in this showcase created bespoke to attend the requirements proposed by Orange. 
-                </br>
-                This page was created to be used and a guide to those who are testing the show case.
+                This page was created to be used as a Agent simulator and as a guide to those who are testing the show case.
               </h6>
             </div>
             <div class="three-col-feature-frame">
@@ -196,7 +55,7 @@
                     <h5>Cash-in / Cash-out / P2P Transfer</h5>
                     <h6>
                       The simulations of cash-in/out and p2p transfers can be initiate by
-                      the customer or the agent and can be done by call centre (p2p transfer), 
+                      the customer or the agent and can be done by call centre (P2P transfer), 
                       SMS/USSD and QR Code.
                     </h6>
                   </div>
@@ -360,7 +219,7 @@
         <div class="row">
           <div class="col-12">
             <div align="center">
-              <h2>Use Case Simulator </h2>
+              <h2>Agent Simulator </h2>
             </div>
             <div align="center" class="col-12">
             <AgentConfig :selectedSystem="selectedSystem" />
@@ -382,18 +241,18 @@ import VueI18n from 'vue-i18n'
 Vue.use(VueAxios, axios, VueI18n);
 import AppHeader from "../components/AppHeader";
 import Footer from "../components/layout/Footer";
-import AgentConfigOrange from '../components/AgentConfigOrange.vue';
+import AgentConfig from '../components/AgentConfig.vue';
 import QrcodeVue from 'qrcode.vue'
 import { VueTelInput } from "vue-tel-input";
 export default {
-  name: "Orange",
-  components: { AppHeader, Footer, VueTelInput, AgentConfigOrange, QrcodeVue },
+  name: "Merchant",
+  components: { AppHeader, Footer, VueTelInput, AgentConfig, QrcodeVue },
   data: () => ({
     props: {
-      tittle: "IVR Call Centre - Orange/GSMA Project",
+      tittle: "IVR Call Centre - Agent Simulator",
       breadCrumb: {
-        tittle: "Orange",
-        link: "orange",
+        tittle: "Agent Simulator",
+        link: "Agent",
       },
     },
     selectedSystem: 'mock',
@@ -476,7 +335,7 @@ export default {
 
         this.axios
           .post(
-            "https://kugxq13zgf.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webSignUpOrange",
+            "https://kugxq13zgf.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webSignUp",
             postData,
             {
               headers: {

@@ -7,6 +7,7 @@ import TryB4All from "../views/TryB4All.vue";
 import RequestForm from "../views/RequestForm.vue";
 import RequestForm1 from "../views/RequestForm1.vue";
 import Orange from "../views/Orange.vue";
+import Agent from "../views/Agent.vue";
 import NotFound from "../views/NotFound.vue";
 import CookiePolicy from "../views/CookiePolicy.vue";
 import CookieList from "../views/CookieList.vue";
@@ -49,6 +50,11 @@ const routes = [
     path: "/orange",
     name: "Orange",
     component: Orange,
+  },
+  {
+    path: "/agent",
+    name: "Agent Simulator",
+    component: Agent,
   },
   { path: "/404", component: NotFound },
   { path: "*", redirect: "/404" },

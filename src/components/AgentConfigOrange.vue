@@ -77,7 +77,7 @@ import { VueTelInput } from "vue-tel-input";
 import QrcodeVue from 'qrcode.vue';
 
 export default {
-  name: 'AgentConfig',
+  name: 'AgentConfigOrange',
   components: { CurrencyInput, VueTelInput, QrcodeVue },
   props: {
     selectedSystem: {
@@ -196,14 +196,14 @@ export default {
 
           switch (this.selectedOperation) {
             case 'merchant-pay':
-              endpoint = 'webPayment'
+              endpoint = 'webPaymentOrange'
               break;
             case 'cash-in':
             case 'cash-out':
-              endpoint = 'webCashInOut';
+              endpoint = 'webCashInOutOrange';
               break;
             case 'p2p':
-              endpoint = 'webCashInOut'
+              endpoint = 'webCashInOutOrange'
               break;
           }
 
@@ -273,7 +273,7 @@ export default {
       if (this.amount && this.customerIdentifier) {
         const amount = this.amount;
         const number = this.customerIdentifier.split(" ").join("");
-        this.url = `https://kugxq13zgf.execute-api.eu-west-2.amazonaws.com/dev/${language}/webPayment?Caller=${encodeURIComponent(number)}&amount=${amount}`
+        this.url = `https://kugxq13zgf.execute-api.eu-west-2.amazonaws.com/dev/${language}/webPaymentOrange?Caller=${encodeURIComponent(number)}&amount=${amount}`
         console.log(this.url);
         this.generateQR = true;
       }
