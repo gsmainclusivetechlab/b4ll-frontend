@@ -382,12 +382,12 @@ import VueI18n from 'vue-i18n'
 Vue.use(VueAxios, axios, VueI18n);
 import AppHeader from "../components/AppHeader";
 import Footer from "../components/layout/Footer";
-import AgentConfig from '../components/AgentConfig.vue';
+import AgentConfigOrange from '../components/AgentConfigOrange.vue';
 import QrcodeVue from 'qrcode.vue'
 import { VueTelInput } from "vue-tel-input";
 export default {
   name: "Orange",
-  components: { AppHeader, Footer, VueTelInput, AgentConfig, QrcodeVue },
+  components: { AppHeader, Footer, VueTelInput, AgentConfigOrange, QrcodeVue },
   data: () => ({
     props: {
       tittle: "IVR Call Centre - Orange/GSMA Project",
@@ -476,7 +476,7 @@ export default {
 
         this.axios
           .post(
-            "https://e0pfv0uv98.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webSignUpOrange",
+            "https://kugxq13zgf.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webSignUpOrange",
             postData,
             {
               headers: {

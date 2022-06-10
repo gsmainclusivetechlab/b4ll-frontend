@@ -335,7 +335,7 @@ export default {
 
         this.axios
           .post(
-            "https://e0pfv0uv98.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webSignUpOrange",
+            "https://kugxq13zgf.execute-api.eu-west-2.amazonaws.com/dev/en-GB/webSignUp",
             postData,
             {
               headers: {
