@@ -363,7 +363,7 @@
               <h2>Use Case Simulator </h2>
             </div>
             <div align="center" class="col-12">
-            <AgentConfig :selectedSystem="selectedSystem" />
+            <AgentConfigOrange :selectedSystem="selectedSystem" />
             </div>
           </div>
         </div>
