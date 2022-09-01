@@ -424,7 +424,7 @@ export default {
   top: 2px;
   left: 0;
   width: 421px;
-  height: 625px;
+  height: 590px;
   background-repeat: no-repeat;
 }
 .slider-portfolio {
