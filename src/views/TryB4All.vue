@@ -179,12 +179,19 @@
                 class="justify-content-center align-items-center gutter-20 flex-md-column"
               >
                 <b-col cols="12" md="7">
-                  <a href="https://voiceit.io/" target="_blank">
-                  <div class="bg-biometric2 bg-black">
+                  <a href="https://enquanta.io/" target="_blank">
+                  <div class="bg-biometric2 bg-white">
                     <img
-                      src="../assets/images/biometric-provide-icon-1.svg"
+                      src="../assets/images/enquanta-hex.gif"
                       class="img-fluid"
                       alt="biometric-provide-icon-1"
+                      style="width: 24px; padding-top: 2px; margin-right: 3px;"
+                    />
+                    <img
+                      src="../assets/images/enquanta-logo.png"
+                      class="img-fluid"
+                      alt="biometric-provide-icon-1"
+                      style="width: 100px; padding-top: 5px; margin-left: 5px;"
                     />
                   </div>
                   </a>
