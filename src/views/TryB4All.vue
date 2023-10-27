@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <AppHeader v-bind="props" />
-    <div class="login-form-frame">
+    <!-- <div class="login-form-frame">
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-6">
@@ -144,7 +144,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <section class="two-col-biometric-wrap text-white">
       <b-container>
         <b-row class="justify-content-start align-items-center">
