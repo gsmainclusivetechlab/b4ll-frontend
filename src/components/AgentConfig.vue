@@ -48,10 +48,10 @@
       </div>
 
       <a v-if="!loading && this.selectedOperation!='merchant-qr'" href="#" class="btn1">
-        <input class="btn" type="submit" :value="$t('form.submit')" />
+        <input class="btn" type="submit" :value="$t('form.submit')" disabled />
       </a>
       <a v-if="!qrLoading && this.selectedOperation=='merchant-qr'" href="#" class="btn1">
-        <input class="btn" @click.prevent="generateQrCode" :value="$t('form.generate-qr')" />
+        <input class="btn" @click.prevent="generateQrCode" :value="$t('form.generate-qr')" disabled />
       </a>
       <b-spinner style="" v-if="loading" label="Spinning"></b-spinner>
 

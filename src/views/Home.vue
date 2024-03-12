@@ -22,7 +22,7 @@
               <div class="os-system-wrap">
                 <ul>
                   <li>
-                    <a href="https://apps.apple.com/gb/app/gsma-b4ll/id1566270261" target="_blank">
+                    <a href="#" class="greyed-out" title="App currently unavailable">
                     <img
                       src="../assets/images/ios.svg"
                       class="img-fluid"
@@ -31,7 +31,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="https://play.google.com/store/apps/details?id=com.gsmab4all" target="_blank">
+                    <a href="#" class="greyed-out" title="App currently unavailable">
                     <img
                       src="../assets/images/google.svg"
                       class="img-fluid"
@@ -64,7 +64,7 @@
               <div class="os-system-wrap">
                 <ul>
                   <li>
-                    <a href="https://apps.apple.com/gb/app/gsma-b4ll/id1566270261" target="_blank">
+                    <a href="#" class="greyed-out" title="App currently unavailable">
                     <img
                       src="../assets/images/ios.svg"
                       class="img-fluid"
@@ -73,7 +73,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="https://play.google.com/store/apps/details?id=com.gsmab4all" target="_blank">
+                    <a href="#" class="greyed-out" title="App currently unavailable">
                     <img
                       src="../assets/images/google.svg"
                       class="img-fluid"
@@ -106,22 +106,22 @@
               <div class="os-system-wrap">
                 <ul>
                   <li>
-                    <a href="https://apps.apple.com/gb/app/gsma-b4ll/id1566270261" target="_blank">
+                    <a href="#" class="greyed-out" title="App currently unavailable">
                     <img
                       src="../assets/images/ios.svg"
                       class="img-fluid"
                       alt=""
                     />
-                    </a>  
+                    </a>
                   </li>
                   <li>
-                    <a href="https://play.google.com/store/apps/details?id=com.gsmab4all" target="_blank">
+                    <a href="#" class="greyed-out" title="App currently unavailable">
                     <img
                       src="../assets/images/google.svg"
                       class="img-fluid"
                       alt=""
                     />
-                    </a>  
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -413,6 +413,11 @@ export default {
 };
 </script>
 <style>
+.greyed-out {
+  filter: grayscale(100%); /* Convert the image to grayscale */
+  opacity: 0.5; /* Make the image semi-transparent */
+  cursor: not-allowed; /* Change the cursor to indicate the button is disabled */
+}
 .home-header {
   background-image: linear-gradient(180deg, #6b3076 0%, #424985 100%);
 }
